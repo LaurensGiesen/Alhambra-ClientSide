@@ -6,20 +6,30 @@ function init(){
     document.querySelectorAll("main figure img").forEach((element) => {
         element.addEventListener('click', open)});
     document.querySelector(".close").addEventListener("click", close);
+    document.querySelector(".close2").addEventListener("click", closeAgain);
 }
 
-let modal = document.querySelector("#popUp");
+let popUp = document.querySelector("#popUp");
+let popUpNot = document.querySelector("#popUpNot");
 
-// When the user clicks the button, open the modal
+
+// open de popup
 function open(e) {
     e.preventDefault();
-    modal.style.display = "block";
+    if ( e.target.className  === "active"){
+        popUp.style.display = "block";
+    }
+    else{
+        popUpNot.style.display = "block";
+    }
+
+}
+// sluit pop up
+function close(){
+    popUp.style.display = "none";
+}
+function closeAgain(){
+    popUpNot.style.display = "none";
 }
 
-
-// When the user clicks on <span> (x), close the modal
-function close(e){
-    e.preventDefault();
-    modal.style.display = "none";
-}
 
