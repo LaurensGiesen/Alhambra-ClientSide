@@ -1,6 +1,94 @@
 /*---------------------*/
 /*   GENERAL ELEMENTS  */
 /*---------------------*/
+main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    margin-left: 8%;
+    margin-right: 20%;
+
+}
+
+main aside{
+    display: flex;
+    flex-direction: row;
+}
+main div strong{
+    font-weight:bold;
+}
+main p{
+    font-size: 1rem;
+    margin-top: 3px;
+    padding-top: 15px;
+}
+
+main h1{
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-top: 30px;
+    border-bottom: black 2px solid;
+}
+
+main h2{
+    font-size: 1.2rem;
+    color: saddlebrown;
+    padding-top: 30px;
+
+}
+main div{
+    width: 70%;
+    margin: auto;
+}
+
+ul{
+    padding-top: 30px;
+}
+main figure img{
+    margin-right: 10%;
+    width: 350px;
+    margin-top: 5px;
+}
+ul li{
+    margin-top: 20px;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    height: 120px;
+}
+
+header h1{
+    font-size: 5rem;
+    margin-left: 23%;
+    font-family: 'MedievalSharp', cursive;
+    padding-top: 25px;
+    width: 50%;
+    height: 100%;
+    background-image: url(../../icons/joystick.png);
+    background-repeat: no-repeat;
+    background-size: 22%;
+    background-position: 390px -20px;
+
+
+
+}
+header figure{
+    width: 5%;
+    margin-left: 2%;
+    margin-top: 20px;
+
+}
+
+
+img{
+    width: 100%;
+
+}
+header figure img{
+    padding-left: 10px;
+}
 
 
 /*---------------------*/

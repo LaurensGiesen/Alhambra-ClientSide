@@ -58,19 +58,19 @@ header figure{
 }
 header figure img{
     padding-top: 20px;
+
 }
 div figure img{
-    height: 400px;
-    margin-left: 50%;
+    height: 125px;
+    margin-left: 71%;
     margin-top: 50px;
+    width: 57%;
 }
 div figure{
     width: 50%;
 
 }
-div figure img{
-    height: 280px;
-}
+
 
 
 /*---------------------*/

@@ -16,7 +16,7 @@ main p{
     width: 75%;
     text-align: center;
     margin-left: 23%;
-    margin-top: 3px;
+    padding-top: 20px;
 }
 main figure img{
     margin-right: 10%;
@@ -43,7 +43,9 @@ header figure{
     margin-top: 20px;
 
 }
-
+.walls{
+    margin-left: 100%;
+}
 
 img{
     width: 100%;
