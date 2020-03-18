@@ -4,6 +4,14 @@ header img {
     margin-top: 2%;
 }
 
+body {
+    overflow: hidden;
+}
+
+section {
+    height: 1080px;
+}
+
 div {
     width: 500px;
     margin-left: 750px;
