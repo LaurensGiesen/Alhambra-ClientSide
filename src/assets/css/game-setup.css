@@ -1,0 +1,41 @@
+header img {
+    width: 5%;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+div {
+    width: 500px;
+    margin: auto;
+}
+
+div a {
+    text-decoration: none;
+    color: black;
+    font-size: 4rem;
+    margin-bottom: 10px;
+    padding-left: 60px;
+}
+
+.Castle {
+    background-image: url("../../icons/cartoon-castle-vector-art.png");
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: center 10px;
+}
+
+.plus {
+    background-image: url("../../icons/plus (1).png") ;
+    background-repeat: no-repeat;
+    background-size: 10%;
+}
+
+.join {
+    background-image: url("../../icons/add.png");
+    background-repeat: no-repeat;
+    background-size: 10%;
+}
+
+h1 a:hover {
+    color: blue;
+}
