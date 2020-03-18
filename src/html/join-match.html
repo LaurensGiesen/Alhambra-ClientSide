@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Join-Match</title>
         <link rel="stylesheet" href="../assets/css/reset.css">
-        <link href="https://fonts.googleapis.com/css?family=MedievalSharp&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=MedievalSharp|Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../assets/css/joinMatch.css">
     </head>
     <body>
@@ -49,8 +49,48 @@
             </figure>
             <figure>
                 <img src="../icons/tower.png" alt="Tower" title="Tower">
+             </figure>
+            <figure>
+                <img src="../icons/tower.png" alt="Tower" title="Tower">
             </figure>
-
         </main>
+
+        <div id="friendCode">
+            <figure>
+                <img src="../icons/hug.png" alt="">
+            </figure>
+            <h6>Friend Code:</h6>
+            <form>
+                <input type="text" id="Friend" name="Friend" placeholder="Enter a Friend Code..">
+                <input type="submit" value="Join">
+            </form>
+        </div>
+
+        <!-- pop up-->
+        <div id="popUp" class="popUp">
+
+            <!-- popUp content -->
+            <div class="popUp-content">
+                <div class="eerste">
+                    <h2 class="close">Close</h2>
+                </div>
+                <div class="flex">
+                    <div>
+                        <img src="../icons/tower.png" alt="">
+                    </div>
+                    <div class="tweede">
+                        <h3>Batlle Royale</h3>
+                        <h4>5/6</h4>
+                    </div>
+
+                </div>
+                <div>
+                    <form>
+                        <input type="submit" value="Join">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="../assets/js/joinMatch/joinMatch.js"></script>
     </body>
 </html>
