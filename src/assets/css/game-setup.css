@@ -18,6 +18,17 @@ div {
     margin-top: 440px;
 }
 
+div.fillInName {
+    width: 800px;
+    margin-left: 500px;
+    margin-top: 350px;
+}
+
+footer {
+    width: 1920px;
+    height: 900px;
+}
+
 div h1 {
     margin-bottom: 40px;
 }
@@ -28,6 +39,25 @@ div a {
     color: black;
     font-size: 4rem;
     padding-left: 60px;
+}
+
+div label {
+    font-size: 4rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+div input {
+    font-size: 3rem;
+    align-content: center;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer p {
+    font-size: 4rem;
+    margin-left: 1390px;
+    margin-top: 120px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .Castle {
@@ -49,6 +79,21 @@ div a {
     background-size: 10%;
 }
 
+.tower {
+    background-image: url("../../icons/toweractive.png");
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: center 40px;
+}
+
+.hammer {
+    background-image: url("../../icons/hammer.png");
+    background-repeat: no-repeat;
+    background-size: 10%;
+    background-position: 1530px 70px;
+}
+
 h1 a:hover {
     color: red;
 }
+
