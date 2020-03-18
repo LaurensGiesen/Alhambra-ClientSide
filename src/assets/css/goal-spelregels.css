@@ -1,0 +1,65 @@
+/*---------------------*/
+/*   GENERAL ELEMENTS  */
+/*---------------------*/
+main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 8%;
+    margin-left: 8%;
+
+}
+
+main p{
+    font-size: 1.8rem;
+
+    text-align: center;
+    width: 55%;
+    font-family: 'Roboto', cursive;
+    padding-left: 14%;
+    margin-top: 5px;
+    line-height: 115%;
+}
+
+
+
+header{
+    display: flex;
+    flex-direction: row;
+}
+
+header h1{
+    font-size: 5rem;
+    margin-left: 32%;
+    font-family: 'MedievalSharp', cursive;
+    padding-top: 25px;
+
+}
+header figure{
+    width: 5%;
+    margin-left: 2%;
+    margin-top: 20px;
+
+}
+
+
+img{
+    width: 100%;
+
+}
+header figure img{
+    padding-left: 10px;
+}
+
+/*---------------------*/
+/* GENERAL CLASSES     */
+/*---------------------*/
+
+
+/*---------------------*/
+/* CONTAINING ELEMENTS */
+/*---------------------*/
+
+
+/*------------------------*/
+/* PAGE SPECIFIC ELEMENTS */
+/*------------------------*/
