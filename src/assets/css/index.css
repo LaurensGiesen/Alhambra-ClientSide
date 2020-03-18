@@ -1,22 +1,18 @@
 /***************************index****************************/
 
-body{
-    width: 650px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-a{
-    text-decoration: none;
-    color: black;
-
-}
-
-img {
-    margin-top: 100px;
-    margin-left: 120px;
-}
-
 form {
+    margin-left: 750px;
+    background-image: url("../../icons/alhambraIconLogin.png");
 
+}
+
+
+.username {
+    display: block;
+    margin-bottom: 20px;
+    background-image: url("../../icons/user.png");
+}
+
+.button {
+    margin-left: 200px;
 }
