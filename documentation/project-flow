@@ -51,6 +51,7 @@ How to work with GitLab
 
 13) Remove WIP
     Op Gitlab website, ga naar 'Issues < Board' en klik op de Issue
+    Klik op 'WIP: Resolve' onder 'Related merge request'
     Klik op 'Resolve WIP status' (staat onder Approvals)
     en vervolgens op 'Merge' (staat voor Resolve WIP)
 
