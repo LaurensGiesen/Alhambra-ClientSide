@@ -12,19 +12,40 @@ main{
 
 
 main p{
+    font-size: 1rem;
+    font-family: 'Roboto', cursive;
     margin-top: 8px;
     width: 75%;
     text-align: center;
     margin-left: 23%;
     padding-top: 20px;
+    line-height: 155%;
 }
 main figure img{
-    margin-right: 10%;
+
     width: 350px;
-    margin-top: 80px;
+    margin-bottom: 50%;
 }
 
 
+main aside{
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    font-family: 'Roboto', cursive;
+    margin-top: 8px;
+    width: 100%;
+    text-align: center;
+    margin-left: 23%;
+    padding-top: 20px;
+    line-height: 155%;
+}
+main aside div p{
+    width: 100%;
+}
+aside figure img{
+    margin-left: 80%;
+}
 header{
     display: flex;
     flex-direction: row;
@@ -32,27 +53,40 @@ header{
 
 header h1{
     font-size: 5rem;
-    margin-left: 32%;
+    margin-left: 35%;
     font-family: 'MedievalSharp', cursive;
     padding-top: 25px;
+    background-image: url(../../icons/scoring1.png);
+    background-repeat: no-repeat;
+    background-size: 9%;
+    background-position: 300px;
+    width: 50%;
+
 
 }
-header figure{
-    width: 5%;
-    margin-left: 2%;
-    margin-top: 20px;
 
-}
-.walls{
-    margin-left: 100%;
-}
 
+main div h1{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 28px;
+    text-align: center;
+    margin-left: 23%;
+    padding-top: 20px;
+}
 img{
     width: 100%;
 
 }
-header figure img{
-    padding-left: 10px;
+aside a {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 75px;
+    width: 75px;
+    background-image: url("../../icons/left-arrow.png");
+    background-repeat: no-repeat;
+    background-size: 75px;
 }
 
 /*---------------------*/
