@@ -1,0 +1,41 @@
+/***************************index****************************/
+
+form {
+    width: 500px;
+    margin: auto;
+    padding-top: 500px;
+    background-image: url("../../icons/alhambraIconLogin.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+form input {
+    display: block;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: 'MedievalSharp', cursive;
+}
+
+form input[type=text] {
+    line-height: 2;
+    border: 1px solid darkgray;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+form input[type=submit]{
+    border: none;
+    background-color: white;
+    font-size: 28px;
+    font-family: 'MedievalSharp', cursive;
+}
+
+form input[type=submit]:hover{
+    border: 1px dotted darkgray;
+}
+
+form input:focus {
+    outline: none;
+}
