@@ -35,14 +35,3 @@ main a:first-of-type {
 main a:last-of-type {
     background-image: url("../../icons/book.png");
 }
-
-aside a {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    height: 75px;
-    width: 75px;
-    background-image: url("../../icons/left-arrow.png");
-    background-repeat: no-repeat;
-    background-size: 75px;
-}
