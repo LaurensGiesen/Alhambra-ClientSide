@@ -4,6 +4,7 @@
 main{
     display: flex;
     flex-direction: row;
+    align-content: space-around;
 }
 
 body{
@@ -17,45 +18,32 @@ div.goal, div.gameplay, div.scoring{
     padding-top: 5%;
     font-family: 'Roboto', cursive;
     height: 400px;
-    width: 33%;
+    width: 400px;
+
+    background-repeat: no-repeat;
+    background-size: auto 150px;
+    background-position: center;
 }
 
 div.goal{
     background-image: url(../../icons/target.png);
-    background-repeat: no-repeat;
-    background-size: 25%;
-    background-position: 185px 180px;
 }
+div.gameplay{
+    background-image: url(../../icons/joystick.png);
+}
+div.scoring{
+    background-image: url(../../icons/scoring1.png);
+}
+
+div.goal a:hover,div.gameplay a:hover,div.scoring a:hover{
+    color: red;
+}
+
 main div a{
     text-decoration: none;
     color: black;
 }
-div.goal a:hover{
-    color: red;
-}
 
-div.gameplay a:hover{
-    color: red;
-}
-
-div.scoring a:hover{
-    color: red;
-}
-
-div.gameplay{
-    background-image: url(../../icons/joystick.png);
-    background-repeat: no-repeat;
-    background-size: 35%;
-    background-position: 160px 150px;
-}
-div.scoring{
-    background-image: url(../../icons/scoring1.png);
-    background-repeat: no-repeat;
-    background-size: 20%;
-    background-position: 210px 170px;
-
-
-}
 img{
     width: 100%;
 
@@ -83,19 +71,3 @@ aside a {
     background-repeat: no-repeat;
     background-size: 75px;
 }
-
-
-
-/*---------------------*/
-/* GENERAL CLASSES     */
-/*---------------------*/
-
-
-/*---------------------*/
-/* CONTAINING ELEMENTS */
-/*---------------------*/
-
-
-/*------------------------*/
-/* PAGE SPECIFIC ELEMENTS */
-/*------------------------*/
