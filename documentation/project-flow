@@ -1,0 +1,56 @@
+How to work with GitLab
+
+1) Create issue
+    Op GitLab website, ga vanuit de Alhambra-20 folder naar 'Issues < List' en klik op 'New Issue'
+    Vul volgende velden in:
+        Title
+        Description
+        Weight
+        Milestone (eventueel)
+        Assignee (eventueel)
+
+2) Assign issue
+    Op Gitlab website, ga vanuit 'Issues < Board' en klik op de Issue
+    In de rechterkolom wijs je de issue toe aan de correcte persoon.
+
+3) Doing issue
+    Op Gitlab website, ga vanuit de Alhambra-20 folder naar 'Issues < Board' en sleep de Issue naar 'doing'
+
+4) Create merge request
+    Op Gitlab website, ga vanuit de Alhambra-20 folder naar 'Issues < Board' en selecteer de Issue
+    Klik op 'Create merge request'
+
+5) Checkout to branch
+    In PHPStorm, klik op 'VCS < Git < Fetch'.
+    Vervolgens in rechteronderhoek de remote branch selecteren en 'Checkout as' klikken
+
+6) Work in project
+    Schrijf de code die nodig is
+
+7) Commit
+    In PHPStorm, commit regelmatig
+
+8) Test (1)
+    In PHPStorm, open de Terminal (rechtsklik en 'Open in Terminal')
+    Ga naar de root map (webclient) a.h.v. cd command
+    Run het command 'npm run validate-win'
+
+9) Merge master in local branch
+    In PHPStorm, klik op 'VCS < Git < Pull' en selecteer enkel 'origin/master' bij 'Branches to merge'
+    Los eventuele merge conflicts op.
+
+10) Test (2)
+    Run de testen opnieuw zoals in 8)
+
+11) Push
+    In PHPStorm, klik 'VCS < Git < Push'
+
+12) Review
+    Op Gitlab website, ga naar 'Issues < Board' en sleep de Issue naar 'Review'
+    Wacht vervolgens op 2 approvals.
+
+13) Remove WIP
+    Op Gitlab website, ga naar 'Issues < Board' en klik op de Issue
+    Klik op 'WIP: Resolve' onder 'Related merge request'
+    Klik op 'Resolve WIP status' (staat onder Approvals)
+    en vervolgens op 'Merge' (staat voor Resolve WIP)
