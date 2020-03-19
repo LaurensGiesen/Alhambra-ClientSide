@@ -108,14 +108,17 @@ main h5, main h6{
 main h5{
     background-image: url("../../icons/finish.png");
     font-size: 3rem;
-    width: 18%;
+    width: 19%;
     margin-top: 1%;
     margin-left: 60%;
     padding-left: 5%;
 }
+main h5:hover{
+    cursor: pointer;
+}
 .timer{
     margin-left: 59%;
-    width: 32%;
+    width: 35%;
 }
 .timer h6{
     background-image: url("../../icons/timer.png");
