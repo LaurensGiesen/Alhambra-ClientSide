@@ -10,18 +10,21 @@ body{
     font-family: 'Roboto', cursive;
 }
 
-div.goal{
+div.goal, div.gameplay, div.scoring{
     font-size: 4rem;
     text-align: center;
     margin: auto;
     padding-top: 5%;
     font-family: 'Roboto', cursive;
+    height: 400px;
+    width: 33%;
+}
+
+div.goal{
     background-image: url(../../icons/target.png);
     background-repeat: no-repeat;
     background-size: 25%;
     background-position: 185px 180px;
-    height: 400px;
-    width: 33%;
 }
 main div a{
     text-decoration: none;
@@ -40,31 +43,17 @@ div.scoring a:hover{
 }
 
 div.gameplay{
-    font-size: 4rem;
-    text-align: center;
-    margin: auto;
-    padding-top: 5%;
-    font-family: 'Roboto', cursive;
     background-image: url(../../icons/joystick.png);
     background-repeat: no-repeat;
     background-size: 35%;
     background-position: 160px 150px;
-    height: 400px;
-    width: 33%;
-
 }
 div.scoring{
-    font-size: 4rem;
-    text-align: center;
-    margin: auto;
-    padding-top: 5%;
-    font-family: 'Roboto', cursive;
     background-image: url(../../icons/scoring1.png);
     background-repeat: no-repeat;
     background-size: 20%;
     background-position: 210px 170px;
-    height: 400px;
-    width: 33%;
+
 
 }
 img{
