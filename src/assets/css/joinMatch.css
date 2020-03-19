@@ -115,19 +115,7 @@ main figure:nth-child(12){
 / PAGE SPECIFIC ELEMENTS /
 /------------------------*/
 /* pop up*/
-.popUp {
-    display: none; /* wordt op block gezet in js */
-    position: fixed; /* op zijn plaats laten staan */
-    z-index: 1; /* boven de rest komen */
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.popUpDeactive {
+.popUp, .popUpDeactive {
     display: none; /* wordt op block gezet in js */
     position: fixed; /* op zijn plaats laten staan */
     z-index: 1; /* boven de rest komen */
