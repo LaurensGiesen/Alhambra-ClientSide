@@ -1,99 +1,107 @@
-header img {
-    width: 5%;
-    margin-left: 2%;
-    margin-top: 2%;
+/*-----------*/
+/*Html tags*/
+/*----------*/
+
+/*Aside*/
+
+aside a {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 75px;
+    width: 75px;
+    background-image: url("../../icons/left-arrow.png");
+    background-repeat: no-repeat;
+    background-size: 75px;
 }
 
-body {
-    overflow: hidden;
-}
+/*Section*/
 
 section {
-    height: 1080px;
+    height: 100vh;
+}
+
+/*label*/
+ label {
+     font-size: 4rem;
+     font-family: 'Roboto', sans-serif;
+ }
+
+input {
+     font-size: 3rem;
+ }
+
+/*Div*/
+
+div.tower {
+    margin-left: 25%;
+    padding-top: 25%;
 }
 
 div {
-    width: 500px;
-    margin-left: 750px;
-    margin-top: 440px;
+    width: 900px;
+    margin-left: 40%;
+    padding-top: 32%;
 }
 
-div.fillInName {
-    width: 800px;
-    margin-left: 500px;
-    margin-top: 350px;
-}
-
-footer {
-    width: 1920px;
-    height: 900px;
+div a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4rem;
+    padding-left: 60px;
 }
 
 div h1 {
     margin-bottom: 40px;
 }
 
-div a {
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    color: black;
-    font-size: 4rem;
-    padding-left: 60px;
-}
-
-div label {
-    font-size: 4rem;
-    font-family: 'Roboto', sans-serif;
-}
-
-div input {
-    font-size: 3rem;
-    align-content: center;
-    margin-bottom: 10px;
-    font-family: 'Roboto', sans-serif;
-}
+/*footer*/
 
 footer p {
     font-size: 4rem;
-    margin-left: 1390px;
-    margin-top: 120px;
     font-family: 'Roboto', sans-serif;
+    margin-left: 70%;
+    margin-top: 5%;
 }
 
-.Castle {
+footer img {
+    width: 12%;
+    margin-left: 76%;
+    margin-top: 1%;
+    cursor: pointer;
+}
+
+/*Images*/
+
+.castle {
     background-image: url("../../icons/cartoon-castle-vector-art.png");
     background-repeat: no-repeat;
-    background-size: 45%;
-    background-position: center 10px;
+    background-size: 50%;
+    background-position: center top;
 }
 
-.plus {
-    background-image: url("../../icons/plus (1).png") ;
+.create {
+    background-image: url("../../icons/plus (1).png");
     background-repeat: no-repeat;
-    background-size: 10%;
+    background-size: 6%;
 }
 
 .join {
     background-image: url("../../icons/add.png");
     background-repeat: no-repeat;
-    background-size: 10%;
+    background-size: 6%;
 }
 
 .tower {
     background-image: url("../../icons/toweractive.png");
     background-repeat: no-repeat;
-    background-size: 20%;
-    background-position: center 40px;
+    background-size: 40%;
+    background-position: center 60px;
 }
 
-.hammer {
-    background-image: url("../../icons/hammer.png");
-    background-repeat: no-repeat;
-    background-size: 10%;
-    background-position: 1530px 70px;
-}
+/*Hover*/
 
-h1 a:hover {
+div a:hover {
     color: red;
 }
-
