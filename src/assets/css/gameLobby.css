@@ -1,0 +1,134 @@
+/*----------------------/
+/   GENERAL ELEMENTS /
+/---------------------*/
+body{
+    font-family: 'Roboto', sans-serif;
+}
+img{
+    width: 100%;
+}
+
+/*--------header-------------*/
+header{
+
+}
+header aside a {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 75px;
+    width: 75px;
+    background-image: url("../../icons/left-arrow.png");
+    background-repeat: no-repeat;
+    background-size: 75px;
+}
+header h1{
+    text-align: right;
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-left: 1300px;
+    padding: 2.5% 0 2.5% 3%;
+    background-image: url("../../icons/joystick.png");
+    background-size: 32%;
+    background-repeat: no-repeat;
+    background-position: center left;
+    font-weight: bolder;
+}
+header p{
+    display: inline-block;
+    font-size: 1.3rem;
+    color: #5c5b5b;
+    margin-top: 0;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+
+
+/*--------main-------------*/
+main{
+margin-top: 1%;
+}
+main .eerst{
+    width:400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+main div h2{
+    margin-right: 10px;
+    font-size: 2.5rem;
+}
+main div p{
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+main .twee{
+    width: 720px;
+    margin: 0 auto;
+
+
+}
+main .twee div{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    border: 3px solid black;
+    justify-content: space-between;
+}
+main .ready h3, .notReady h3{
+    background-image: url("../../icons/user.png");
+    background-repeat:no-repeat;
+    background-size: 40px;
+    background-position: center left;
+    padding: 2% 0 1% 7%;
+    font-size: 2rem;
+    margin-left: 1%;
+}
+main .ready h4, .notReady h4{
+    background-image: url("../../icons/rightgreen.png");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center right;
+    padding: 2% 5% 2% 0;
+    font-size: 1.5rem;
+    margin-right: 1% ;
+}
+.notReady h4{
+    background-image: url("../../icons/closered.png");
+    background-size: 25px;
+}
+
+main h5, main h6{
+    background-repeat: no-repeat;
+    padding: 2.5% 0 2.5% 12%;
+    background-size: 70px;
+    background-position: center left;
+}
+main h5{
+    background-image: url("../../icons/finish.png");
+    font-size: 3rem;
+    width: 361px;
+    margin-top: 1%;
+    margin-left: 1000px;
+    padding-left: 5%;
+}
+main h5:hover{
+    cursor: pointer;
+}
+.timer{
+    margin-left: 1000px;
+    width: 670px;
+}
+.timer h6{
+    background-image: url("../../icons/timer.png");
+    display: inline-block;
+    font-size: 2rem;
+}
+.timer p{
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: normal;
+    margin-left: 1%;
+}
