@@ -23,32 +23,33 @@ section {
 
 /*label*/
  label {
-     font-size: 4rem;
-     font-family: 'Roboto', sans-serif;
+     font-size: 3rem;
+     font-family: 'MedievalSharp', cursive;
  }
 
 input {
-     font-size: 3rem;
+     font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
  }
 
 /*Div*/
 
 div.tower {
-    margin-left: 25%;
-    padding-top: 25%;
+    margin-left: 650px;
+    padding-top: 450px;
 }
 
 div {
     width: 900px;
-    margin-left: 40%;
-    padding-top: 32%;
+    margin-left: 790px;
+    padding-top: 560px;
 }
 
 div a{
     text-decoration: none;
     color: black;
-    font-family: 'Roboto', sans-serif;
-    font-size: 4rem;
+    font-family: 'MedievalSharp', cursive;
+    font-size: 3rem;
     padding-left: 60px;
 }
 
@@ -59,16 +60,16 @@ div h1 {
 /*footer*/
 
 footer p {
-    font-size: 4rem;
-    font-family: 'Roboto', sans-serif;
-    margin-left: 70%;
-    margin-top: 5%;
+    font-size: 3rem;
+    font-family: 'MedievalSharp', cursive;
+    margin-left: 1450px;
+    margin-top: 200px;
 }
 
 footer img {
-    width: 12%;
-    margin-left: 76%;
-    margin-top: 1%;
+    width: 8%;
+    margin-left: 1550px;
+    margin-top: 25px;
     cursor: pointer;
 }
 
@@ -77,27 +78,27 @@ footer img {
 .castle {
     background-image: url("../media/cartoon-castle-vector-art.png");
     background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: center top;
+    background-size: 40%;
+    background-position: center 50px;
 }
 
 .create {
     background-image: url("../media/icons/plus (1).png");
     background-repeat: no-repeat;
-    background-size: 6%;
+    background-size: 5%;
 }
 
 .join {
     background-image: url("../media/icons/add.png");
     background-repeat: no-repeat;
-    background-size: 6%;
+    background-size: 5%;
 }
 
 .tower {
     background-image: url("../media/icons/toweractive.png");
     background-repeat: no-repeat;
-    background-size: 40%;
-    background-position: center 60px;
+    background-size: 30%;
+    background-position: 175px 150px;
 }
 
 /*Hover*/
