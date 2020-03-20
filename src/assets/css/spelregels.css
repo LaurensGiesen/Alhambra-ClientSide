@@ -26,13 +26,13 @@ div.goal, div.gameplay, div.scoring{
 }
 
 div.goal{
-    background-image: url(../../icons/target.png);
+    background-image: url(../media/icons/target.png);
 }
 div.gameplay{
-    background-image: url(../../icons/joystick.png);
+    background-image: url(../media/icons/joystick.png);
 }
 div.scoring{
-    background-image: url(../../icons/scoring1.png);
+    background-image: url(../media/icons/scoring1.png);
 }
 
 div.goal a:hover,div.gameplay a:hover,div.scoring a:hover{
@@ -67,7 +67,7 @@ aside a {
     left: 20px;
     height: 75px;
     width: 75px;
-    background-image: url("../../icons/left-arrow.png");
+    background-image: url("../media/icons/left-arrow.png");
     background-repeat: no-repeat;
     background-size: 75px;
 }

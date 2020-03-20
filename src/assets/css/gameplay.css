@@ -69,7 +69,7 @@ header h1{
     padding-top: 25px;
     width: 50%;
     height: 100%;
-    background-image: url(../../icons/joystick.png);
+    background-image: url(../media/icons/joystick.png);
     background-repeat: no-repeat;
     background-size: 22%;
     background-position: 390px -20px;
@@ -96,7 +96,7 @@ aside a {
     left: 20px;
     height: 75px;
     width: 75px;
-    background-image: url("../../icons/left-arrow.png");
+    background-image: url("../media/icons/left-arrow.png");
     background-repeat: no-repeat;
     background-size: 75px;
 }

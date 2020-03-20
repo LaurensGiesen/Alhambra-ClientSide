@@ -10,7 +10,7 @@ aside a {
     left: 20px;
     height: 75px;
     width: 75px;
-    background-image: url("../../icons/left-arrow.png");
+    background-image: url("../media/icons/left-arrow.png");
     background-repeat: no-repeat;
     background-size: 75px;
 }
@@ -75,26 +75,26 @@ footer img {
 /*Images*/
 
 .castle {
-    background-image: url("../../icons/cartoon-castle-vector-art.png");
+    background-image: url("../media/cartoon-castle-vector-art.png");
     background-repeat: no-repeat;
     background-size: 50%;
     background-position: center top;
 }
 
 .create {
-    background-image: url("../../icons/plus (1).png");
+    background-image: url("../media/icons/plus (1).png");
     background-repeat: no-repeat;
     background-size: 6%;
 }
 
 .join {
-    background-image: url("../../icons/add.png");
+    background-image: url("../media/icons/add.png");
     background-repeat: no-repeat;
     background-size: 6%;
 }
 
 .tower {
-    background-image: url("../../icons/toweractive.png");
+    background-image: url("../media/icons/toweractive.png");
     background-repeat: no-repeat;
     background-size: 40%;
     background-position: center 60px;

@@ -29,9 +29,9 @@ main a:hover {
 }
 
 main a:first-of-type {
-    background-image: url("../../icons/fortress.png");
+    background-image: url("../media/icons/fortress.png");
 }
 
 main a:last-of-type {
-    background-image: url("../../icons/book.png");
+    background-image: url("../media/icons/book.png");
 }

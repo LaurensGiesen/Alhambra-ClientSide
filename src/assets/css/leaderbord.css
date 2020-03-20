@@ -61,7 +61,7 @@ div article.first div{
     margin-top: 25px;
     height: 106px;
     width: 428px;
-    background-image: url("../../icons/one.png");
+    background-image: url("../media/icons/one.png");
     background-repeat: no-repeat;
     background-size: 12%;
     background-position: 180px 30px;
@@ -71,7 +71,7 @@ div article.second div{
     border: solid;
     height: 92px;
     width:428px;
-    background-image: url("../../icons/two.png");
+    background-image: url("../media/icons/two.png");
     background-repeat: no-repeat;
     background-size: 12%;
     background-position: 178px 20px;
@@ -81,7 +81,7 @@ div article.third div{
     border: solid;
     height: 72px;
     width: 380px;
-    background-image: url("../../icons/three.png");
+    background-image: url("../media/icons/three.png");
     background-repeat: no-repeat;
     background-size: 12%;
     background-position: 178px 13px;
@@ -118,21 +118,21 @@ aside article p{
     padding-top: 17px;
 }
 aside article.fourth{
-    background-image: url("../../icons/four.png");
+    background-image: url("../media/icons/four.png");
     background-repeat: no-repeat;
     background-size: 3%;
     background-position: 178px 8px;
 }
 
 aside article.fifth{
-    background-image: url("../../icons/five.png");
+    background-image: url("../media/icons/five.png");
     background-repeat: no-repeat;
     background-size: 3%;
     background-position: 178px 8px;
 }
 
 aside article.sixth{
-    background-image: url("../../icons/six.png");
+    background-image: url("../media/icons/six.png");
     background-repeat: no-repeat;
     background-size: 3%;
     background-position: 178px 8px;
