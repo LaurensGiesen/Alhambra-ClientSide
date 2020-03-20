@@ -59,6 +59,8 @@
     height: 115px;
     width: 115px;
     border: 5px solid transparent;
+    background-image: url("../../media/wood.jpg");
+    background-size: cover;
 }
 
 #alhambra .tile span {
@@ -89,27 +91,27 @@
     border-radius: 10px 10px 100px 10px;
 }
 
-#alhambra .pavilion {
+.pavilion img, .pavilion span{
     -webkit-filter: drop-shadow(5px 5px 5px #4d7fce);
     filter:         drop-shadow(5px 5px 5px #4d7fce);
 }
-#alhambra .garden {
+.garden img, .garden span{
     -webkit-filter: drop-shadow(5px 5px 5px #61ab3a);
     filter:         drop-shadow(5px 5px 5px #61ab3a);
 }
-#alhambra .seraglio {
+.seraglio img, .seraglio span{
     -webkit-filter: drop-shadow(5px 5px 5px #e83328);
     filter:         drop-shadow(5px 5px 5px #e83328);
 }
-#alhambra .arcade {
+.arcade img, .arcade span {
     -webkit-filter: drop-shadow(5px 5px 5px #fa822c);
     filter:         drop-shadow(5px 5px 5px #fa822c);
 }
-#alhambra .tower {
+.tower img, .tower span{
     -webkit-filter: drop-shadow(5px 5px 5px #ab479d);
     filter:         drop-shadow(5px 5px 5px #ab479d);
 }
-#alhambra .chamber {
+.chamber img, .chamber span {
     -webkit-filter: drop-shadow(5px 5px 5px #ffce33);
     filter:         drop-shadow(5px 5px 5px #ffce33);
 }
