@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Create-game</title>
+    <title>Alhambra</title>
     <link rel="stylesheet" type="text/css" href="../assets/css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/css/general.css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -10,23 +10,21 @@
     <link rel="stylesheet" href="../assets/css/game-setup.css">
 </head>
 <body>
+<a href="game-start.html" id="return"></a>
 
-    <aside>
-        <a href="game-start.html" id="return"></a>
-        <!-- terug icoon -->
-    </aside>
+<form>
+    <label for="kingdomName">Name:</label>
+    <input type="text" id="kingdomName" name="kingdomName" placeholder="Enter Kingdom name">
 
-    <div class="tower">
-        <label for="kingdomName">Name:</label>
-        <input type="text" id="kingdomName" name="kingdomName" placeholder="Enter Kingdom name">
-    </div>
+    <fieldset class="submit">
+        <label for="submit">Create Kingdom:</label>
+        <input type="submit" id="submit" value="">
+    </fieldset>
+</form>
 
-    <footer>
-        <p>Create Kingdom:</p>
-        <a href="game-lobby.html"><img src="../assets/media/icons/hammer.png" alt="hammer"></a>
-    </footer>
-    <script src="../assets/js/config.js"></script>
-    <script src="../assets/js/communication.js"></script>
-    <script src="../assets/js/script.js"></script>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/communication.js"></script>
+<script src="../assets/js/script.js"></script>
+<script src="../assets/js/setupGame/setupGame.js"></script>
 </body>
 </html>
