@@ -1,0 +1,45 @@
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 900px;
+    height: calc(100% - 50px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    background-image: url("../media/cartoon-castle-vector-art.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center 50px;
+}
+
+span {
+    margin-bottom: 25px;
+    padding-left: 125px;
+    line-height: 1.5;
+    font-size: 3rem;
+    font-family: 'MedievalSharp', cursive;
+}
+
+span a, span a:visited, span a:hover {
+    text-decoration: none;
+    color: black;
+
+}
+
+span.create {
+    background-image: url("../media/icons/plus (1).png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+span.join {
+    background-image: url("../media/icons/add.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
