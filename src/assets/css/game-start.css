@@ -9,14 +9,18 @@ div {
     justify-content: flex-end;
     align-items: center;
     width: 900px;
-    height: calc(100% - 50px);
+    height: calc(100% - 170px);
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 50px;
+    padding-bottom: 170px;
     background-image: url("../media/cartoon-castle-vector-art.png");
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center 50px;
+    background-position: center 10px;
+}
+
+div span a:hover {
+    color: red;
 }
 
 span {
@@ -27,7 +31,7 @@ span {
     font-family: 'MedievalSharp', cursive;
 }
 
-span a, span a:visited, span a:hover {
+span a {
     text-decoration: none;
     color: black;
 
