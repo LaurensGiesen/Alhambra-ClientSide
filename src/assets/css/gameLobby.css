@@ -18,7 +18,7 @@ header aside a {
     left: 20px;
     height: 75px;
     width: 75px;
-    background-image: url("../../icons/left-arrow.png");
+    background-image: url("../media/icons/left-arrow.png");
     background-repeat: no-repeat;
     background-size: 75px;
 }
@@ -28,7 +28,7 @@ header h1{
     display: inline-block;
     margin-left: 1300px;
     padding: 2.5% 0 2.5% 3%;
-    background-image: url("../../icons/joystick.png");
+    background-image: url("../media/icons/joystick.png");
     background-size: 32%;
     background-repeat: no-repeat;
     background-position: center left;
@@ -78,7 +78,7 @@ main .twee div{
     justify-content: space-between;
 }
 main .ready h3, .notReady h3{
-    background-image: url("../../icons/user.png");
+    background-image: url("../media/icons/user.png");
     background-repeat:no-repeat;
     background-size: 40px;
     background-position: center left;
@@ -87,7 +87,7 @@ main .ready h3, .notReady h3{
     margin-left: 1%;
 }
 main .ready h4, .notReady h4{
-    background-image: url("../../icons/rightgreen.png");
+    background-image: url("../media/icons/rightgreen.png");
     background-repeat: no-repeat;
     background-size: 25px;
     background-position: center right;
@@ -96,7 +96,7 @@ main .ready h4, .notReady h4{
     margin-right: 1% ;
 }
 .notReady h4{
-    background-image: url("../../icons/closered.png");
+    background-image: url("../media/icons/closered.png");
     background-size: 25px;
 }
 
@@ -107,7 +107,7 @@ main h5, main h6{
     background-position: center left;
 }
 main h5{
-    background-image: url("../../icons/finish.png");
+    background-image: url("../media/icons/finish.png");
     font-size: 3rem;
     width: 361px;
     margin-top: 1%;
@@ -122,7 +122,7 @@ main h5:hover{
     width: 670px;
 }
 .timer h6{
-    background-image: url("../../icons/timer.png");
+    background-image: url("../media/icons/timer.png");
     display: inline-block;
     font-size: 2rem;
 }
