@@ -27,12 +27,12 @@
     -webkit-filter: drop-shadow(5px 5px 5px #61ab3a);
     filter:         drop-shadow(5px 5px 5px #61ab3a);
 }
-#players article p:first-of-type {
+#players article h2 {
     font-size: 1rem;
     font-weight: bold;
     padding-bottom: 5px;
 }
-#players article p:last-of-type {
+#players article p {
     position: absolute;
     right: 16px;
     top: 35px;
