@@ -1,0 +1,41 @@
+#players {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../../media/empty.jpg");
+    background-size: cover;
+    padding: 10px;
+    border: 5px solid transparent;
+    border-radius: 10px;
+}
+
+#players article {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    width: 125px;
+    height: 125px;
+    background-image: url("../../media/icons/board/knight.png"), url("../../media/icons/board/shield.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right 20px;
+    background-size: 100px, 50px;
+    -webkit-filter: drop-shadow(5px 5px 5px #e83328);
+    filter:         drop-shadow(5px 5px 5px #e83328);
+}
+#players article.active {
+    -webkit-filter: drop-shadow(5px 5px 5px #61ab3a);
+    filter:         drop-shadow(5px 5px 5px #61ab3a);
+}
+#players article p:first-of-type {
+    font-size: 1rem;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+#players article p:last-of-type {
+    position: absolute;
+    right: 16px;
+    top: 35px;
+    font-weight: bold;
+    font-size: 1rem;
+}
