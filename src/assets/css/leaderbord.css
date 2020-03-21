@@ -1,158 +1,122 @@
 body {
     font-family: 'MedievalSharp', cursive;
-    margin-left: auto;
-    margin-right: auto;
 }
 header{
-    width: 1100px;
-
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid black;
 }
 header h1 {
-    font-size: 2rem;
-    width: 1260px;
+    font-size: 3rem;
     color: black;
-    border: solid;
     text-align: center;
-    margin-top: 20px;
-    margin-left: 14%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+}
+main {
+    width: 900px;
+    margin: auto;
+}
 
-    }
-
-
-div{
-    width: 85%;
+#podium {
     display: flex;
     flex-direction: row;
-    margin-left: 8%;
-    margin-top: 2%;
-    height: 210px;
+    justify-content: space-around;
+    height: 200px;
+    align-items: flex-end;
+    margin-bottom: 30px;
 }
 
-div article p{
-    text-align: center;
-    font-size: 1.4rem;
-    padding-left: 20px;
-    margin-right: auto;
+#podium article {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: end;
+    width: 25%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
 }
-div article h2{
+#podium article:nth-of-type(1) {
+    padding-bottom: 90px;
+    background-image: url("../media/podium.png");
+}
+#podium article:nth-of-type(2) {
+    padding-bottom: 130px;
+    background-image: url("../media/podium-high.png");
+}
+#podium article:nth-of-type(3) {
+    padding-bottom: 90px;
+    background-image: url("../media/podium.png");
+}
+#podium article h2 {
     font-size: 1.6rem;
     text-align: center;
-    padding-left: 190px;
-    margin-right: 160px;
 }
-div article{
-
-    width: 33%;
+#podium article h3 {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
 }
-div article.second{
-    margin-top:30px;
+#podium article:nth-of-type(2) h3 {
+    bottom: 55px;
 }
-
-div article.third{
-    margin-top:50px;
-
-}
-
-
-div article.first div{
-    border: solid;
-    margin-top: 25px;
-    height: 106px;
-    width: 428px;
-    background-image: url("../media/icons/one.png");
-    background-repeat: no-repeat;
-    background-size: 12%;
-    background-position: 180px 30px;
+#podium article p {
+    font-size: 1.4rem;
+    text-align: center;
 }
 
-div article.second div{
-    border: solid;
-    height: 92px;
-    width:428px;
-    background-image: url("../media/icons/two.png");
-    background-repeat: no-repeat;
-    background-size: 12%;
-    background-position: 178px 20px;
-}
-
-div article.third div{
-    border: solid;
-    height: 72px;
-    width: 380px;
-    background-image: url("../media/icons/three.png");
-    background-repeat: no-repeat;
-    background-size: 12%;
-    background-position: 178px 13px;
-}
-
-aside{
-    display:flex;
+#list {
+    display: flex;
     flex-direction: column;
-    font-family: 'MedievalSharp', cursive;
+    margin-bottom: 30px;
 }
-aside article{
-    display:flex;
+
+#list article {
+    display: flex;
     flex-direction: row;
-    padding-bottom: 17px;
-    border: solid;
-    margin-top: 20px;
-    margin-left: 9%;
-    width: 82%;
-    justify-content: space-between;
-
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 20px;
 }
-
-aside article p, h2{
+#list article h3 {
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
     font-size: 1.5rem;
+    width: 20%;
 }
-
-aside article h2{
-    margin-left: 20%;
-    padding-top: 17px;
+#list article h2 {
+    font-size: 1.8rem;
+    width: 50%;
 }
-
-aside article p{
-    margin-right: 5%;
-    padding-top: 17px;
+#list article p {
+    font-size: 1.5rem;
+    width: 30%;
 }
-aside article.fourth{
-    background-image: url("../media/icons/four.png");
-    background-repeat: no-repeat;
-    background-size: 3%;
-    background-position: 178px 8px;
-}
-
-aside article.fifth{
-    background-image: url("../media/icons/five.png");
-    background-repeat: no-repeat;
-    background-size: 3%;
-    background-position: 178px 8px;
-}
-
-aside article.sixth{
-    background-image: url("../media/icons/six.png");
-    background-repeat: no-repeat;
-    background-size: 3%;
-    background-position: 178px 8px;
-}
-
 
 footer{
-    height: 75px;
-    margin-top: 50px;
-    width: 350px;
-    margin-left: 1100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer a{
     text-decoration: none;
     border: solid;
+    border-radius: 10px;
     color: black;
-    margin-right: 20px;
+    margin-left: 20px;
     padding: 30px;
-
 }
 
 footer a:hover{
