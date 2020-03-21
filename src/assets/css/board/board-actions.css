@@ -19,7 +19,6 @@
 #actions article h2 {
     margin: 5px;
     padding-top: 90px;
-    background-image: url("../../media/icons/board/build.png");
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -30,6 +29,17 @@
     -webkit-filter: drop-shadow(5px 5px 5px #e83328);
     filter:         drop-shadow(5px 5px 5px #e83328);
 }
+
+#actions article#money h2 {
+    background-image: url("../../media/icons/board/take money.png");
+}
+#actions article#buy h2 {
+    background-image: url("../../media/icons/board/buy.png");
+}
+#actions article#build h2 {
+    background-image: url("../../media/icons/board/build.png");
+}
+
 
 #actions.active article h2{
     -webkit-filter: drop-shadow(5px 5px 5px #61ab3a);
