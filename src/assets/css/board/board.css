@@ -11,7 +11,7 @@ main {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 300px 2fr 1fr 150px;
-    grid-template-rows: 40px 4fr 2fr 1fr 150px;
+    grid-template-rows: 40px 250px 2fr 1fr 150px;
 }
 
 #alhambra {
@@ -23,7 +23,6 @@ main {
     grid-area: 1 / 1 / span 1 / span 1;
 }
 #publicmarket {
-    background-color: orange;
     grid-area: 2 / 1 / span 1 / span 1;
 }
 #publicbank {
