@@ -18,7 +18,7 @@
 }
 #publicmarket h3 {
     position: absolute;
-    right: 10px;
+    left: 10px;
     top: 132px;
     font-size: 0.9rem;
     font-weight: bold;
@@ -72,7 +72,7 @@
     position: absolute;
     bottom: 5px;
     right: 5px;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
