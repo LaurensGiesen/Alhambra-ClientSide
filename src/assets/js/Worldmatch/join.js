@@ -1,13 +1,14 @@
 "use strict";
-let _games = null;
 
+let _games = null;
+let _playerToken = null;
 
 document.addEventListener('DOMContentLoaded',init);
 
 function init(){
     getGroup();
     document.querySelector(".popUpDeactive form input").addEventListener('click', goTo);
-    // document.querySelector("input.joinButton").addEventListener('click', joinGame);
+    document.querySelector("input.joinButton").addEventListener('click', joinGame);
 
 }
 function goTo(e){
@@ -31,17 +32,20 @@ function getGroup() {
     })
 }
 
-// let playerName = localStorage.getItem('playername');
-//
-// function joinGame() {
-//     console.log("Gooffof");
-//     console.log(playerName);
-//     console.log(_gameId[0]);
-//
-//     fetchFromServer(`${config.root}games/${_gameId[0]}/players`, 'POST', {playerName: `${playerName}`}).then(function(response){
-//         _playerToken = response;
-//         console.log(_playerToken);
-//         // window.location.href = "game-lobby.html";
-//     })
-// }
-//
+
+
+function joinGame(e) {
+    e.preventDefault();
+    let playerName = localStorage.getItem('playername');
+    let h3 = document.querySelector("div.titelPopUp h3").innerHTML;
+    console.log(h3);
+    console.log(playerName);
+
+    fetchFromServer(`${config.root}games/${h3}/players`, 'POST', {playerName: `${playerName}`}).then(function(response){
+        _playerToken = response;
+        console.log(_playerToken);
+        localStorage.setItem("playerToken", _playerToken);
+        window.location.href = "game-lobby.html";
+    })
+}
+

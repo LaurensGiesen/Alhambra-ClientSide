@@ -23,13 +23,12 @@ function createNewGame(e) {
     } else
     fetchFromServer(`${config.root}games`, 'POST', {prefix:`group${config.groupnumber}` }).then(function (response) {
         _games = response;
-
         joinGame(_games,playerName);
     })
 });
 
-function joinGame(_gameId,playerName) {
-    fetchFromServer(`${config.root}games/${_gameId}/players`, 'POST', {playerName: `${playerName}`}).then(function(response){
+function joinGame(_games,playerName) {
+    fetchFromServer(`${config.root}games/${_games}/players`, 'POST', {playerName: `${playerName}`}).then(function(response){
         _playerToken = response;
         localStorage.setItem("playerToken", _playerToken);
         window.location.href = "game-lobby.html";
