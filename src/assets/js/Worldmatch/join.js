@@ -1,7 +1,7 @@
 "use strict";
 
 let _games = null;
-// let _playerToken = null;
+let _playerToken = null;
 
 document.addEventListener('DOMContentLoaded',init);
 
@@ -34,7 +34,8 @@ function getGroup() {
 
 
 
-function joinGame() {
+function joinGame(e) {
+    e.preventDefault();
     let playerName = localStorage.getItem('playername');
     let h3 = document.querySelector("div.titelPopUp h3").innerHTML;
     console.log(h3);
@@ -43,7 +44,8 @@ function joinGame() {
     fetchFromServer(`${config.root}games/${h3}/players`, 'POST', {playerName: `${playerName}`}).then(function(response){
         _playerToken = response;
         console.log(_playerToken);
-        // window.location.href = "game-lobby.html";
+        localStorage.setItem("playerToken", _playerToken);
+        window.location.href = "game-lobby.html";
     })
 }
 
