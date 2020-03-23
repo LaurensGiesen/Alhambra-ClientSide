@@ -19,7 +19,7 @@
     background-color: rgba(0,0,0,0.4);
 }
 
-#options .popup-content {
+#options .popup-content, #options .popup-warning {
     background-color: #fefefe;
     border: 1px solid #888;
     width: 50%;
@@ -69,4 +69,58 @@
 #options .popup-content ul #resume {background-image: url("../../media/icons/right.png");}
 #options .popup-content ul #rules {background-image: url("../../media/icons/book.png");}
 #options .popup-content ul #leave {background-image: url("../../media/icons/logout.png");}
+
+#options .popup-warning div {
+    margin: 20px;
+    border: 1px solid black;
+    padding: 20px;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#options .popup-warning div  header {
+    padding-left: 100px;
+    background-image: url("../../media/icons/alert.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#options .popup-warning div header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 5px;
+    font-family: 'MedievalSharp', cursive;
+}
+#options .popup-warning div header p {
+    padding-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#options .popup-warning div ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+#options .popup-warning div ul li {
+    padding-left: 80px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'MedievalSharp', cursive;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+    cursor: pointer;
+}
+
+#options .popup-warning div ul li:hover {
+    color: red;
+}
+
+#options .popup-warning div ul #leaveyes {background-image: url("../../media/icons/right.png");}
+#options .popup-warning div ul #leaveno {background-image: url("../../media/icons/close.png");}
 
