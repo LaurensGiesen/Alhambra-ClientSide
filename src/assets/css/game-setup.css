@@ -24,6 +24,7 @@ form input[type=text]{
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
     margin-left: 10px;
+    text-align: center;
 }
 
 fieldset.submit{
