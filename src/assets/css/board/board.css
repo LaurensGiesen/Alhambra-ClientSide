@@ -10,8 +10,8 @@ main {
     height: calc(100vh - 20px);
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: 300px 2fr 1fr 200px;
-    grid-template-rows: 40px 4fr 2fr 1fr 200px;
+    grid-template-columns: 300px 2fr 1fr 150px;
+    grid-template-rows: 40px 4fr 2fr 1fr 150px;
 }
 
 #alhambra {
@@ -43,6 +43,5 @@ main {
     grid-area: 5 / 3 / span 1 / span 1;
 }
 #players {
-    background-color: purple;
     grid-area: 1 / 4 / span 5 / span 1;
 }
