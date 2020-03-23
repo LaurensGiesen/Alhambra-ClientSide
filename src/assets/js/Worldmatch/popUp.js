@@ -21,7 +21,7 @@ function open(e) {
         let fig = e.target.id.substring(2);
         document.querySelector("div.titelPopUp").innerHTML =
             `<h3>${_games[fig].id}</h3>
-                <h4> ${_games[fig].playerCount}/6 </h4>`
+                <h4>${_games[fig].playerCount}/6 </h4>`
         // popUp.innerHTML =
     }
     else{
