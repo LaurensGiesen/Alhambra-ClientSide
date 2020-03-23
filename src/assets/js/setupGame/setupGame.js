@@ -19,7 +19,7 @@ function createNewGame(e) {
         _games = response;
 
     if (_games.length > 12){
-        alert("All the lobby's are currently being used.");
+        window.alert("All the lobby's are currently being used.");
     } else
     fetchFromServer(`${config.root}games`, 'POST', {prefix:`group${config.groupnumber}` }).then(function (response) {
         _games = response;
