@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded',init);
 let randomNumber = Math.floor(Math.random() * 999999999);
 
 function init(){
-    console.log("succesvol geladen");
     document.querySelector("h5").addEventListener("click", ready);
     random()
 }
