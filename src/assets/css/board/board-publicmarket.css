@@ -1,0 +1,86 @@
+#publicmarket {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 10px;
+    background-image: url("../../media/empty.jpg");
+    border-radius: 10px;
+}
+#publicmarket h2 {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'MedievalSharp', cursive;
+    text-decoration: underline;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+#publicmarket h3 {
+    position: absolute;
+    left: 10px;
+    top: 132px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+#publicmarket .market {
+    display: flex;
+    width: 130px;
+    height: 92px;
+    padding: 5px;
+    background-repeat: no-repeat;
+    background-size: 100px;
+}
+#publicmarket #bluemarket {
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-image: url("../../media/blue.png");
+    background-position: -25px -25px;
+    border-radius: 10px 0 0 0;
+}
+#publicmarket #greenmarket {
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-image: url("../../media/green.png");
+    background-position: 80px -25px;
+    border-radius: 0 10px 75px 0;
+}
+#publicmarket #orangemarket {
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-image: url("../../media/orange.png");
+    background-position: -25px 40px;
+    border-radius: 0 0 0 10px;
+}
+#publicmarket #yellowmarket {
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-image: url("../../media/yellow.png");
+    background-position: 80px 40px;
+    border-radius: 0 75px 10px 0;
+}
+#publicmarket .market .tile {
+    height: 75px;
+    width: 75px;
+    position: relative;
+    border: 5px solid transparent;
+    border-radius: 10px;
+    background-image: url("../../media/wood.jpg");
+    background-size: cover;
+}
+#publicmarket .tile span {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+#publicmarket .tile img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 73px;
+    width: 73px;
+    border-radius: 10px 10px 100px 10px;
+}
