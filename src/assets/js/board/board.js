@@ -22,7 +22,6 @@ function shortcuts(e){
     switch(e.keyCode){
         case 37: //ArrowLeft
             alh.scrollBy(tileHeight*-1,0);
-            console.log(tileHeight);
             break;
         case 38: //ArrowUp
             alh.scrollBy(0, tileHeight*-1);

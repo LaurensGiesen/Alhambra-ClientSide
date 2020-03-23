@@ -1,11 +1,10 @@
 "use strict";
-let _gameId = null;
+let _games = null;
 
 
 document.addEventListener('DOMContentLoaded',init);
 
 function init(){
-    console.log("join page");
     getGroup();
     document.querySelector(".popUpDeactive form input").addEventListener('click', goTo);
     // document.querySelector("input.joinButton").addEventListener('click', joinGame);
@@ -18,18 +17,14 @@ function goTo(e){
 
 function getGroup() {
 
-    fetchFromServer(`http://172.21.22.52:48201/alhambra-api/games?details=true&prefix=group20`, 'GET').then(function (response) {
-        _gameId = response;
-        console.log(_gameId);
-        console.log("Item:");
-        console.log(_gameId[0].playerCount);
+    fetchFromServer(`${config.root}games?details=true&prefix=group${config.groupnumber}`, 'GET').then(function (response) {
+        _games = response;
 
-
-        while (_gameId.length > 12){
-            _gameId.pop();
+        while (_games.length > 12){
+            _games.pop();
         }
 
-        for (let i = 0; i < _gameId.length; i++) {
+        for (let i = 0; i < _games.length; i++) {
             document.querySelector('main figure:nth-child(' + (i+1) + ')').innerHTML =
                 `<img src="../assets/media/icons/toweractive.png" alt="Tower" title="tower" class="active" id="id${i}">`
         }
