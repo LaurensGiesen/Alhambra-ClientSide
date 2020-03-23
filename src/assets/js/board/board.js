@@ -16,8 +16,8 @@ function scrollToFountain() {
 }
 
 function shortcuts(e){
-    let alh = document.querySelector("#alhambra");
-    let tileHeight = document.querySelector(".row0").clientHeight;
+    const alh = document.querySelector("#alhambra");
+    const tileHeight = document.querySelector(".row0").clientHeight;
     e.preventDefault();
     switch(e.keyCode){
         case 37: //ArrowLeft
@@ -31,6 +31,8 @@ function shortcuts(e){
             break;
         case 40: //ArrowDown
             alh.scrollBy(0,parseInt(tileHeight));
+            break;
+        default:
             break;
     }
 }

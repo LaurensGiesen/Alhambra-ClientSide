@@ -67,7 +67,30 @@
     </div>
     <div id="options">
         <img src="../assets/media/icons/board/options.png" alt="option">
-
+        <div class="popup">
+            <div class="popup-content">
+                <header>
+                    <h2>close</h2>
+                </header>
+                <ul>
+                    <li id="resume">Resume</li>
+                    <li id="rules">Game Rules</li>
+                    <li id="leave">Leave game</li>
+                </ul>
+            </div>
+            <div class="popup-warning">
+                <div>
+                    <header>
+                        <h2>Warning</h2>
+                        <p>Are you sure you want to leave this game? If you leave this game, you'll automatically lose.</p>
+                    </header>
+                    <ul>
+                        <li id="leaveyes">Yes</li>
+                        <li id="leaveno">No</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="publicmarket">
         <h2>Public market</h2>
@@ -180,8 +203,10 @@
     </div>
 </main>
 <script src="../assets/js/board/board.js"></script>
+<script src="../assets/js/board/board-options.js"></script>
 <script src="../assets/js/config.js"></script>
 <script src="../assets/js/communication.js"></script>
 <script src="../assets/js/script.js"></script>
+
 </body>
 </html>
