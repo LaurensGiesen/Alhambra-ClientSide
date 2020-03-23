@@ -32,5 +32,7 @@ function shortcuts(e){
         case 40: //ArrowDown
             alh.scrollBy(0,parseInt(tileHeight));
             break;
+        default:
+            break;
     }
 }
