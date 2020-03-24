@@ -38,7 +38,7 @@ function showDetails(response) {
         addPlayerStroke.innerHTML = "";
         for (let i = 0; i < playerCount; i++) {
                 addPlayerStroke.innerHTML +=
-                    `<div class="notReady">
+                    `<div class="notReady" data-player=${playerName[i]}>
                     <h3>${playerName[i]}</h3>
                     <h4>Not Ready</h4>
                 </div>`;
