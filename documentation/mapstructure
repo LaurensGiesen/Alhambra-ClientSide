@@ -1,0 +1,58 @@
+# **Map Structure**
+
+To keep the project structured, we'll use the following maps:
+- src
+    - assets
+        - css
+        - js
+            - pages
+            - functions
+        - media
+            - icons
+            - textures
+            - figures
+    - html
+    - images
+    
+##css
+All css files are stored in one map. 
+The filename is all in lowercase and is identical to the .html file it refers to.
+In case a css file is used for only a part of a file, the name will be as follows:
+filename-part.css.
+
+##js
+###pages
+For each html file, there is one .js file with an identical name. 
+This file will contain the DOMContentLoaded 
+and the functions that make use of elements on that page.
+
+###functions
+In this map, there will be several files that contain js-functions. 
+Each file only contains functions of the same subject. 
+The file is named after that subject, making use of only lowercase and - to seperate words.
+
+This map contains the files communication.js and config.js.
+
+##media
+###icons
+Only .png files with icon-like content are placed in this map. 
+Each file is renamed to what it contains in lowercase and - is used to seperate words.
+
+###textures
+Mainly .jpg files with textures that serve as background for pages and elements. 
+Each file is renamed to a comprehensible name in lowercase and - is used to seperate words.
+
+###figures
+All images that are used as design but that do not fall under icons. 
+Each file is renamed to what it contains in lowercase and - is used to seperate words.
+
+##html 
+All .html files (except index.html) are placed in this map. 
+Each filed is named as short as possible with only lowercase and -. 
+Each name should clearly state what is done on the page.
+
+##images
+Only pictures that are added to a html file as `<img>`. It gives content, not just design.
+Each picture is renamed with only lowercase and - to seperate words, 
+clearly stating what the image represents.
+
