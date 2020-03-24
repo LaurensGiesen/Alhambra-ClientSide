@@ -9,11 +9,11 @@ function init() {
     loadingLobby();
 }
 
-let _playerToken = localStorage.getItem('playerToken');
+const _playerToken = localStorage.getItem('playerToken');
 
 function loadingLobby() {
 
-    let split1 = _playerToken.split('+');
+    const split1 = _playerToken.split('+');
     _gameId = split1[0];
 
     fetchFromServer(`${config.root}games/${_gameId}`, 'GET')
@@ -24,15 +24,15 @@ function loadingLobby() {
             showDetails(response);
         }
 
-    })
+    });
 }
 
 function showDetails(response) {
 
-    let playerCount = response.playerCount;
-    let playerAlreadyExisting = document.querySelectorAll("section.twee div h3");
-    let playerName = response.players;
-    let addPlayerStroke = document.querySelector("section.twee");
+    const playerCount = response.playerCount;
+    const playerAlreadyExisting = document.querySelectorAll("section.twee div h3");
+    const playerName = response.players;
+    const addPlayerStroke = document.querySelector("section.twee");
 
     if(playerCount !== playerAlreadyExisting.length){
         addPlayerStroke.innerHTML = "";
@@ -41,7 +41,7 @@ function showDetails(response) {
                     `<div class="notReady">
                     <h3>${playerName[i]}</h3>
                     <h4>Not Ready</h4>
-                </div>`
+                </div>`;
             }
     }
 
