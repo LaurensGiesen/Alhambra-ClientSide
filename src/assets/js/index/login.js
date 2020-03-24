@@ -8,7 +8,7 @@ function init(){
 
 function logPlayername(e){
     e.preventDefault();
-    let playername = e.target.elements.playername.value;
+    const playername = e.target.elements.playername.value;
     if(validatePlayername(playername)){
         storePlayername(playername);
         window.location.href = "html/game-menu.html";

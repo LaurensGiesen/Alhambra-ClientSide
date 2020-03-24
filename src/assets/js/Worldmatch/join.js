@@ -26,18 +26,19 @@ function getGroup() {
         }
 
         for (let i = 0; i < _games.length; i++) {
-            document.querySelector('main figure:nth-child(' + (i+1) + ')').innerHTML =
-                `<img src="../assets/media/icons/toweractive.png" alt="Tower" title="tower" class="active" id="id${i}">`
+            const towerLoading = document.querySelector('main figure:nth-child(' + (i+1) + ')');
+            towerLoading.innerHTML =
+                `<img src="../assets/media/icons/toweractive.png" alt="Tower" title="tower" class="active" id="id${i}">`;
         }
-    })
+    });
 }
 
 
 
 function joinGame(e) {
     e.preventDefault();
-    let playerName = localStorage.getItem('playername');
-    let h3 = document.querySelector("div.titelPopUp h3").innerHTML;
+    const playerName = localStorage.getItem('playername');
+    const h3 = document.querySelector("div.titelPopUp h3").innerHTML;
     console.log(h3);
     console.log(playerName);
 
@@ -46,6 +47,6 @@ function joinGame(e) {
         console.log(_playerToken);
         localStorage.setItem("playerToken", _playerToken);
         window.location.href = "game-lobby.html";
-    })
+    });
 }
 
