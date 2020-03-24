@@ -1,50 +1,53 @@
 "use strict";
 
 let _games = null;
+let _gameId = null;
 
 document.addEventListener('DOMContentLoaded',init);
 
 function init() {
-    console.log("Ho maat de pagina laad gwne");
-    inladen();
-    joinedPlayers();
+    loadingLobby();
 }
 
-function inladen() {
+let _playerToken = localStorage.getItem('playerToken');
 
-    console.log("ej");
+function loadingLobby() {
 
-    let playerName = localStorage.getItem('playername');
-    console.log(playerName);
-    document.querySelector("section.twee").innerHTML +=
-        `<div class="notReady">
-            <h3>${playerName}</h3>
-            <h4>Not Ready</h4>
-        </div>`
-}
+    let split1 = _playerToken.split('+');
+    _gameId = split1[0];
 
-function joinedPlayers() {
+    fetchFromServer(`${config.root}games/${_gameId}`, 'GET')
+        .then(function (response) {
 
-    let playerToken = localStorage.getItem('playerToken');
-
-    console.log(playerToken);
-
-    let split1 = playerToken.split('+');
-
-    console.log(split1[0]);
-
-    fetchFromServer(`${config.root}games?details=true&prefix=group${config.groupnumber}`, 'GET').then(function (response) {
-        _games = response;
-
-        console.log(_games);
-
-        for (let i = 0; i < _games.length; i++){
-            if (_games[i].id === split1[0]) {
-                let aantal = _games[i].playerCount;
-                console.log(aantal);
-                document.querySelector("div.eerst").innerHTML +=
-                    `<p>${aantal}/6</p>`;
-            }
+        if(!response.started) {
+            setTimeout(loadingLobby, 1000);
+            showDetails(response);
         }
-    });
+
+    })
+}
+
+function showDetails(response) {
+
+    let playerCount = response.playerCount;
+    let playerAlreadyExisting = document.querySelectorAll("section.twee div h3");
+    let playerName = response.players;
+    let addPlayerStroke = document.querySelector("section.twee");
+
+    if(playerCount !== playerAlreadyExisting.length){
+        addPlayerStroke.innerHTML = "";
+        for (let i = 0; i < playerCount; i++) {
+                addPlayerStroke.innerHTML +=
+                    `<div class="notReady">
+                    <h3>${playerName[i]}</h3>
+                    <h4>Not Ready</h4>
+                </div>`
+            }
+    }
+
+    document.querySelector("header p").innerHTML = _gameId;
+
+    document.querySelector("div.eerst").innerHTML =
+        `<h2>Joined players:</h2>
+         <p>${playerCount}/6</p>`;
 }
