@@ -37,6 +37,11 @@ function openWarning(e){
 
 function leaveGame(e){
     e.preventDefault();
-    //TODO: logout from game
-    window.location.href = "game-menu.html";
+    fetchFromServer(`${config.root}games/${_gameId}/players/${_playername}`, 'DELETE', {}).then(function(response){
+        if(response === true){
+            localStorage.setItem("gameId", "");
+            localStorage.setItem("playerToken", "");
+            window.location.href = "game-menu.html";
+        }
+    });
 }
