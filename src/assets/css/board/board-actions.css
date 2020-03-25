@@ -34,13 +34,13 @@
     filter:         drop-shadow(5px 5px 5px #e83328);
 }
 
-#actions article#money h3 {
+#actions #money h3 {
     background-image: url("../../media/icons/board/take money.png");
 }
-#actions article#buy h3 {
+#actions #buy h3 {
     background-image: url("../../media/icons/board/buy.png");
 }
-#actions article#build h3 {
+#actions #build h3 {
     background-image: url("../../media/icons/board/build.png");
 }
 
