@@ -1,3 +1,7 @@
+#options h2 {
+    display: none;
+}
+
 #options img {
     height: 40px;
     width: 40px;
@@ -88,7 +92,7 @@
     background-repeat: no-repeat;
 }
 
-#options .popup-warning div header h2 {
+#options .popup-warning div header h3 {
     font-size: 2rem;
     font-weight: bold;
     padding-bottom: 5px;
