@@ -31,6 +31,9 @@
     background-repeat: no-repeat;
     background-size: 100px;
 }
+#publicmarket .market h3 {
+    display: none;
+}
 #publicmarket #bluemarket {
     justify-content: flex-end;
     align-items: flex-end;
@@ -68,7 +71,7 @@
     background-image: url("../../media/wood.jpg");
     background-size: cover;
 }
-#publicmarket .tile span {
+#publicmarket .tile h4 {
     position: absolute;
     bottom: 5px;
     right: 5px;
