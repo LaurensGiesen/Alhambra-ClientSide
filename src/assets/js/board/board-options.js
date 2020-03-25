@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded',init);
 
 function init(){
     document.querySelector("#options img").addEventListener('click', openPopup);
-    document.querySelector("#options .popup header h2").addEventListener('click', closePopup);
+    document.querySelector("#options .popup header h3").addEventListener('click', closePopup);
     document.querySelector("#options .popup #resume").addEventListener('click', closePopup);
     document.querySelector("#options .popup #rules").addEventListener('click', openRules);
     document.querySelector("#options .popup #leave").addEventListener('click', openWarning);

@@ -75,6 +75,7 @@
 #options .popup-content ul #leave {background-image: url("../../media/icons/logout.png");}
 
 #options .popup-warning div {
+    width: 100%;
     margin: 20px;
     border: 1px solid black;
     padding: 20px;
