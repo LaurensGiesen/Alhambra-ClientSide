@@ -24,6 +24,9 @@
     grid-auto-columns: 100%;
     grid-auto-rows: 30px;
 }
+#personalbank .moneystack h3 {
+    display: none;
+}
 #personalbank .moneystack .money {
     display: flex;
     position: relative;
