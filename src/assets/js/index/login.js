@@ -11,7 +11,7 @@ function logPlayername(e){
     const playername = e.target.elements.playername.value;
     if(validatePlayername(playername)){
         storePlayername(playername);
-        window.location.href = "html/game-menu.html";
+        window.location.href = "html/gamemenu.html";
     } else {
         showError();
     }

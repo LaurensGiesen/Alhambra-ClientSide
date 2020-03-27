@@ -41,7 +41,7 @@ function leaveGame(e){
         if(response === true){
             localStorage.setItem("gameId", "");
             localStorage.setItem("playerToken", "");
-            window.location.href = "game-menu.html";
+            window.location.href = "gamemenu.html";
         }
     });
 }

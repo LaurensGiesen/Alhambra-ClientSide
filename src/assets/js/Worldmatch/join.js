@@ -13,7 +13,7 @@ function init(){
 }
 function goTo(e){
     e.preventDefault();
-    window.location.href = "game-setup.html";
+    window.location.href = "gamesetup.html";
 }
 
 function getGroup() {
@@ -46,7 +46,7 @@ function joinGame(e) {
         _playerToken = response;
         console.log(_playerToken);
         localStorage.setItem("playerToken", _playerToken);
-        window.location.href = "game-lobby.html";
+        window.location.href = "gamelobby.html";
     });
 }
 

@@ -31,6 +31,6 @@ function joinGame(_games,playerName) {
     fetchFromServer(`${config.root}games/${_games}/players`, 'POST', {playerName: `${playerName}`}).then(function(response){
         _playerToken = response;
         localStorage.setItem("playerToken", _playerToken);
-        window.location.href = "game-lobby.html";
+        window.location.href = "gamelobby.html";
     });
 }}
