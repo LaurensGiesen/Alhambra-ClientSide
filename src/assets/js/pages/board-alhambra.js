@@ -1,12 +1,5 @@
 "use strict";
 
-document.addEventListener('DOMContentLoaded',init);
-
-function init(){
-    scrollToFountain();
-    document.addEventListener('keydown', shortcuts);
-}
-
 function scrollToFountain() {
     document.querySelector(".row0").scrollIntoView({
         behavior: 'auto',
@@ -15,7 +8,7 @@ function scrollToFountain() {
     });
 }
 
-function shortcuts(e){
+function shortcutsAlhambra(e){
     const alh = document.querySelector("#alhambra");
     const tileHeight = document.querySelector(".row0").clientHeight;
     e.preventDefault();
