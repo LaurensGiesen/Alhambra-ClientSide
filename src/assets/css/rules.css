@@ -32,7 +32,7 @@ div.gameplay{
     background-image: url(../media/icons/joystick.png);
 }
 div.scoring{
-    background-image: url(../media/icons/scoring1.png);
+    background-image: url(../media/icons/scorecard.png);
 }
 
 div.goal a:hover,div.gameplay a:hover,div.scoring a:hover{

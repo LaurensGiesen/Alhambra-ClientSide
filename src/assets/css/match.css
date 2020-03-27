@@ -30,7 +30,7 @@ header figure{
 /*---------main------------*/
 main{
     margin-top: 2%;
-    background-image: url("../../images/world map/worldMap.jpg");
+    background-image: url("../../images/worldmap.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

@@ -85,7 +85,7 @@ main .ready h3, .notReady h3{
     margin-left: 1%;
 }
 main .ready h4, .notReady h4{
-    background-image: url("../media/icons/rightgreen.png");
+    background-image: url("../media/icons/right-green.png");
     background-repeat: no-repeat;
     background-size: 25px;
     background-position: center right;
@@ -94,7 +94,7 @@ main .ready h4, .notReady h4{
     margin-right: 1% ;
 }
 .notReady h4{
-    background-image: url("../media/icons/closered.png");
+    background-image: url("../media/icons/close-red.png");
     background-size: 25px;
 }
 
@@ -105,7 +105,7 @@ main h5, main h6{
     background-position: center left;
 }
 main h5{
-    background-image: url("../media/icons/finish.png");
+    background-image: url("../media/icons/flag.png");
     font-size: 3rem;
     width: 361px;
     margin-top: 1%;
@@ -120,7 +120,7 @@ main h5:hover{
     width: 670px;
 }
 .timer h6{
-    background-image: url("../media/icons/timer.png");
+    background-image: url("../media/icons/hourglass.png");
     display: inline-block;
     font-size: 2rem;
 }

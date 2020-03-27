@@ -40,15 +40,15 @@ main {
 }
 #podium article:nth-of-type(1) {
     padding-bottom: 90px;
-    background-image: url("../media/podium.png");
+    background-image: url("../media/figures/castle-podium.png");
 }
 #podium article:nth-of-type(2) {
     padding-bottom: 130px;
-    background-image: url("../media/podium-high.png");
+    background-image: url("../media/figures/castle-podium-high.png");
 }
 #podium article:nth-of-type(3) {
     padding-bottom: 90px;
-    background-image: url("../media/podium.png");
+    background-image: url("../media/figures/castle-podium.png");
 }
 #podium article h2 {
     font-size: 1.6rem;

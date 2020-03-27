@@ -28,7 +28,7 @@ function getGroup() {
         for (let i = 0; i < _games.length; i++) {
             const towerLoading = document.querySelector('main figure:nth-child(' + (i+1) + ')');
             towerLoading.innerHTML =
-                `<img src="../assets/media/icons/toweractive.png" alt="Tower" title="tower" class="active" id="id${i}">`;
+                `<img src="../assets/media/icons/tower-active.png" alt="Tower" title="tower" class="active" id="id${i}">`;
         }
     });
 }

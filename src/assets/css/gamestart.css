@@ -13,7 +13,7 @@ div {
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 170px;
-    background-image: url("../media/cartoon-castle-vector-art.png");
+    background-image: url("../media/figures/castle-on-rock.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center 10px;
@@ -38,7 +38,7 @@ span a {
 }
 
 span.create {
-    background-image: url("../media/icons/plus (1).png");
+    background-image: url("../media/icons/plus.png");
     background-repeat: no-repeat;
     background-size: contain;
 }

@@ -55,7 +55,7 @@
     width: 115px;
     border: 5px solid transparent;
     border-radius: 10px;
-    background-image: url("../media/empty.jpg");
+    background-image: url("../media/textures/white-sand.jpg");
 }
 #alhambra .emptyTile h4 {
     display: none;
@@ -67,7 +67,7 @@
     width: 115px;
     border: 5px solid transparent;
     border-radius: 10px;
-    background-image: url("../media/wood.jpg");
+    background-image: url("../media/textures/wood.jpg");
     background-size: cover;
 }
 

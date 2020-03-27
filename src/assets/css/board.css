@@ -2,7 +2,7 @@ body {
     height: 100%;
     width: 100%;
     font-family: 'Roboto', cursive;
-    background-image: url("../media/desert.jpg");
+    background-image: url("../media/textures/desert.jpg");
     background-size: cover;
 }
 main {
