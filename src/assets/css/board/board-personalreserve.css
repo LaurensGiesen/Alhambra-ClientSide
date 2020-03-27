@@ -32,7 +32,7 @@
 }
 
 
-#personalreserve .tile span {
+#personalreserve .tile h4 {
     position: absolute;
     bottom: 5px;
     right: 5px;

@@ -9,6 +9,10 @@
     border-radius: 10px;
 }
 
+#players h2 {
+    display: none;
+}
+
 #players article {
     display: flex;
     justify-content: center;
@@ -27,7 +31,7 @@
     -webkit-filter: drop-shadow(5px 5px 5px #61ab3a);
     filter:         drop-shadow(5px 5px 5px #61ab3a);
 }
-#players article h2 {
+#players article h3 {
     font-size: 1rem;
     font-weight: bold;
     padding-bottom: 5px;

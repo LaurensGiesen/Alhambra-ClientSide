@@ -7,6 +7,10 @@
     border-radius: 10px;
 }
 
+#actions h2 {
+    display: none;
+}
+
 #actions article {
     height: 120px;
     width: 90px;
@@ -16,7 +20,7 @@
     border: 5px solid transparent;
 }
 
-#actions article h2 {
+#actions article h3 {
     margin: 5px;
     padding-top: 90px;
     background-repeat: no-repeat;
@@ -30,18 +34,18 @@
     filter:         drop-shadow(5px 5px 5px #e83328);
 }
 
-#actions article#money h2 {
+#actions #money h3 {
     background-image: url("../../media/icons/board/take money.png");
 }
-#actions article#buy h2 {
+#actions #buy h3 {
     background-image: url("../../media/icons/board/buy.png");
 }
-#actions article#build h2 {
+#actions #build h3 {
     background-image: url("../../media/icons/board/build.png");
 }
 
 
-#actions.active article h2{
+#actions.active article h3{
     -webkit-filter: drop-shadow(5px 5px 5px #61ab3a);
     filter:         drop-shadow(5px 5px 5px #61ab3a);
 }
