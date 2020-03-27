@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     padding: 10px;
-    background-image: url("../../media/empty.jpg");
+    background-image: url("../media/empty.jpg");
     border-radius: 10px;
 }
 #publicmarket h2 {
@@ -37,28 +37,28 @@
 #publicmarket #bluemarket {
     justify-content: flex-end;
     align-items: flex-end;
-    background-image: url("../../media/blue.png");
+    background-image: url("../media/blue.png");
     background-position: -25px -25px;
     border-radius: 10px 0 0 0;
 }
 #publicmarket #greenmarket {
     justify-content: flex-start;
     align-items: flex-end;
-    background-image: url("../../media/green.png");
+    background-image: url("../media/green.png");
     background-position: 80px -25px;
     border-radius: 0 10px 75px 0;
 }
 #publicmarket #orangemarket {
     justify-content: flex-end;
     align-items: flex-start;
-    background-image: url("../../media/orange.png");
+    background-image: url("../media/orange.png");
     background-position: -25px 40px;
     border-radius: 0 0 0 10px;
 }
 #publicmarket #yellowmarket {
     justify-content: flex-start;
     align-items: flex-start;
-    background-image: url("../../media/yellow.png");
+    background-image: url("../media/yellow.png");
     background-position: 80px 40px;
     border-radius: 0 75px 10px 0;
 }
@@ -68,7 +68,7 @@
     position: relative;
     border: 5px solid transparent;
     border-radius: 10px;
-    background-image: url("../../media/wood.jpg");
+    background-image: url("../media/wood.jpg");
     background-size: cover;
 }
 #publicmarket .tile h4 {

@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-image: url("../../media/empty.jpg");
+    background-image: url("../media/empty.jpg");
     border-radius: 10px;
 }
 
@@ -14,7 +14,7 @@
 #actions article {
     height: 120px;
     width: 90px;
-    background-image: url("../../media/wood.jpg");
+    background-image: url("../media/wood.jpg");
     background-size: cover;
     border-radius: 10px;
     border: 5px solid transparent;
@@ -35,13 +35,13 @@
 }
 
 #actions #money h3 {
-    background-image: url("../../media/icons/board/take money.png");
+    background-image: url("../media/icons/board/take money.png");
 }
 #actions #buy h3 {
-    background-image: url("../../media/icons/board/buy.png");
+    background-image: url("../media/icons/board/buy.png");
 }
 #actions #build h3 {
-    background-image: url("../../media/icons/board/build.png");
+    background-image: url("../media/icons/board/build.png");
 }
 
 

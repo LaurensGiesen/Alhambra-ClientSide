@@ -70,9 +70,9 @@
     cursor: pointer;
 }
 
-#options .popup-content ul #resume {background-image: url("../../media/icons/right.png");}
-#options .popup-content ul #rules {background-image: url("../../media/icons/book.png");}
-#options .popup-content ul #leave {background-image: url("../../media/icons/logout.png");}
+#options .popup-content ul #resume {background-image: url("../media/icons/right.png");}
+#options .popup-content ul #rules {background-image: url("../media/icons/book.png");}
+#options .popup-content ul #leave {background-image: url("../media/icons/logout.png");}
 
 #options .popup-warning div {
     width: 100%;
@@ -88,7 +88,7 @@
 
 #options .popup-warning div  header {
     padding-left: 100px;
-    background-image: url("../../media/icons/alert.png");
+    background-image: url("../media/icons/alert.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -126,6 +126,6 @@
     color: red;
 }
 
-#options .popup-warning div ul #leaveyes {background-image: url("../../media/icons/right.png");}
-#options .popup-warning div ul #leaveno {background-image: url("../../media/icons/close.png");}
+#options .popup-warning div ul #leaveyes {background-image: url("../media/icons/right.png");}
+#options .popup-warning div ul #leaveno {background-image: url("../media/icons/close.png");}
 

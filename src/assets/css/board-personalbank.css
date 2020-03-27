@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-image: url("../../media/empty.jpg");
+    background-image: url("../media/empty.jpg");
     border-radius: 10px;
     padding: 10px;
     overflow: auto;
@@ -37,7 +37,7 @@
     border: 5px solid rgba(0,0,0,0.4);
     border-radius: 10px;
     padding: 5px;
-    background-image: url("../../media/icons/coins.png");
+    background-image: url("../media/icons/coins.png");
     background-size: 40px;
     background-repeat: no-repeat;
     background-position: center 35px;

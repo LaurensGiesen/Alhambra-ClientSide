@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("../../media/empty.jpg");
+    background-image: url("../media/empty.jpg");
     background-size: cover;
     padding: 10px;
     border: 5px solid transparent;
@@ -20,7 +20,7 @@
     position: relative;
     width: 125px;
     height: 125px;
-    background-image: url("../../media/icons/board/knight.png"), url("../../media/icons/board/shield.png");
+    background-image: url("../media/icons/board/knight.png"), url("../media/icons/board/shield.png");
     background-repeat: no-repeat, no-repeat;
     background-position: left top, right 20px;
     background-size: 100px, 50px;
