@@ -37,6 +37,7 @@ main {
 
 main figure {
     width: 5%;
+    cursor: pointer;
 }
 
 main figure:first-child {
