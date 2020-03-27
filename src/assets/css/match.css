@@ -154,7 +154,7 @@ main figure:nth-child(12) {
     cursor: pointer;
 }
 
-#popup main {
+#popup div div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,19 +164,19 @@ main figure:nth-child(12) {
 
 }
 
-#popup main section {
+#popup div div section {
     background-image: url("../media/icons/tower-white.jpg");
     background-repeat: no-repeat;
     background-size: 100px;
     padding-left: 150px;
 }
 
-#popup main section h3 {
+#popup div div section h3 {
     font-size: 2rem;
     text-align: left;
 }
 
-#popup main section p {
+#popup div div section p {
     font-size: 4rem;
     font-weight: bolder;
     margin: 2%;

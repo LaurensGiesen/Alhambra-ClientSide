@@ -6,8 +6,8 @@ function init(){
     loadTowers();
     document.querySelector("#popup h2").addEventListener("click", closePopup);
     document.querySelector("#popup input[type=submit]").addEventListener('click', clickToJoinGame);
+    document.querySelector("#friendCode input[type=submit").addEventListener('click', clickFriendCode);
 }
-
 
 function loadTowers() {
     const main = document.querySelector('main');
@@ -73,6 +73,15 @@ function clickToJoinGame(e){
             window.location.href = "gamelobby.html";
         });
     }
+}
+
+function clickFriendCode(e){
+    e.preventDefault();
+    const gameId = document.querySelector("#friend").value;
+
+    joinGame(gameId, function(){
+        window.location.href = "gamelobby.html";
+    });
 }
 
 function getHTMLofTower(gameId, active){
