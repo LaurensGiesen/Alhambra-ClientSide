@@ -36,5 +36,4 @@ function testRemoteAPI(){
         // These are the games in your group lobby, the first time you'll call this, this will be an empty array
         console.log(response);
     });
-
 }

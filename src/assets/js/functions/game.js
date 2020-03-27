@@ -5,3 +5,4 @@ function deleteSelfFromGame(){
         return response;
     });
 }
+
