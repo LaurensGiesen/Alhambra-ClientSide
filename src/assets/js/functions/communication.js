@@ -1,9 +1,5 @@
 "use strict";
 
-let _gameId = localStorage.getItem("gameId");
-let _playername = localStorage.getItem("playername");
-let _playerToken = localStorage.getItem("playerToken");
-
 function fetchFromServer(url, httpVerb, requestBody){
     let options= {};
     options.method = httpVerb;
