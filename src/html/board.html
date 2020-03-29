@@ -22,62 +22,62 @@
 <main>
     <section id="alhambra">
         <h2>Alhambra board</h2>
-        <section class="row-1 col0">
+        <section class="row-1 col0" data-row="-1" data-col="0">
             <h3>Boardarea</h3>
             <article class="emptyTile">
                 <h4>Empty tile</h4>
             </article>
         </section>
-        <section class="row1 col0">
+        <section class="row1 col0" data-row="1" data-col="0">
             <h3>Boardarea</h3>
-            <article class="tile arcade wallSouth wallWest">
+            <article class="tile arcade wallSouth wallWest" data-type="arcade" data-cost="2" data-walls="sw">
                 <img src="../assets/media/icons/board/arcade.png" alt="arcade">
                 <h4>2</h4>
             </article>
         </section>
-        <section class="row0 col0">
+        <section class="row0 col0" data-row="0" data-col="0">
             <h3>Boardarea</h3>
-            <article class="tile fountain">
+            <article class="tile fountain" data-type="fountain">
                 <img src="../assets/media/icons/board/fountain.png" alt="fountain">
                 <h4>Fountain</h4>
             </article>
         </section>
-        <section class="row0 col-1">
+        <section class="row0 col-1" data-row="0" data-col="-1">
             <h3>Boardarea</h3>
-            <article class="tile chamber wallSouth wallWest">
+            <article class="tile chamber wallNorth wallEast" data-type="chamber" data-cost="13" data-walls="ne">
                 <img src="../assets/media/icons/board/chamber.png" alt="chamber">
                 <h4>13</h4>
             </article>
         </section>
-        <section class="row0 col1">
+        <section class="row0 col1" data-row="0" data-col="1">
             <h3>Boardarea</h3>
-            <article class="tile garden">
+            <article class="tile garden" data-type="garden" data-cost="8" data-walls="">
                 <img src="../assets/media/icons/board/garden.png" alt="garden">
                 <h4>8</h4>
             </article>
         </section>
-        <section class="row0 col2">
+        <section class="row0 col2" data-row="0" data-col="2">
             <h3>Boardarea</h3>
-            <article class="tile seraglio">
+            <article class="tile seraglio" data-type="seraglio" data-cost="7" data-walls="">
                 <img src="../assets/media/icons/board/seraglio.png" alt="seraglio">
                 <h4>7</h4>
             </article>
         </section>
-        <section class="row-1 col2">
+        <section class="row-1 col2" data-row="-1" data-col="2">
             <h3>Boardarea</h3>
-            <article class="tile tower wallWest wallEast">
+            <article class="tile tower wallWest wallEast" data-type="tower" data-cost="8" data-walls="we">
                 <img src="../assets/media/icons/tower.png" alt="tower">
                 <h4>8</h4>
             </article>
         </section>
-        <section class="row-2 col2">
+        <section class="row-2 col2" data-row="-2" data-col="2">
             <h3>Boardarea</h3>
-            <article class="tile pavilion wallNorth">
+            <article class="tile pavilion wallNorth" data-type="pavilion" data-cost="6" data-walls="6">
                 <img src="../assets/media/icons/board/pavilion.png" alt="pavilion">
                 <h4>6</h4>
             </article>
         </section>
-        <div class="row9 col9">
+        <div class="row9 col9" data-row="9" data-col="9">
             <h3>Boardarea</h3>
         </div>
     </section>
@@ -112,30 +112,30 @@
     <section id="publicmarket">
         <h2>Public market</h2>
         <h3>27 left</h3>
-        <section id="bluemarket" class="market">
+        <section id="bluemarket" class="market" data-currency="blue">
             <h3>Market</h3>
-            <article class="tile chamber wallSouth wallWest">
+            <article class="tile chamber wallSouth wallWest" data-type="chamber" data-cost="13" data-walls="sw">
                 <img src="../assets/media/icons/board/chamber.png" alt="chamber">
                 <h4>13</h4>
             </article>
         </section>
-        <section id="greenmarket" class="market">
+        <section id="greenmarket" class="market" data-currency="green">
             <h3>Market</h3>
-            <article class="tile chamber wallSouth wallWest">
+            <article class="tile chamber wallSouth wallWest" data-type="chamber" data-cost="13" data-walls="sw">
                 <img src="../assets/media/icons/board/chamber.png" alt="chamber">
                 <h4>13</h4>
             </article>
         </section>
-        <section id="orangemarket" class="market">
+        <section id="orangemarket" class="market" data-currency="orange">
             <h3>Market</h3>
-            <article class="tile chamber wallSouth wallWest">
+            <article class="tile chamber wallSouth wallWest" data-type="chamber" data-cost="13" data-walls="sw">
                 <img src="../assets/media/icons/board/chamber.png" alt="chamber">
                 <h4>13</h4>
             </article>
         </section>
-        <section id="yellowmarket" class="market">
+        <section id="yellowmarket" class="market" data-currency="yellow">
             <h3>Market</h3>
-            <article class="tile chamber wallSouth wallWest">
+            <article class="tile chamber wallSouth wallWest" data-type="chamber" data-cost="13" data-walls="sw">
                 <img src="../assets/media/icons/board/chamber.png" alt="chamber">
                 <h4>13</h4>
             </article>
@@ -143,19 +143,19 @@
     </section>
     <section id="publicbank">
         <h2>Public bank</h2>
-        <article class="money bluemoney">
+        <article class="money bluemoney" data-currency="blue" data-amount="5">
             <h4>5</h4>
             <h4>5</h4>
         </article>
-        <article class="money greenmoney">
+        <article class="money greenmoney" data-currency="green" data-amount="5">
             <h4>5</h4>
             <h4>5</h4>
         </article>
-        <article class="money orangemoney">
+        <article class="money orangemoney" data-currency="orange" data-amount="5">
             <h4>5</h4>
             <h4>5</h4>
         </article>
-        <article class="money yellowmoney">
+        <article class="money yellowmoney" data-currency="yellow" data-amount="5">
             <h4>5</h4>
             <h4>5</h4>
         </article>
@@ -164,52 +164,52 @@
         <h2>Personal bank</h2>
         <section id="bluestack" class="moneystack">
             <h3>Blue stack</h3>
-            <article class="money bluemoney">
+            <article class="money bluemoney" data-currency="blue" data-amount="5">
                 <h4>5</h4>
                 <h4>5</h4>
             </article>
         </section>
         <section class="moneystack" id="greenstack">
             <h3>Green stack</h3>
-            <article class="money greenmoney">
+            <article class="money greenmoney" data-currency="green" data-amount="5">
                 <h4>5</h4>
                 <h4>5</h4>
             </article>
-            <article class="money greenmoney">
+            <article class="money greenmoney" data-currency="green" data-amount="5">
                 <h4>5</h4>
                 <h4>5</h4>
             </article>
-            <article class="money greenmoney">
+            <article class="money greenmoney" data-currency="green" data-amount="5">
                 <h4>5</h4>
                 <h4>5</h4>
             </article>
         </section>
         <section class="moneystack" id="orangestack">
             <h3>Orange stack</h3>
-            <article class="money orangemoney">
+            <article class="money orangemoney" data-currency="orange" data-amount="5">
                 <h4>5</h4>
                 <h4>5</h4>
             </article>
-            <article class="money orangemoney">
+            <article class="money orangemoney" data-currency="orange" data-amount="5">
                 <h4>5</h4>
                 <h4>5</h4>
             </article>
-            <article class="money orangemoney">
+            <article class="money orangemoney" data-currency="orange" data-amount="5">
                 <h4>5</h4>
                 <h4>5</h4>
             </article>
         </section>
         <section class="moneystack" id="yellowstack">
             <h3>Yellow stack</h3>
-            <article class="money yellowmoney">
+            <article class="money yellowmoney" data-currency="yellow" data-amount="5">
                 <h4>5</h4>
                 <h4>5</h4>
             </article>
-            <article class="money yellowmoney">
+            <article class="money yellowmoney" data-currency="yellow" data-amount="5">
                 <h4>5</h4>
                 <h4>5</h4>
             </article>
-            <article class="money yellowmoney">
+            <article class="money yellowmoney" data-currency="yellow" data-amount="5">
                 <h4>5</h4>
                 <h4>5</h4>
             </article>
@@ -217,44 +217,28 @@
     </section>
     <section id="personalreserve">
         <h2>Personal reserve</h2>
-        <article class="tile pavilion wallNorth">
+        <article class="tile pavilion wallNorth" data-type="pavilion" data-cost="13" data-walls="n">
             <img src="../assets/media/icons/board/pavilion.png" alt="pavilion">
             <h4>13</h4>
         </article>
-        <article class="tile garden wallNorth">
+        <article class="tile garden wallNorth" data-type="garden" data-cost="6" data-walls="n">
             <img src="../assets/media/icons/board/garden.png" alt="garden">
             <h4>6</h4>
         </article>
-        <article class="tile seraglio wallNorth">
+        <article class="tile seraglio wallNorth" data-type="seraglio" data-cost="6" data-walls="n">
             <img src="../assets/media/icons/board/seraglio.png" alt="seraglio">
             <h4>6</h4>
         </article>
-        <article class="tile arcade wallNorth">
+        <article class="tile arcade wallNorth" data-type="arcade" data-cost="6" data-walls="n">
             <img src="../assets/media/icons/board/arcade.png" alt="arcade">
             <h4>6</h4>
         </article>
-        <article class="tile tower wallNorth">
+        <article class="tile tower wallNorth" data-type="tower" data-cost="6" data-walls="n">
             <img src="../assets/media/icons/tower.png" alt="tower">
             <h4>6</h4>
         </article>
-        <article class="tile chamber wallNorth">
+        <article class="tile chamber wallNorth" data-type="tower" data-cost="6" data-walls="n">
             <img src="../assets/media/icons/board/chamber.png" alt="chamber">
-            <h4>6</h4>
-        </article>
-        <article class="tile pavilion wallNorth">
-            <img src="../assets/media/icons/board/pavilion.png" alt="pavilion">
-            <h4>6</h4>
-        </article>
-        <article class="tile pavilion wallNorth">
-            <img src="../assets/media/icons/board/pavilion.png" alt="pavilion">
-            <h4>6</h4>
-        </article>
-        <article class="tile pavilion wallNorth">
-            <img src="../assets/media/icons/board/pavilion.png" alt="pavilion">
-            <h4>6</h4>
-        </article>
-        <article class="tile pavilion wallNorth">
-            <img src="../assets/media/icons/board/pavilion.png" alt="pavilion">
             <h4>6</h4>
         </article>
     </section>
@@ -272,23 +256,23 @@
     </section>
     <section id="players">
         <h2>Players</h2>
-        <article class="deactive">
+        <article class="deactive" data-name="kwinten">
             <h3>kwinten</h3>
             <p>76</p>
         </article>
-        <article class="deactive">
+        <article class="deactive" data-name="jonas">
             <h3>jonas</h3>
             <p>25</p>
         </article>
-        <article class="deactive">
+        <article class="deactive" data-name="quinten">
             <h3>quinten</h3>
             <p>70</p>
         </article>
-        <article class="active">
+        <article class="active" data-name="michiel">
             <h3>michiel</h3>
             <p>88</p>
         </article>
-        <article class="deactive">
+        <article class="deactive" data-name="laurens">
             <h3>laurens</h3>
             <p>7</p>
         </article>
