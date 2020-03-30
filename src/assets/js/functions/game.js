@@ -24,3 +24,22 @@ function deleteSelfFromGame(callback){
     });
 }
 
+function getNumberOfGames(number, callback){
+    fetchFromServer(`${config.root}games?details=true&prefix=group${config.groupnumber}`, 'GET').then(function (games) {
+        while (games.length > number){
+            games.pop();
+        }
+        callback(games);
+    });
+}
+
+function getNumberOfPlayers(gameId, callback){
+    fetchFromServer(`${config.root}games?details=true&prefix=group${config.groupnumber}`, 'GET').then(function (games) {
+        for(let game of games){
+            if(game.id === gameId){
+                callback(game.playerCount);
+            }
+        }
+    });
+}
+

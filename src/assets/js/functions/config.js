@@ -4,5 +4,7 @@
 const config = {
     root: "http://172.21.22.52:48201/alhambra-api/",
     groupnumber: "20",
-    maxLengthPlayerName: 20
+    maxLengthPlayerName: 20,
+    towersOnMap: 12,
+    maxNumberOfParticipants: 6
 };

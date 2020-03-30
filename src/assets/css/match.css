@@ -1,134 +1,133 @@
 /*----------------------/
 /   GENERAL ELEMENTS /
 /---------------------*/
-body{
+body {
     font-family: 'Roboto', sans-serif;
 }
-img{
+
+img {
     width: 100%;
 
 }
+
 /*--------header-------------*/
-header{
+header {
     display: flex;
     flex-direction: row;
-    margin-top: 1%;
+    justify-content: center;
+    margin-top: 20px;
 }
-header h1{
+
+header h1 {
     font-size: 5rem;
-    margin: 0 0 0 32%;
     font-family: 'MedievalSharp', cursive;
 
 }
-header figure{
-    width: 5%;
-    margin-top: 0;
-    margin-left: 2%;
 
-}
 /*---------------------*/
 /*---------main------------*/
-main{
-    margin-top: 2%;
+main {
+    margin-top: 20px;
     background-image: url("../../images/worldmap.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height: 77vh;
+    height: calc(100vh - 180px);
 }
-main figure{
+
+main figure {
     width: 5%;
+    cursor: pointer;
 }
-main figure:first-child{
-    position:absolute;
+
+main figure:first-child {
+    position: absolute;
     top: 26%;
     left: 23%;
 }
-main figure:nth-child(2){
+
+main figure:nth-child(2) {
     position: absolute;
     top: 48%;
     left: 46%;
 }
-main figure:nth-child(3){
+
+main figure:nth-child(3) {
     position: absolute;
     top: 58%;
     left: 33%;
 }
-main figure:nth-child(4){
+
+main figure:nth-child(4) {
     position: absolute;
-    top:22%;
+    top: 22%;
     left: 65%;
 }
-main figure:nth-child(5){
+
+main figure:nth-child(5) {
     position: absolute;
-    top:40%;
+    top: 40%;
     left: 67%;
 }
-main figure:nth-child(6){
-     position: absolute;
-     top:39%;
-     left: 26%;
- }
-main figure:nth-child(7){
-      position: absolute;
-      top:30%;
-      left: 53%;
-}
-main figure:nth-child(8){
+
+main figure:nth-child(6) {
     position: absolute;
-    top:66%;
-    left:71%;
+    top: 39%;
+    left: 26%;
 }
-main figure:nth-child(9){
+
+main figure:nth-child(7) {
     position: absolute;
-    top:38%;
+    top: 30%;
+    left: 53%;
+}
+
+main figure:nth-child(8) {
+    position: absolute;
+    top: 66%;
+    left: 71%;
+}
+
+main figure:nth-child(9) {
+    position: absolute;
+    top: 38%;
     left: 60%;
 }
-main figure:nth-child(10){
-     position: absolute;
-     top:69%;
-     left: 34%;
-}
-main figure:nth-child(11){
+
+main figure:nth-child(10) {
     position: absolute;
-    top:62%;
+    top: 69%;
+    left: 34%;
+}
+
+main figure:nth-child(11) {
+    position: absolute;
+    top: 62%;
     left: 50%;
 }
-main figure:nth-child(12){
+
+main figure:nth-child(12) {
     position: absolute;
-    top:17%;
+    top: 17%;
     left: 38%;
 }
 
-
-/*---------------------/
-/ GENERAL CLASSES     /
-/---------------------*/
-
-
-/*---------------------/
-/ CONTAINING ELEMENTS /
-/---------------------*/
-
-
-/*------------------------/
-/ PAGE SPECIFIC ELEMENTS /
-/------------------------*/
 /* pop up*/
-.popUp, .popUpDeactive {
-    display: none; /* wordt op block gezet in js */
-    position: fixed; /* op zijn plaats laten staan */
-    z-index: 1; /* boven de rest komen */
-    padding-top: 100px;
+#popup {
+    display: none; /* wordt op flex gezet in js */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* popUp content */
-.popUp-content {
+.popup-content {
     background-color: #fefefe;
     margin: auto;
     border: 1px solid #888;
@@ -136,53 +135,62 @@ main figure:nth-child(12){
 }
 
 /* close button */
-.eerste {
-    display: block;
+#popup header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     font-weight: bold;
+    font-size: 1rem;
     background-color: lightgray;
     color: #aaaaaa;
-    padding: 1%;
-    width: 98%;
-    font-size: 1rem;
+    padding: 5px;
+    margin: inherit;
+
 }
-.close, .close2{
-    width: 10%;
-    margin-left: 90%;
-}
-.close:hover, .close:focus, .close2:hover, .close2:focus {
+
+#popup h2:hover, #popup h2:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
-.flex{
+
+#popup div div {
     display: flex;
-    flex-direction: row;
-    margin: 5% 0;
-}
-.flex div:first-child{
-    margin-left: 15%;
-    width: 23%;
-    padding:2px;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    margin: inherit;
+    height: 200px;
 
 }
-.flex div:last-child{
-    width: 60%;
-    margin-left: 10%;
+
+#popup div div section {
+    background-image: url("../media/icons/tower-white.jpg");
+    background-repeat: no-repeat;
+    background-size: 100px;
+    padding-left: 150px;
 }
-.flex h3{
+
+#popup div div section h3 {
     font-size: 2rem;
     text-align: left;
 }
-.flex h4{
+
+#popup div div section p {
     font-size: 4rem;
     font-weight: bolder;
     margin: 2%;
     text-align: left;
 }
-.popUp-content div:nth-child(3){
-    margin: 2% 0;
+
+#popup footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
 }
-.popUp-content input {
+
+#popup input {
     border: none;
     background-color: #18AA8D;
     color: white;
@@ -190,38 +198,44 @@ main figure:nth-child(12){
     border-radius: 3px;
     padding: 6px;
     width: 40%;
-    margin-left: 30%;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
 }
-.popUp-content input:hover {
-     transform: translateY(-3px);
-     box-shadow: 0 6px 6px 0 rgba(0,0,0,0.2);
+
+#popup input:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
-
-#friendCode{
+#friendCode {
     display: flex;
     flex-direction: row;
-    margin-left: 2%;
+    margin-left: 50px;
 }
-#friendCode figure{
-    width: 3%;
+
+#friendCode h6 {
+    display: none;
 }
-#friendCode h6{
+
+#friendCode form {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
     font-size: 2rem;
-    margin-left: 1%;
-    margin-top: 1%;
+    background-image: url("../media/icons/hug.png");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
-#friendCode form{
-    font-size: 2rem;
-    margin-left: 10px;
-    margin-top: 13px;
+
+#friendCode label {
+    padding-right: 10px;
 }
-#friendCode input[type="text"]{
+
+#friendCode input[type="text"] {
     padding: 5px;
+    margin-right: 10px;
 }
-#friendCode input[type="submit"]{
+
+#friendCode input[type="submit"] {
     padding: 5px;
-    margin-top:0;
 }
 

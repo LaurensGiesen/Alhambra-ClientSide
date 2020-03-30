@@ -12,87 +12,55 @@
 </head>
 <body>
 <header>
-    <aside>
-        <a href="gamestart.html" id="return"></a>
-        <!-- terug icoon -->
-    </aside>
+    <a href="gamestart.html" id="return"></a>
+
     <h1>Join match</h1>
 </header>
 <main>
-
+    <!-- load Towers here -->
+    <figure>
+        <img src="../assets/media/icons/tower-deactive.png" alt="Deactive Tower" title="Deactive Tower" data-gameid=0>
+    </figure>
+    <figure>
+        <img src="../assets/media/icons/tower-active.png" alt="Active Tower" title="Active Tower" data-gameid="group20-030">
+    </figure>
 </main>
 
-<div id="friendCode">
-    <figure>
-        <img src="../assets/media/icons/hug.png" alt="">
-    </figure>
+<footer id="friendCode">
     <h6>Friend Code:</h6>
     <form>
-        <label for="Friend"></label>
-        <input type="text" id="Friend" name="Friend" placeholder="Enter a Friend Code..">
-        <input type="submit" value="Join" id="submit">
+        <label for="friend">Friend Code:</label>
+        <input type="text" id="friend" name="friend" placeholder="Enter a Friend Code..">
+        <input type="submit" value="Join">
     </form>
-</div>
+</footer>
 
 <!-- pop up-->
-<div id="popUp" class="popUp">
-
-    popUp content
-    <div class="popUp-content">
-        <div class="eerste">
-            <h2 class="close">Close</h2>
-        </div>
-        <div class="flex">
-            <div>
-                <img src="../assets/media/icons/tower.png" alt="">
-            </div>
-            <div class="titelPopUp">
-
-            </div>
-
-        </div>
+<div id="popup">
+    <div class="popup-content">
+        <header>
+            <h2>Close</h2>
+        </header>
         <div>
-            <form>
-                <input class="joinButton" type="submit" value="Join">
-            </form>
+            <section>
+                <h3>Empty game</h3>
+                <p></p>
+            </section>
         </div>
+        <footer>
+            <input type="submit" value="Join">
+        </footer>
     </div>
 </div>
-
-
-
-<!-- pop up-->
-<div id="popUpNot" class="popUpDeactive">
-
-    <!-- popUp content -->
-    <div class="popUp-content">
-        <div class="eerste">
-            <h2 class="close2">Close</h2>
-        </div>
-        <div class="flex">
-            <div>
-                <img src="../assets/media/icons/tower.png" alt="">
-            </div>
-            <div class="tweede">
-                <h3>Empty</h3>
-                <h4>0/6</h4>
-            </div>
-
-        </div>
-        <div>
-            <form>
-                <input type="submit" value="Create a Kingdom">
-            </form>
-        </div>
-    </div>
-</div>
-<script src="../assets/js/pages/Worldmatch/inladen.js"></script>
 
 <script src="../assets/js/functions/config.js"></script>
 <script src="../assets/js/functions/communication.js"></script>
 <script src="../assets/js/functions/script.js"></script>
-<script src="../assets/js/pages/Worldmatch/popUp.js"></script>
-<script src="../assets/js/pages/Worldmatch/join.js"></script>
-<script src="../assets/js/pages/Worldmatch/friendCode.js"></script>
+<script src="../assets/js/functions/localstorage.js"></script>
+
+<script src="../assets/js/pages/match.js"></script>
+
+<script src="../assets/js/functions/game.js"></script>
+
 </body>
 </html>
