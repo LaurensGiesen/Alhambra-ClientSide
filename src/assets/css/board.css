@@ -1,0 +1,24 @@
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', cursive;
+    background-image: url("../media/textures/desert.jpg");
+    background-size: cover;
+}
+main {
+    padding: 10px;
+    height: calc(100vh - 20px);
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 300px 2fr 1fr 150px;
+    grid-template-rows: 40px 250px 150px 1fr 150px;
+}
+
+#alhambra {grid-area: 1 / 2 / span 4 / span 2;}
+#options {grid-area: 1 / 1 / span 1 / span 1;}
+#publicmarket {grid-area: 2 / 1 / span 1 / span 1;}
+#publicbank {grid-area: 3 / 1 / span 1 / span 1;}
+#personalreserve {grid-area: 5 / 2 / span 1 / span 1;}
+#personalbank {grid-area: 4 / 1 / span 2 / span 1;}
+#actions {grid-area: 5 / 3 / span 1 / span 1;}
+#players {grid-area: 1 / 4 / span 5 / span 1;}

@@ -1,0 +1,124 @@
+body {
+    font-family: 'MedievalSharp', cursive;
+}
+header{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid black;
+}
+header h1 {
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+}
+main {
+    width: 900px;
+    margin: auto;
+}
+
+#podium {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 200px;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+#podium article {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: end;
+    width: 25%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+#podium article:nth-of-type(1) {
+    padding-bottom: 90px;
+    background-image: url("../media/figures/castle-podium.png");
+}
+#podium article:nth-of-type(2) {
+    padding-bottom: 130px;
+    background-image: url("../media/figures/castle-podium-high.png");
+}
+#podium article:nth-of-type(3) {
+    padding-bottom: 90px;
+    background-image: url("../media/figures/castle-podium.png");
+}
+#podium article h2 {
+    font-size: 1.6rem;
+    text-align: center;
+}
+#podium article h3 {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+#podium article:nth-of-type(2) h3 {
+    bottom: 55px;
+}
+#podium article p {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+#list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+#list article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+#list article h3 {
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: 20%;
+}
+#list article h2 {
+    font-size: 1.8rem;
+    width: 50%;
+}
+#list article p {
+    font-size: 1.5rem;
+    width: 30%;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer a{
+    text-decoration: none;
+    border: solid;
+    border-radius: 10px;
+    color: black;
+    margin-left: 20px;
+    padding: 30px;
+}
+
+footer a:hover{
+    color:red;
+}

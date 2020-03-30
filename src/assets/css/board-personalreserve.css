@@ -1,0 +1,74 @@
+#personalreserve {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-image: url("../media/textures/white-sand.jpg");
+    border-radius: 10px;
+    padding: 10px;
+    overflow: auto;
+}
+
+#personalreserve h2 {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'MedievalSharp', cursive;
+    text-decoration: underline;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+#personalreserve .tile {
+    background-color: purple;
+    height: 90px;
+    width: 90px;
+    margin-bottom: 10px;
+    position: relative;
+    border: 5px solid transparent;
+    border-radius: 10px;
+    background-image: url("../media/textures/wood.jpg");
+    background-size: cover;
+}
+
+
+#personalreserve .tile h4 {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+#personalreserve .tile img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 88px;
+    width: 88px;
+    border-radius: 10px 10px 100px 10px;
+}
+
+#personalreserve .tile.wallSouth {border-bottom: 5px solid black;}
+#personalreserve .tile.wallNorth {border-top: 5px solid black;}
+#personalreserve .tile.wallEast {border-right: 5px solid black;}
+#personalreserve .tile.wallWest {border-left: 5px solid black;}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: darkgray;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: gray;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: gray;
+}

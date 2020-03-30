@@ -1,0 +1,227 @@
+/*----------------------/
+/   GENERAL ELEMENTS /
+/---------------------*/
+body{
+    font-family: 'Roboto', sans-serif;
+}
+img{
+    width: 100%;
+
+}
+/*--------header-------------*/
+header{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1%;
+}
+header h1{
+    font-size: 5rem;
+    margin: 0 0 0 32%;
+    font-family: 'MedievalSharp', cursive;
+
+}
+header figure{
+    width: 5%;
+    margin-top: 0;
+    margin-left: 2%;
+
+}
+/*---------------------*/
+/*---------main------------*/
+main{
+    margin-top: 2%;
+    background-image: url("../../images/worldmap.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 77vh;
+}
+main figure{
+    width: 5%;
+}
+main figure:first-child{
+    position:absolute;
+    top: 26%;
+    left: 23%;
+}
+main figure:nth-child(2){
+    position: absolute;
+    top: 48%;
+    left: 46%;
+}
+main figure:nth-child(3){
+    position: absolute;
+    top: 58%;
+    left: 33%;
+}
+main figure:nth-child(4){
+    position: absolute;
+    top:22%;
+    left: 65%;
+}
+main figure:nth-child(5){
+    position: absolute;
+    top:40%;
+    left: 67%;
+}
+main figure:nth-child(6){
+     position: absolute;
+     top:39%;
+     left: 26%;
+ }
+main figure:nth-child(7){
+      position: absolute;
+      top:30%;
+      left: 53%;
+}
+main figure:nth-child(8){
+    position: absolute;
+    top:66%;
+    left:71%;
+}
+main figure:nth-child(9){
+    position: absolute;
+    top:38%;
+    left: 60%;
+}
+main figure:nth-child(10){
+     position: absolute;
+     top:69%;
+     left: 34%;
+}
+main figure:nth-child(11){
+    position: absolute;
+    top:62%;
+    left: 50%;
+}
+main figure:nth-child(12){
+    position: absolute;
+    top:17%;
+    left: 38%;
+}
+
+
+/*---------------------/
+/ GENERAL CLASSES     /
+/---------------------*/
+
+
+/*---------------------/
+/ CONTAINING ELEMENTS /
+/---------------------*/
+
+
+/*------------------------/
+/ PAGE SPECIFIC ELEMENTS /
+/------------------------*/
+/* pop up*/
+.popUp, .popUpDeactive {
+    display: none; /* wordt op block gezet in js */
+    position: fixed; /* op zijn plaats laten staan */
+    z-index: 1; /* boven de rest komen */
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* popUp content */
+.popUp-content {
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+/* close button */
+.eerste {
+    display: block;
+    font-weight: bold;
+    background-color: lightgray;
+    color: #aaaaaa;
+    padding: 1%;
+    width: 98%;
+    font-size: 1rem;
+}
+.close, .close2{
+    width: 10%;
+    margin-left: 90%;
+}
+.close:hover, .close:focus, .close2:hover, .close2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    margin: 5% 0;
+}
+.flex div:first-child{
+    margin-left: 15%;
+    width: 23%;
+    padding:2px;
+
+}
+.flex div:last-child{
+    width: 60%;
+    margin-left: 10%;
+}
+.flex h3{
+    font-size: 2rem;
+    text-align: left;
+}
+.flex h4{
+    font-size: 4rem;
+    font-weight: bolder;
+    margin: 2%;
+    text-align: left;
+}
+.popUp-content div:nth-child(3){
+    margin: 2% 0;
+}
+.popUp-content input {
+    border: none;
+    background-color: #18AA8D;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 6px;
+    width: 40%;
+    margin-left: 30%;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+}
+.popUp-content input:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 6px 6px 0 rgba(0,0,0,0.2);
+}
+
+
+#friendCode{
+    display: flex;
+    flex-direction: row;
+    margin-left: 2%;
+}
+#friendCode figure{
+    width: 3%;
+}
+#friendCode h6{
+    font-size: 2rem;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+#friendCode form{
+    font-size: 2rem;
+    margin-left: 10px;
+    margin-top: 13px;
+}
+#friendCode input[type="text"]{
+    padding: 5px;
+}
+#friendCode input[type="submit"]{
+    padding: 5px;
+    margin-top:0;
+}
+

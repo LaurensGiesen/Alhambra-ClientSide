@@ -1,0 +1,73 @@
+/*---------------------*/
+/*   GENERAL ELEMENTS  */
+/*---------------------*/
+main{
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+}
+
+body{
+    font-family: 'Roboto', cursive;
+}
+
+div.goal, div.gameplay, div.scoring{
+    font-size: 4rem;
+    text-align: center;
+    margin: auto;
+    padding-top: 5%;
+    font-family: 'Roboto', cursive;
+    height: 400px;
+    width: 400px;
+
+    background-repeat: no-repeat;
+    background-size: auto 150px;
+    background-position: center;
+}
+
+div.goal{
+    background-image: url(../media/icons/target.png);
+}
+div.gameplay{
+    background-image: url(../media/icons/joystick.png);
+}
+div.scoring{
+    background-image: url(../media/icons/scorecard.png);
+}
+
+div.goal a:hover,div.gameplay a:hover,div.scoring a:hover{
+    color: red;
+}
+
+main div a{
+    text-decoration: none;
+    color: black;
+}
+
+img{
+    width: 100%;
+
+}
+header{
+    display: flex;
+    flex-direction: row;
+
+
+}
+header h1{
+    font-size: 5rem;
+    margin-left: 36%;
+    font-family: 'MedievalSharp', cursive;
+    padding-top: 20px;
+}
+
+aside a {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 75px;
+    width: 75px;
+    background-image: url("../media/icons/left-arrow.png");
+    background-repeat: no-repeat;
+    background-size: 75px;
+}

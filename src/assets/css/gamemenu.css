@@ -1,0 +1,37 @@
+body {
+    font-family: 'MedievalSharp', cursive;
+}
+main {
+    display: flex;
+    justify-content: space-around;
+    width: 800px;
+    margin: 50px auto 0 auto ;
+    padding-top: 500px;
+    background-image: url("../media/figures/alhambra-castle.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+main a {
+    padding-top: 150px;
+    width: 150px;
+    background-repeat: no-repeat;
+    background-size: 150px;
+    font-size: 2.5rem;
+    line-height: 2;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+main a:hover {
+    color: black;
+}
+
+main a:first-of-type {
+    background-image: url("../media/icons/fortress.png");
+}
+
+main a:last-of-type {
+    background-image: url("../media/icons/book.png");
+}
