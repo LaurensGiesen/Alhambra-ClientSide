@@ -6,7 +6,7 @@ function init(){
     // Load players
     pollPlayers();
     loadPersonalBank();
-
+    pollPublicBank();
     // Options functionality
     document.querySelector("#options img").addEventListener('click', openOptionsPopup);
     document.querySelector("#options .popup header h3").addEventListener('click', closeOptionsPopup);

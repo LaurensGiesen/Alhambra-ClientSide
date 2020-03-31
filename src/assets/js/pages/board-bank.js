@@ -34,6 +34,19 @@ function loadPersonalBank(){
     });
 }
 
+function pollPublicBank(){
+    setTimeout(pollPublicBank, 1000);
+
+    let publicBankHTML = "<h2>Public bank</h2>";
+    getJoinedGame(function(game){
+
+        for(const coin of game.bank){
+            publicBankHTML += getCoinHTML(coin);
+        }
+        document.querySelector("#publicbank").innerHTML = publicBankHTML;
+    });
+}
+
 function getCoinHTML(coin){
     return `<article class="money ${coin.currency}money" data-currency="${coin.currency}" data-amount="${coin.amount}">
                 <h4>${coin.amount}</h4>
