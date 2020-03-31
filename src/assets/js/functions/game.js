@@ -35,7 +35,7 @@ function getNumberOfGames(number, callback){
 
 function getGame(gameId, callback){
     fetchFromServer(`${config.root}games?details=true&prefix=group${config.groupnumber}`, 'GET').then(function (games) {
-        for(let game of games){
+        for(const game of games){
             if(game.id === gameId){
                 callback(game);
             }
@@ -54,4 +54,3 @@ function getPlayers(gameId, callback){
         callback(game.players);
     })
 }
-
