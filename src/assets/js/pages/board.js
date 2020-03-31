@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded',init);
 function init(){
     // Load players
     pollPlayers();
+    loadPersonalBank();
 
     // Options functionality
     document.querySelector("#options img").addEventListener('click', openOptionsPopup);
@@ -19,7 +20,3 @@ function init(){
     scrollToFountain();
     document.addEventListener('keydown', shortcutsAlhambra);
 }
-
-
-
-

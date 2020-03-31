@@ -14,6 +14,15 @@ function getJoinedGame(callback){
 function hasGameStarted(callback){
     getJoinedGame(function(game){
         callback(game.started);
-    })
+    });
 }
 
+function getPlayerOfJoinedGame(name, callback){
+    getJoinedGame(function(game){
+       for(const player of game.players){
+           if(player.name === name){
+               callback(player);
+           }
+       }
+    });
+}

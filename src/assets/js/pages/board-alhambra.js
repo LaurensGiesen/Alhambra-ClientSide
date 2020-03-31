@@ -11,7 +11,7 @@ function scrollToFountain() {
 function shortcutsAlhambra(e){
     const alh = document.querySelector("#alhambra");
     const tileHeight = document.querySelector(".row0").clientHeight;
-    e.preventDefault();
+
     switch(e.keyCode){
         case 37: //ArrowLeft
             alh.scrollBy(tileHeight*-1,0);
