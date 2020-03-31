@@ -33,13 +33,24 @@ function getNumberOfGames(number, callback){
     });
 }
 
-function getNumberOfPlayers(gameId, callback){
+function getGame(gameId, callback){
     fetchFromServer(`${config.root}games?details=true&prefix=group${config.groupnumber}`, 'GET').then(function (games) {
-        for(let game of games){
+        for(const game of games){
             if(game.id === gameId){
-                callback(game.playerCount);
+                callback(game);
             }
         }
     });
 }
 
+function getNumberOfPlayers(gameId, callback){
+    getGame(gameId, function(game){
+        callback(game.playerCount);
+    });
+}
+
+function getPlayers(gameId, callback){
+    getGame(gameId, function(game){
+        callback(game.players);
+    })
+}

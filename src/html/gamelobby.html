@@ -1,40 +1,45 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="../assets/css/reset.css">
-        <link rel="stylesheet" href="../assets/css/general.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=MedievalSharp&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../assets/css/gamelobby.css">
-        <title>Game-lobby</title>
-    </head>
-    <body>
-        <header>
-            <aside>
-                <a href="gamestart.html" id="return"></a>
-                <!-- terug icoon -->
-            </aside>
-            <h1>Game Id:</h1>
-            <p></p>
-        </header>
-        <main>
-            <div class="eerst">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/general.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/gamelobby.css">
+    <title>Game-lobby</title>
+</head>
+<body>
+<a href="gamestart.html" id="return"></a>
 
-            </div>
-            <section class="twee">
+<header>
+    <h1>Game Id:</h1>
+    <p></p>
+</header>
 
-            </section>
-            <h5>Ready Up!</h5>
-            <div class="timer">
-                <h6>Your game will start in</h6><p class="timerp"></p><p>seconds...</p>
-            </div>
-        </main>
-        <script src="../assets/js/pages/gameLobby/inladenLobby.js"></script>
-        <script src="../assets/js/pages/gameLobby/gameLobby.js"></script>
-        <script src="../assets/js/functions/config.js"></script>
-        <script src="../assets/js/functions/communication.js"></script>
-        <script src="../assets/js/functions/script.js"></script>
-        <script src="../assets/js/pages/gameLobby/readyOrNot.js"></script>
-    </body>
+<main>
+    <header>
+        <h2>Joined players: </h2>
+        <span></span>
+    </header>
+    <section>
+        <h2>List of players</h2>
+    </section>
+    <section>
+        <h5>Ready?</h5>
+    </section>
+
+</main>
+<script src="../assets/js/functions/config.js"></script>
+<script src="../assets/js/functions/communication.js"></script>
+<script src="../assets/js/functions/script.js"></script>
+<script src="../assets/js/functions/localstorage.js"></script>
+
+<script src="../assets/js/pages/gamelobby.js"></script>
+
+<script src="../assets/js/functions/game.js"></script>
+<script src="../assets/js/functions/game-joined.js"></script>
+<script src="../assets/js/functions/player.js"></script>
+
+</body>
 </html>
