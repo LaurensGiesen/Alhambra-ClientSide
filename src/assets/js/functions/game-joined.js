@@ -17,3 +17,13 @@ function hasGameStarted(callback){
     })
 }
 
+function getPlayerOfJoinedGame(name, callback){
+    getJoinedGame(function(game){
+       for(let player of game.players){
+           console.log(player.name);
+           if(player.name === name){
+               callback(player);
+           }
+       }
+    });
+}
