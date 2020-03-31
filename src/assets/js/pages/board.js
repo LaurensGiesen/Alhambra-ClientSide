@@ -3,6 +3,9 @@
 document.addEventListener('DOMContentLoaded',init);
 
 function init(){
+    // Load players
+    pollPlayers();
+
     // Options functionality
     document.querySelector("#options img").addEventListener('click', openOptionsPopup);
     document.querySelector("#options .popup header h3").addEventListener('click', closeOptionsPopup);
@@ -16,6 +19,7 @@ function init(){
     scrollToFountain();
     document.addEventListener('keydown', shortcutsAlhambra);
 }
+
 
 
 

@@ -5,8 +5,15 @@
 * The player has authorization.
 * */
 
-function hasGameStarted(callback){
+function getJoinedGame(callback){
     fetchFromServer(`${config.root}games/${_gameId}`, 'GET').then(function (game) {
-        callback(game.started);
+        callback(game);
     });
 }
+
+function hasGameStarted(callback){
+    getJoinedGame(function(game){
+        callback(game.started);
+    })
+}
+
