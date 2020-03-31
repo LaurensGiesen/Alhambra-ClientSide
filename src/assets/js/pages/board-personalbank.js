@@ -12,7 +12,7 @@ function loadPersonalBank(){
         orangestack.innerHTML = "";
         yellowstack.innerHTML = "";
 
-        for(let coin of player.coins){
+        for(const coin of player.coins){
             switch(coin.currency) {
                 case "blue":
                     bluestack.innerHTML += getCoinHTML(coin);
@@ -25,6 +25,8 @@ function loadPersonalBank(){
                     break;
                 case "orange":
                     orangestack.innerHTML += getCoinHTML(coin);
+                    break;
+                default:
                     break;
             }
 

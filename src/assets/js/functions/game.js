@@ -52,5 +52,5 @@ function getNumberOfPlayers(gameId, callback){
 function getPlayers(gameId, callback){
     getGame(gameId, function(game){
         callback(game.players);
-    })
+    });
 }
