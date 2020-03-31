@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded',init);
 function init(){
     // Load players
     pollPlayers();
-
+    pollMarket();
     // Options functionality
     document.querySelector("#options img").addEventListener('click', openOptionsPopup);
     document.querySelector("#options .popup header h3").addEventListener('click', closeOptionsPopup);
