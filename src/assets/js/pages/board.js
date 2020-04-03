@@ -7,7 +7,7 @@ function init(){
     pollGameAuth(function(){
         loadPlayers(); // Load players onto the board
         loadBanks(); // Load public bank and personal bank onto the board
-        pollMarket();
+        loadPublicMarket();
         //loadPublicMarket();
         //loadPersonalReserve();
         //loadAlhambra();
