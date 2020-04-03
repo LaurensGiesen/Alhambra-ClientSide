@@ -1,15 +1,17 @@
 "use strict";
 
-function pollPlayers(){
-    setTimeout(pollPlayers, 1000);
+function loadPlayers(){
+    const isActivePlayer = isPlayerActive(_playerName);
+    if(!isActivePlayer){
+        setTimeout(loadPlayers, 1000);
+    }
 
-    getJoinedGame(function(game){
-        let playersArea = "";
-        for(const player of game.players){
-            playersArea += getPlayersHTML(player, game.currentPlayer);
-        }
-        document.querySelector("#players").innerHTML = playersArea;
-    });
+    let playersArea = "";
+    for(const player of _gameAuth.players){
+        playersArea += getPlayersHTML(player, _gameAuth.currentPlayer);
+    }
+    document.querySelector("#players").innerHTML = playersArea;
+
 }
 
 function getPlayersHTML(player, currentPlayer){

@@ -3,10 +3,16 @@
 document.addEventListener('DOMContentLoaded',init);
 
 function init(){
-    // Load players
-    pollPlayers();
-    loadPersonalBank();
-    pollPublicBank();
+    // Load game into _game
+    pollGameAuth(function(){
+        loadPlayers(); // Load players onto the board
+        loadBanks(); // Load public bank and personal bank onto the board
+        //loadPublicMarket();
+        //loadPersonalReserve();
+        //loadAlhambra();
+    });
+
+
     // Options functionality
     document.querySelector("#options img").addEventListener('click', openOptionsPopup);
     document.querySelector("#options .popup header h3").addEventListener('click', closeOptionsPopup);
