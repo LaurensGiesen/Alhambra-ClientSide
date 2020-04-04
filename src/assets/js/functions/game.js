@@ -3,6 +3,8 @@
 /*
 * All functionality around creating games, deleting games, joining games.
 * */
+let _game;
+
 
 function createGame(callback){
     fetchFromServer(`${config.root}games`, 'POST', {prefix: `group${config.groupnumber}`}).then(function (response) {
@@ -49,8 +51,3 @@ function getNumberOfPlayers(gameId, callback){
     });
 }
 
-function getPlayers(gameId, callback){
-    getGame(gameId, function(game){
-        callback(game.players);
-    });
-}

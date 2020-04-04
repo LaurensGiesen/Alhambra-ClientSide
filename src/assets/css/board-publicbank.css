@@ -33,6 +33,10 @@
     font-weight: bold;
 }
 
+#publicbank .money[data-selected="true"]{
+    border-color: red;
+}
+
 #publicbank .bluemoney {background-color: #4d7fce;}
 #publicbank .greenmoney {background-color: #61ab3a;}
 #publicbank .orangemoney {background-color: #fa822c;}

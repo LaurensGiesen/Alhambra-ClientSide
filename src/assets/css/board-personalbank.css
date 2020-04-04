@@ -43,6 +43,11 @@
     background-position: center 35px;
     font-weight: bold;
 }
+
+#personalbank .moneystack .money[data-selected="true"]{
+    border-color: red;
+}
+
 #personalbank .bluemoney {background-color: #4d7fce;}
 #personalbank .greenmoney {background-color: #61ab3a;}
 #personalbank .orangemoney {background-color: #fa822c;}

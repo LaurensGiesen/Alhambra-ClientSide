@@ -66,7 +66,7 @@ function clickToJoinGame(e){
         createGame(function(response){
             joinGame(response, function(){
                 window.location.href = "gamelobby.html";
-            })
+            });
         });
     } else {
         joinGame(gameId, function(){
