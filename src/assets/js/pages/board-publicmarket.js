@@ -106,9 +106,10 @@ function dropPersonalReserve(e){
             "west":e.dataTransfer.getData("walls").includes("w"),
         }
     };
-    
+
     //buy building
     buyBuilding(e.dataTransfer.getData("currency"), coinArray, function(){
-        placeBuildingInReserve(building);
+        placeBuildingInReserve(building, endOfTurn);
     });
 }
+

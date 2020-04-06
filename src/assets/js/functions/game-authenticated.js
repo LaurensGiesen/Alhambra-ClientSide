@@ -58,10 +58,10 @@ function buyBuilding(currency, coins, callback){
     });
 }
 
-function placeBuildingInReserve(building){
+function placeBuildingInReserve(building, callback){
     const body = {"building": building, "location": null};
     fetchFromServer(`${config.root}games/${_gameId}/players/${_playerName}/city`, 'POST', body).then(function (response) {
         _gameAuth = response;
-        console.log(_gameAuth);
+        callback();
     });
 }

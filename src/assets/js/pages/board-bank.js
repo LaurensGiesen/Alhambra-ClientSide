@@ -97,7 +97,6 @@ function endOfTurn(){
     loadPlayers();
     loadBanks();
     loadPublicMarket();
-
 }
 
 
