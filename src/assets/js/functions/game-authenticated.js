@@ -48,3 +48,24 @@ function takeMoney(coins, callback){
         });
     });
 }
+
+function buyBuilding(currency, coins, callback){
+    const body = {};
+    body.currency = currency;
+    body.coins = coins;
+    fetchFromServer(`${config.root}games/${_gameId}/players/${_playerName}/buildings-in-hand`, 'POST', body).then(function (response) {
+       _gameAuth = response;
+       console.log(_gameAuth);
+       callback();
+    });
+}
+
+function placeBuildingInReserve(building){
+    const body = {};
+    body.building = building;
+    body.location = null;
+    fetchFromServer(`${config.root}games/${_gameId}/players/${_playerName}/city`, 'POST', body).then(function (response) {
+        _gameAuth = response;
+        console.log(_gameAuth);
+    });
+}

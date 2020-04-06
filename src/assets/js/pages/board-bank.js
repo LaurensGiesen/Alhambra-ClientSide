@@ -96,7 +96,8 @@ function clickTakeMoney(e){
 function endOfTurn(){
     loadPlayers();
     loadBanks();
-    //loadTiles();
+    loadPublicMarket();
+
 }
 
 
