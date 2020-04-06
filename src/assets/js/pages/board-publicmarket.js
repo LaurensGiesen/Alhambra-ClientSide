@@ -96,15 +96,17 @@ function dropPersonalReserve(e){
     }
 
     // place building in reserve
-    const building = {};
-    building.type= e.dataTransfer.getData("type");
-    building.cost = e.dataTransfer.getData("cost");
-    building.walls = {};
-    building.walls.north = e.dataTransfer.getData("walls").includes("n");
-    building.walls.east = e.dataTransfer.getData("walls").includes("e");
-    building.walls.south = e.dataTransfer.getData("walls").includes("s");
-    building.walls.west = e.dataTransfer.getData("walls").includes("w");
-
+    const building = {
+        "type": e.dataTransfer.getData("type"),
+        "cost": e.dataTransfer.getData("cost"),
+        "walls": {
+            "north": e.dataTransfer.getData("walls").includes("n"),
+            "east":e.dataTransfer.getData("walls").includes("e"),
+            "south":e.dataTransfer.getData("walls").includes("s"),
+            "west":e.dataTransfer.getData("walls").includes("w"),
+        }
+    };
+    
     //buy building
     buyBuilding(e.dataTransfer.getData("currency"), coinArray, function(){
         placeBuildingInReserve(building);
