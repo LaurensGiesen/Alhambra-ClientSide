@@ -3,6 +3,10 @@
 /---------------------*/
 body{
     font-family: 'Roboto', sans-serif;
+    background-image: url("../media/textures/stone-wall-texture_1110-425.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 
@@ -76,6 +80,7 @@ main article {
     padding: 10px 50px 10px 50px;
     border: 3px solid black;
     margin-bottom: 10px;
+    background-color: white;
 }
 
 main article h3 {

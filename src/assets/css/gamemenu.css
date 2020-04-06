@@ -1,5 +1,7 @@
 body {
     font-family: 'MedievalSharp', cursive;
+    background-image: url("../media/textures/stone-wall-texture_1110-425.jpg");
+
 }
 main {
     display: flex;
