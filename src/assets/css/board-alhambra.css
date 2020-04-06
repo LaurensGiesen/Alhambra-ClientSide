@@ -113,7 +113,7 @@
     -webkit-filter: drop-shadow(5px 5px 5px #e83328);
     filter:         drop-shadow(5px 5px 5px #e83328);
 }
-.arcade img, .arcade h4 {
+.arcades img, .arcades h4 {
     -webkit-filter: drop-shadow(5px 5px 5px #fa822c);
     filter:         drop-shadow(5px 5px 5px #fa822c);
 }
@@ -121,7 +121,7 @@
     -webkit-filter: drop-shadow(5px 5px 5px #ab479d);
     filter:         drop-shadow(5px 5px 5px #ab479d);
 }
-.chamber img, .chamber h4 {
+.chambers img, .chambers h4 {
     -webkit-filter: drop-shadow(5px 5px 5px #ffce33);
     filter:         drop-shadow(5px 5px 5px #ffce33);
 }
