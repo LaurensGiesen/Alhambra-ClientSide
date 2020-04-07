@@ -101,5 +101,9 @@ function addEmptyTileToAlhambra(location){
 }
 
 function makeAlhambraUndroppable(){
+    const emptyTiles = document.querySelectorAll("#alhambra .emptyTile");
 
+    for(const emptyTile of emptyTiles){
+        emptyTile.closest("section").remove();
+    }
 }
