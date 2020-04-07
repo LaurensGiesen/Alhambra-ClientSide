@@ -6,5 +6,6 @@ const config = {
     groupnumber: "20",
     maxLengthPlayerName: 20,
     towersOnMap: 12,
-    maxNumberOfParticipants: 6
+    maxNumberOfParticipants: 6,
+    pollingTime: 1000
 };

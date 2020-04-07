@@ -1,6 +1,8 @@
 body {
     width: 100vw;
     height: 100vh;
+    background-image: url("../media/textures/stone-wall-texture_1110-425.jpg");
+
 }
 
 div {

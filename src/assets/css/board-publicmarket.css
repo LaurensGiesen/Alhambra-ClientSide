@@ -87,3 +87,8 @@
     width: 73px;
     border-radius: 10px 10px 100px 10px;
 }
+
+#publicmarket .tile.wallSouth {border-bottom: 5px solid black;}
+#publicmarket .tile.wallNorth {border-top: 5px solid black;}
+#publicmarket .tile.wallEast {border-right: 5px solid black;}
+#publicmarket .tile.wallWest {border-left: 5px solid black;}
