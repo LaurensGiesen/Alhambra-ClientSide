@@ -2,18 +2,22 @@
 
 const popUp = document.querySelector("#playerDetails .popup");
 const content = document.querySelector("#playerDetails .popup .popup-content");
+const welcomePlayer = document.querySelector("#playerDetails .popup-content div");
 
 function openPopUp(e) {
     e.preventDefault();
     console.log("dit werkt");
 
-    console.log(popUp);
-    console.log(content);
-
-    popUp.style.display = 'flex';
+    popUp.style.display = 'block';
     content.style.display = 'block';
 
-    document.querySelector("#players .popup").addEventListener("mouseout", closePopUp);
+    let playerName = e.target.innerHTML;
+    console.log(playerName);
+
+    welcomePlayer.innerHTML = `<p>${playerName}</p>`;
+
+    document.querySelectorAll("#players section").forEach((element) => {
+        element.addEventListener("mouseout", closePopUp);});
 
 }
 
