@@ -86,7 +86,17 @@ function makeAlhambraDroppable(e){
         for(let loc of response){
             addEmptyTileToAlhambra(loc);
         }
+        document.querySelectorAll("#alhambra .emptyTile").forEach(
+            tile => {
+                tile.addEventListener("dragover", dragoverTile);
+                tile.addEventListener("drop", dropAlhambra);
+            }
+        );
     });
+}
+
+function dropAlhambra(){
+    alert("yes");
 }
 
 function addEmptyTileToAlhambra(location){
@@ -102,8 +112,9 @@ function addEmptyTileToAlhambra(location){
 
 function makeAlhambraUndroppable(){
     const emptyTiles = document.querySelectorAll("#alhambra .emptyTile");
-
     for(const emptyTile of emptyTiles){
         emptyTile.closest("section").remove();
     }
 }
+
+
