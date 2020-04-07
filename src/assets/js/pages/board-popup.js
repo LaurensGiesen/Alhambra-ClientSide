@@ -1,19 +1,23 @@
 "use strict";
 
-document.addEventListener('DOMContentLoaded',init);
-
-function init(){
-    console.log("pagina ingeladen");
-    // document.querySelector("#players").addEventListener("mouseover", openPopUp);
-}
+const popUp = document.querySelector("#playerDetails .popup");
+const content = document.querySelector("#playerDetails .popup .popup-content");
 
 function openPopUp(e) {
     e.preventDefault();
     console.log("dit werkt");
 
-    // const playerDetails = document.querySelector("#playerDetails .popup");
-    // const popUp = document.querySelector("#playerDatails .popup .popup-content");
-    //
-    // playerDetails.style.display = "flex";
-    // popUp.style.display = "block";
+    console.log(popUp);
+    console.log(content);
+
+    popUp.style.display = 'flex';
+    content.style.display = 'block';
+
+    document.querySelector("#players .popup").addEventListener("mouseout", closePopUp);
+
+}
+
+function closePopUp() {
+    popUp.style.display = 'none';
+    content.style.display = 'none';
 }

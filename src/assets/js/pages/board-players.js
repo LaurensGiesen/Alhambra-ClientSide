@@ -10,7 +10,8 @@ function loadPlayers(){
     for(const player of _gameAuth.players){
         playersArea += getPlayersHTML(player, _gameAuth.currentPlayer);
     }
-    document.querySelector("#players").innerHTML = playersArea;
+    document.querySelector("#players section").innerHTML = playersArea;
+    document.querySelector("#players section article[data-name=chrome]").addEventListener("mouseover", openPopUp);
 
 }
 

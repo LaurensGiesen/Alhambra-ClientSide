@@ -1,12 +1,7 @@
-#playerDetails {
-    position: relative;
-}
 
-#playerDetails h2 {
-    display: none;
-}
+/*dit samen met options in 1 css zetten*/
 
-#playerDetails .popup {
+#players .popup{
     display: none;
     justify-content: center;
     align-items: center;
@@ -22,20 +17,27 @@
 }
 
 #playerDetails .popup-content {
-    background-color: #fefefe;
-    border: 1px solid #888;
-    width: 50%;
-    height: 40%;
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:300px;
+    left: 200px;
+    width:100%;
+    z-index:10000;
 }
 
-#playerDetails .popup-content header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-weight: bold;
-    background-color: lightgray;
-    color: #aaaaaa;
-    font-size: 1rem;
-    height: 26px;
-    padding-right: 10px;
+#playerDetails .popup-content > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
 }
+
