@@ -3,7 +3,7 @@
 function loadPlayers(){
     const isActivePlayer = isPlayerActive(_playerName);
     if(!isActivePlayer){
-        setTimeout(loadPlayers, 1000);
+        setTimeout(loadPlayers, config.pollingTime);
     }
 
     let playersArea = "";

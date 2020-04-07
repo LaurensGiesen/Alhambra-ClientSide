@@ -3,6 +3,7 @@
 /---------------------*/
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: deepskyblue;
 }
 
 img {
@@ -28,7 +29,7 @@ header h1 {
 /*---------main------------*/
 main {
     margin-top: 20px;
-    background-image: url("../../images/worldmap.jpg");
+    background-image: url("../../images/map.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -42,20 +43,20 @@ main figure {
 
 main figure:first-child {
     position: absolute;
-    top: 26%;
-    left: 23%;
+    top: 20%;
+    left: 18%;
 }
 
 main figure:nth-child(2) {
     position: absolute;
-    top: 48%;
-    left: 46%;
+    top: 40%;
+    left: 41%;
 }
 
 main figure:nth-child(3) {
     position: absolute;
-    top: 58%;
-    left: 33%;
+    top: 51%;
+    left: 24%;
 }
 
 main figure:nth-child(4) {
@@ -66,50 +67,50 @@ main figure:nth-child(4) {
 
 main figure:nth-child(5) {
     position: absolute;
-    top: 40%;
+    top: 49%;
     left: 67%;
 }
 
 main figure:nth-child(6) {
     position: absolute;
-    top: 39%;
-    left: 26%;
+    top: 35%;
+    left: 15%;
 }
 
 main figure:nth-child(7) {
     position: absolute;
-    top: 30%;
-    left: 53%;
+    top: 22%;
+    left: 48%;
 }
 
 main figure:nth-child(8) {
     position: absolute;
     top: 66%;
-    left: 71%;
+    left: 74%;
 }
 
 main figure:nth-child(9) {
     position: absolute;
-    top: 38%;
+    top: 35%;
     left: 60%;
 }
 
 main figure:nth-child(10) {
     position: absolute;
     top: 69%;
-    left: 34%;
+    left: 25%;
 }
 
 main figure:nth-child(11) {
     position: absolute;
     top: 62%;
-    left: 50%;
+    left: 46%;
 }
 
 main figure:nth-child(12) {
     position: absolute;
-    top: 17%;
-    left: 38%;
+    top: 12%;
+    left: 33%;
 }
 
 /* pop up*/

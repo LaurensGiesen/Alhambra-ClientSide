@@ -8,7 +8,6 @@ function init(){
         loadPlayers(); // Load players onto the board
         loadBanks(); // Load public bank and personal bank onto the board
         loadPublicMarket();
-        //loadPublicMarket();
         //loadPersonalReserve();
         //loadAlhambra();
     });

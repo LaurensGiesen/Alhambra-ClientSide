@@ -40,6 +40,7 @@
     font-size: 1rem;
     height: 26px;
     padding-right: 10px;
+    background-image: url("../media/textures/rm21-wood-ae-52-p.jpg");
 }
 
 #options .popup-content header:hover {
@@ -57,6 +58,7 @@
     line-height: 1.5;
     font-weight: bold;
     font-family: 'MedievalSharp', cursive;
+    background-image: url("../media/textures/rm21-wood-ae-52-p.jpg");
 }
 
 #options .popup-content ul li {

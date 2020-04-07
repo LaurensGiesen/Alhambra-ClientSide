@@ -5,9 +5,10 @@ body {
     width: 100vw;
     height: 100vh;
     font-family: 'MedievalSharp', cursive;
+    background-image: url("../media/textures/decorative-stone-wall-vector-506267.jpg");
 }
 
-form {
+form{
     width: 900px;
     margin: auto;
     display: flex;
@@ -18,6 +19,7 @@ form {
     background-repeat: no-repeat;
     background-size: 300px;
     background-position: center;
+
 }
 
 form input[type=text]{
@@ -42,16 +44,20 @@ div.submit{
 
 form input[type=submit]{
     height: 150px;
-    width: 150px;
-    margin: auto;
+    width: 180px;
     background-image: url("../media/icons/hammer.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 150px 150px;
     background-color: transparent;
     border: none;
     cursor: pointer;
+    background-position: right;
+    transition:1s;
 }
 
 form input[type=submit]:focus{
     outline: none;
+}
+label{
+    color: white;
 }
