@@ -77,10 +77,12 @@ function dragstartTile(e){
 
     document.querySelector("#personalreserve").addEventListener("dragover", dragoverTile);
     document.querySelector("#personalreserve").addEventListener("drop", dropPersonalReserve);
+    makeAlhambraDroppable(e);
 }
 
 function dragendTile(){
     document.querySelector("#personalreserve").removeEventListener("dragover", dragoverTile);
+    makeAlhambraUndroppable();
 }
 function dragoverTile(e){
     e.preventDefault();

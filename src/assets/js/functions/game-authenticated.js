@@ -80,3 +80,11 @@ function placeBuildingInReserve(building, callback){
         callback();
     });
 }
+
+function getAvailableLocations(walls, callback){
+    fetchFromServer(`${config.root}games/${_gameId}/players/${_playerName}/city/locations?north=${walls.north}&east=${walls.east}&south=${walls.south}&west=${walls.west}`,
+                'GET'
+    ).then(function (response) {
+        callback(response);
+    });
+}

@@ -55,7 +55,14 @@ function loadAlhambra(){
 
 function getHTMLTile(building){
     if(building.type != null){
-        return `<article class="tile ${building.type} wallSouth wallWest" data-type="${building.type}" data-cost="${building.cost}" data-walls="sw">
+        let wallClass= "";
+        let wallData= "";
+        if(building.walls.north){wallClass+="wallNorth"; wallData+="n";}
+        if(building.walls.east){wallClass+="wallEast"; wallData+="e";}
+        if(building.walls.south){wallClass+="wallSouth"; wallData+="s";}
+        if(building.walls.west){wallClass+="wallWest"; wallData+="w";}
+
+        return `<article class="tile ${building.type} ${wallClass}" data-type="${building.type}" data-cost="${building.cost}" data-walls="${wallData}">
             <img src="../assets/media/icons/${building.type}.png" alt="${building.type}">
             <h4>${building.cost}</h4>
             </article>`;
@@ -65,4 +72,34 @@ function getHTMLTile(building){
             <h4>fountain</h4>
             </article>`;
     }
+}
+
+function makeAlhambraDroppable(e){
+    const w = e.target.dataset.walls;
+    const walls = {
+        "north": w.includes("n"),
+        "east": w.includes("e"),
+        "south": w.includes("s"),
+        "west": w.includes("w")
+    };
+    getAvailableLocations(walls, function(response){
+        for(let loc of response){
+            addEmptyTileToAlhambra(loc);
+        }
+    });
+}
+
+function addEmptyTileToAlhambra(location){
+    const board = document.querySelector("#alhambra");
+    board.innerHTML += `
+            <section class="row${location.row} col${location.col}" data-row="${location.row}" data-col="${location.col}">
+                <h3>Boardarea</h3>
+                <article class="emptyTile">
+                    <h4>Empty tile</h4>
+                </article>
+            </section>`;
+}
+
+function makeAlhambraUndroppable(){
+
 }
