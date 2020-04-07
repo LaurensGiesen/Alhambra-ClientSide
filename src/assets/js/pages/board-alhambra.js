@@ -55,7 +55,14 @@ function loadAlhambra(){
 
 function getHTMLTile(building){
     if(building.type != null){
-        return `<article class="tile ${building.type} wallSouth wallWest" data-type="${building.type}" data-cost="${building.cost}" data-walls="sw">
+        let dataWalls = "";
+        let classWalls = "";
+        if(building.walls.north){dataWalls += "n"; classWalls += "wallNorth";}
+        if(building.walls.east){dataWalls += "e"; classWalls += "wallEast";}
+        if(building.walls.south){dataWalls += "s"; classWalls += "wallSouth";}
+        if(building.walls.west){dataWalls += "w"; classWalls += "wallWest";}
+
+        return `<article class="tile ${building.type} ${classWalls}" data-type="${building.type}" data-cost="${building.cost}" data-walls="${dataWalls}">
             <img src="../assets/media/icons/${building.type}.png" alt="${building.type}">
             <h4>${building.cost}</h4>
             </article>`;
