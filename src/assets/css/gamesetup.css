@@ -5,6 +5,7 @@ body {
     width: 100vw;
     height: 100vh;
     font-family: 'MedievalSharp', cursive;
+    background-image: url("../media/textures/decorative-stone-wall-vector-506267.jpg");
 }
 
 form{
@@ -56,4 +57,7 @@ form input[type=submit]{
 
 form input[type=submit]:focus{
     outline: none;
+}
+label{
+    color: white;
 }

@@ -9,7 +9,10 @@ main{
     margin-right: 20%;
 
 }
-
+body{
+    background-image: url(../media/textures/rm21-wood-ae-52-p.jpg);
+    background-size: cover;
+}
 
 main p{
     font-size: 1rem;

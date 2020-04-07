@@ -9,6 +9,8 @@ main{
 
 body{
     font-family: 'Roboto', cursive;
+    background-image: url("../media/textures/rm21-wood-ae-52-p.jpg");
+    background-size: contain;
 }
 
 div.goal, div.gameplay, div.scoring{
@@ -19,7 +21,6 @@ div.goal, div.gameplay, div.scoring{
     font-family: 'Roboto', cursive;
     height: 400px;
     width: 400px;
-
     background-repeat: no-repeat;
     background-size: auto 150px;
     background-position: center;
@@ -42,6 +43,7 @@ div.goal a:hover,div.gameplay a:hover,div.scoring a:hover{
 main div a{
     text-decoration: none;
     color: black;
+
 }
 
 img{
