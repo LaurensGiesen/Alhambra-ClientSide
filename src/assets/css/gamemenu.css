@@ -1,17 +1,19 @@
 body {
     font-family: 'MedievalSharp', cursive;
     background-image: url("../media/textures/stone-wall-texture_1110-425.jpg");
+    background-size: cover;
 
 }
 main {
     display: flex;
     justify-content: space-around;
-    width: 800px;
+    width: 1000px;
     margin: 50px auto 0 auto ;
     padding-top: 500px;
-    background-image: url("../media/figures/alhambra-castle.png");
+    background-image: url("../media/figures/ALHABMRA.png");
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: 70px -150px;
+    background-size: 85%;
 }
 
 main a {
@@ -23,7 +25,7 @@ main a {
     line-height: 2;
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 main a:hover {
@@ -31,9 +33,9 @@ main a:hover {
 }
 
 main a:first-of-type {
-    background-image: url("../media/icons/fortress.png");
+    background-image: url("../media/icons/fortress - kopie.png");
 }
 
 main a:last-of-type {
-    background-image: url("../media/icons/book.png");
+    background-image: url("../media/icons/book - kopie.png");
 }
