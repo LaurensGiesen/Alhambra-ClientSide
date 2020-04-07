@@ -9,7 +9,7 @@ function init(){
         loadBanks(); // Load public bank and personal bank onto the board
         loadPublicMarket();
         //loadPersonalReserve();
-        //loadAlhambra();
+        loadAlhambra();
     });
 
 

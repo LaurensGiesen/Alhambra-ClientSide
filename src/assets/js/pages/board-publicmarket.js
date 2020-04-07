@@ -9,7 +9,7 @@ function loadPublicMarket(){
     loadTileInMarket("yellow");
 
     if(!isActivePlayer){
-        setTimeout(loadPublicMarket, 1000);
+        setTimeout(loadPublicMarket, config.pollingTime);
     } else {
         makeTilesDraggable();
     }
