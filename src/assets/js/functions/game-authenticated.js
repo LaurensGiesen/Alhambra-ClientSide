@@ -16,7 +16,7 @@ function pollGameAuth(callback){
         }
 
     });
-    setTimeout(function(){pollGameAuth();}, 1000);
+    setTimeout(function(){pollGameAuth();}, config.pollingTime);
 }
 
 function hasGameStarted(){

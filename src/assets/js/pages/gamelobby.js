@@ -15,7 +15,7 @@ function loadGameId(){
     document.querySelector("header p").innerHTML = _gameId;
 }
 function loadLobbyTable(){
-    setTimeout(loadLobbyTable, 1500);
+    setTimeout(loadLobbyTable, config.pollingTime);
     checkGameStarted();
     loadNumberOfPlayers();
     loadPlayers();

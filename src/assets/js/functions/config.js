@@ -7,4 +7,5 @@ const config = {
     maxLengthPlayerName: 20,
     towersOnMap: 12,
     maxNumberOfParticipants: 6,
+    pollingTime: 1000
 };
