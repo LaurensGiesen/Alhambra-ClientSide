@@ -10,9 +10,11 @@ main{
     margin-top: 5%;
     margin-left: 8%;
     margin-right: 20%;
-
 }
-
+body{
+    background-image: url(../media/textures/rm21-wood-ae-52-p.jpg);
+    background-size: cover;
+}
 main aside{
     display: flex;
     flex-direction: row;

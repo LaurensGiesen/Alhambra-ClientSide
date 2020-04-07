@@ -9,7 +9,10 @@ main{
     margin-right: 20%;
 
 }
-
+body{
+    background-image: url(../media/textures/rm21-wood-ae-52-p.jpg);
+    background-size: cover;
+}
 
 main p{
     font-size: 1rem;
@@ -36,7 +39,7 @@ main aside{
     margin-top: 8px;
     width: 100%;
     text-align: center;
-    margin-left: 23%;
+    margin-left: 14%;
     padding-top: 20px;
     line-height: 155%;
 }
