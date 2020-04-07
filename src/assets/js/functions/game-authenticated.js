@@ -48,6 +48,7 @@ function getLocationFountain(city){
             }
         }
     }
+    return null;
 }
 
 
