@@ -82,7 +82,7 @@ function dragstartTile(e){
 
 function dragendTile(){
     document.querySelector("#personalreserve").removeEventListener("dragover", dragoverTile);
-    //makeAlhambraUndroppable();
+    makeAlhambraUndroppable();
 }
 function dragoverTile(e){
     e.preventDefault();

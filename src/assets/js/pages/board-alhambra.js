@@ -95,8 +95,13 @@ function makeAlhambraDroppable(e){
     });
 }
 
-function dropAlhambra(){
-    alert("yes");
+function dropAlhambra(e){
+    const dropLocation = e.target.closest("section");
+    const dropRow = dropLocation.dataset.row;
+    const dropCol = dropLocation.dataset.col;
+
+    
+    console.log(dropRow + " " + dropCol);
 }
 
 function addEmptyTileToAlhambra(location){
