@@ -1,12 +1,15 @@
 #personalreserve {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
     background-image: url("../media/textures/white-sand.jpg");
     border-radius: 10px;
     padding: 10px;
     overflow: auto;
+}
+
+#personalreserve div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 #personalreserve h2 {

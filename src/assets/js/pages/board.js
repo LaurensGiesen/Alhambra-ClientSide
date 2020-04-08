@@ -9,7 +9,8 @@ function init(){
         loadBanks(); // Load public bank and personal bank onto the board
         loadPublicMarket();
         //loadPersonalReserve();
-        //loadAlhambra();
+        loadAlhambra();
+        pollPersonalReserve();
     });
 
 
@@ -21,10 +22,6 @@ function init(){
     document.querySelector("#options .popup #leave").addEventListener('click', openLeaveWarning);
     document.querySelector("#options .popup #leaveyes").addEventListener('click', leaveGame);
     document.querySelector("#options .popup #leaveno").addEventListener('click', openOptionsPopup);
-    // document.querySelector("#popUp").addEventListener("mouseover", openPopUp);
-    // document.querySelectorAll("#popUp").forEach((element) => {
-    //     element.addEventListener('mouseover', openPopUp);});
-
     // Alhambra functionality
     scrollToFountain();
     document.addEventListener('keydown', shortcutsAlhambra);
