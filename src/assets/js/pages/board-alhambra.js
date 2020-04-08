@@ -8,40 +8,40 @@ function scrollToFountain() {
     });
 }
 
-function shortcutsAlhambra(e){
+function shortcutsAlhambra(e) {
     const alh = document.querySelector("#alhambra");
     const tileHeight = document.querySelector(".row0").clientHeight;
 
-    switch(e.keyCode){
+    switch (e.keyCode) {
         case 37: //ArrowLeft
-            alh.scrollBy(tileHeight*-1,0);
+            alh.scrollBy(tileHeight * -1, 0);
             break;
         case 38: //ArrowUp
-            alh.scrollBy(0, tileHeight*-1);
+            alh.scrollBy(0, tileHeight * -1);
             break;
         case 39: //ArrowRight
-            alh.scrollBy(parseInt(tileHeight),0);
+            alh.scrollBy(parseInt(tileHeight), 0);
             break;
         case 40: //ArrowDown
-            alh.scrollBy(0,parseInt(tileHeight));
+            alh.scrollBy(0, parseInt(tileHeight));
             break;
         default:
             break;
     }
 }
 
-function loadAlhambra(){
+function loadAlhambra() {
     const alhambra = getAlhambra(_playerName);
     const locationFountain = getLocationFountain(alhambra);
     const board = document.querySelector("#alhambra");
 
     let boardSectionHTML = "";
-    for(let row = 0; row < alhambra.length; row++ ){
-        for(let col = 0; col < alhambra[row].length; col++ ){
+    for (let row = 0; row < alhambra.length; row++) {
+        for (let col = 0; col < alhambra[row].length; col++) {
             const boardrow = row - locationFountain.row;
             const boardcol = col - locationFountain.col;
             boardSectionHTML += `<section class="row${boardrow} col${boardcol}" data-row="${boardrow}" data-col="${boardcol}">`;
-            if(alhambra[row][col] != null){
+            if (alhambra[row][col] != null) {
                 boardSectionHTML += getHTMLTile(alhambra[row][col]);
             }
             boardSectionHTML += `</section>`;
@@ -53,16 +53,28 @@ function loadAlhambra(){
     board.innerHTML = boardSectionHTML;
 }
 
-function getHTMLTile(building){
-    if(building.type != null){
-        let dataWalls = "";
-        let classWalls = "";
-        if(building.walls.north){dataWalls += "n"; classWalls += "wallNorth";}
-        if(building.walls.east){dataWalls += "e"; classWalls += "wallEast";}
-        if(building.walls.south){dataWalls += "s"; classWalls += "wallSouth";}
-        if(building.walls.west){dataWalls += "w"; classWalls += "wallWest";}
+function getHTMLTile(building) {
+    if (building.type != null) {
+        let wallClass = "";
+        let wallData = "";
+        if (building.walls.north) {
+            wallClass += "wallNorth ";
+            wallData += "n";
+        }
+        if (building.walls.east) {
+            wallClass += "wallEast ";
+            wallData += "e";
+        }
+        if (building.walls.south) {
+            wallClass += "wallSouth ";
+            wallData += "s";
+        }
+        if (building.walls.west) {
+            wallClass += "wallWest ";
+            wallData += "w";
+        }
 
-        return `<article class="tile ${building.type} ${classWalls}" data-type="${building.type}" data-cost="${building.cost}" data-walls="${dataWalls}">
+        return `<article class="tile ${building.type} ${wallClass}" data-type="${building.type}" data-cost="${building.cost}" data-walls="${wallData}">
             <img src="../assets/media/icons/${building.type}.png" alt="${building.type}">
             <h4>${building.cost}</h4>
             </article>`;
@@ -71,5 +83,79 @@ function getHTMLTile(building){
             <img src="../assets/media/icons/fountain.png" alt="fountain">
             <h4>fountain</h4>
             </article>`;
+    }
+}
+
+function makeAlhambraDroppable(e) {
+    const w = e.target.dataset.walls;
+    const walls = {
+        "north": w.includes("n"),
+        "east": w.includes("e"),
+        "south": w.includes("s"),
+        "west": w.includes("w")
+    };
+    getAvailableLocations(walls, function (response) {
+        for (const loc of response) {
+            addEmptyTileToAlhambra(loc);
+        }
+        document.querySelectorAll("#alhambra .emptyTile").forEach(
+            tile => {
+                tile.addEventListener("dragover", dragoverTile);
+                tile.addEventListener("drop", dropAlhambra);
+            }
+        );
+    });
+}
+
+function dropAlhambra(e) {
+    //get Location
+    const dropLocationElement = e.target.closest("section");
+    const dropRow = dropLocationElement.dataset.row;
+    const dropCol = dropLocationElement.dataset.col;
+
+    const dropLocation = {"row": dropRow, "col": dropCol};
+
+
+    //get coins
+    const selectedCoins = document.querySelectorAll("#personalbank .money[data-selected=true]");
+    const coinArray = [];
+    for (const coin of selectedCoins) {
+        const currency = coin.dataset.currency;
+        const amount = coin.dataset.amount;
+        coinArray.push({"currency": currency, "amount": amount});
+    }
+
+    // place building in reserve
+    const building = {
+        "type": e.dataTransfer.getData("type"),
+        "cost": e.dataTransfer.getData("cost"),
+        "walls": {
+            "north": e.dataTransfer.getData("walls").includes("n"),
+            "east": e.dataTransfer.getData("walls").includes("e"),
+            "south": e.dataTransfer.getData("walls").includes("s"),
+            "west": e.dataTransfer.getData("walls").includes("w"),
+        }
+    };
+
+    buyBuilding(e.dataTransfer.getData("currency"), coinArray, function () {
+        placeBuildingOnAlhambra(building, dropLocation, endOfTurn);
+    });
+}
+
+function addEmptyTileToAlhambra(location) {
+    const board = document.querySelector("#alhambra");
+    board.innerHTML += `
+            <section class="row${location.row} col${location.col}" data-row="${location.row}" data-col="${location.col}">
+                <h3>Boardarea</h3>
+                <article class="emptyTile">
+                    <h4>Empty tile</h4>
+                </article>
+            </section>`;
+}
+
+function makeAlhambraUndroppable() {
+    const emptyTiles = document.querySelectorAll("#alhambra .emptyTile");
+    for (const emptyTile of emptyTiles) {
+        emptyTile.closest("section").remove();
     }
 }
