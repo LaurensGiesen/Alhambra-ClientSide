@@ -19,7 +19,7 @@
     height:100%;
     position:fixed;
     text-align:center;
-    top:300px;
+    top:200px;
     left: 400px;
     width:100%;
     z-index:10000;
@@ -38,4 +38,3 @@
     border-radius: 8px;
     padding: 15px 5%;
 }
-

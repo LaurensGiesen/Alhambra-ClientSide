@@ -14,11 +14,10 @@ function openPopUp(e) {
     let playerName = e.target.innerHTML;
     console.log(playerName);
 
-    welcomePlayer.innerHTML = `<p>${playerName}</p>`;
+    welcomePlayer.innerHTML = `<p>You're looking at ${playerName}'s Game-Board</p>`;
 
     document.querySelectorAll("#players section").forEach((element) => {
         element.addEventListener("mouseout", closePopUp);});
-
 }
 
 function closePopUp() {
