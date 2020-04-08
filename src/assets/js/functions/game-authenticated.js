@@ -36,6 +36,21 @@ function getPlayer(name){
     }
     return null;
 }
+function getAlhambra(playerName){
+    const player = getPlayer(playerName);
+    return player.city;
+}
+function getLocationFountain(city){
+    for(let col = 0; col < city.length; col++){
+        for(let row = 0; row < city[col].length; row++){
+            if(city[col][row] != null && city[col][row].type == null){
+                return {"row": row, "col":col};
+            }
+        }
+    }
+    return null;
+}
+
 
 function isPlayerActive(name){
     return _gameAuth.currentPlayer === name;
