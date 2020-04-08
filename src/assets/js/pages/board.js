@@ -10,6 +10,7 @@ function init(){
         loadPublicMarket();
         //loadPersonalReserve();
         loadAlhambra();
+        pollPersonalReserve();
     });
 
 
@@ -21,7 +22,6 @@ function init(){
     document.querySelector("#options .popup #leave").addEventListener('click', openLeaveWarning);
     document.querySelector("#options .popup #leaveyes").addEventListener('click', leaveGame);
     document.querySelector("#options .popup #leaveno").addEventListener('click', openOptionsPopup);
-
     // Alhambra functionality
     scrollToFountain();
     document.addEventListener('keydown', shortcutsAlhambra);
