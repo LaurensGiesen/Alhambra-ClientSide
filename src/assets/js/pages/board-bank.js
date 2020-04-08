@@ -97,6 +97,7 @@ function endOfTurn(){
     loadPlayers();
     loadBanks();
     loadPublicMarket();
+    loadAlhambra();
 }
 
 

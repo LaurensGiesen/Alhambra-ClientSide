@@ -81,10 +81,17 @@ function placeBuildingInReserve(building, callback){
     });
 }
 
+function placeBuildingOnAlhambra(building, location, callback){
+    const body = {"building": building, "location": location};
+    fetchFromServer(`${config.root}games/${_gameId}/players/${_playerName}/city`, 'POST', body).then(function (response) {
+        _gameAuth = response;
+        callback();
+    });
+}
+
 function getAvailableLocations(walls, callback){
-    fetchFromServer(`${config.root}games/${_gameId}/players/${_playerName}/city/locations?north=${walls.north}&east=${walls.east}&south=${walls.south}&west=${walls.west}`,
-                'GET'
-    ).then(function (response) {
+    fetchFromServer(`${config.root}games/${_gameId}/players/${_playerName}/city/locations?north=${walls.north}&east=${walls.east}&south=${walls.south}&west=${walls.west}`, 'GET').then(function (response) {
+        console.log(response);
         callback(response);
     });
 }

@@ -57,10 +57,10 @@ function getHTMLTile(building){
     if(building.type != null){
         let wallClass= "";
         let wallData= "";
-        if(building.walls.north){wallClass+="wallNorth"; wallData+="n";}
-        if(building.walls.east){wallClass+="wallEast"; wallData+="e";}
-        if(building.walls.south){wallClass+="wallSouth"; wallData+="s";}
-        if(building.walls.west){wallClass+="wallWest"; wallData+="w";}
+        if(building.walls.north){wallClass+="wallNorth "; wallData+="n";}
+        if(building.walls.east){wallClass+="wallEast "; wallData+="e";}
+        if(building.walls.south){wallClass+="wallSouth "; wallData+="s";}
+        if(building.walls.west){wallClass+="wallWest "; wallData+="w";}
 
         return `<article class="tile ${building.type} ${wallClass}" data-type="${building.type}" data-cost="${building.cost}" data-walls="${wallData}">
             <img src="../assets/media/icons/${building.type}.png" alt="${building.type}">
@@ -96,12 +96,38 @@ function makeAlhambraDroppable(e){
 }
 
 function dropAlhambra(e){
-    const dropLocation = e.target.closest("section");
-    const dropRow = dropLocation.dataset.row;
-    const dropCol = dropLocation.dataset.col;
+    //get Location
+    const dropLocationElement = e.target.closest("section");
+    const dropRow = dropLocationElement.dataset.row;
+    const dropCol = dropLocationElement.dataset.col;
 
+    let dropLocation = {"row": dropRow, "col": dropCol};
+
+
+    //get coins
+    const selectedCoins = document.querySelectorAll("#personalbank .money[data-selected=true]");
+    const coinArray = [];
+    for(const coin of selectedCoins){
+        const currency = coin.dataset.currency;
+        const amount = coin.dataset.amount;
+        coinArray.push({"currency": currency, "amount": amount});
+    }
+
+    // place building in reserve
+    const building = {
+        "type": e.dataTransfer.getData("type"),
+        "cost": e.dataTransfer.getData("cost"),
+        "walls": {
+            "north": e.dataTransfer.getData("walls").includes("n"),
+            "east":e.dataTransfer.getData("walls").includes("e"),
+            "south":e.dataTransfer.getData("walls").includes("s"),
+            "west":e.dataTransfer.getData("walls").includes("w"),
+        }
+    };
     
-    console.log(dropRow + " " + dropCol);
+    buyBuilding(e.dataTransfer.getData("currency"), coinArray, function(){
+        placeBuildingOnAlhambra(building, dropLocation, endOfTurn);
+    });
 }
 
 function addEmptyTileToAlhambra(location){
