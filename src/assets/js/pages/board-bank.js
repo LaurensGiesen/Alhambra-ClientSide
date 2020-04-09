@@ -1,4 +1,5 @@
 "use strict";
+let _turnStarted = false;
 
 function loadBanks(){
     const isActivePlayer = isPlayerActive(_playerName);
@@ -88,16 +89,10 @@ function clickTakeMoney(e){
         coinArray.push({"currency": currency, "amount": amount});
     }
     takeMoney(coinArray, function(){
-        loadBanks();
-        endOfTurn();
+        switchTurn();
     });
 }
 
-function endOfTurn(){
-    loadPlayers();
-    loadBanks();
-    loadPublicMarket();
-    loadAlhambra();
-}
+
 
 

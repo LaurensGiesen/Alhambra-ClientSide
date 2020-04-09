@@ -90,61 +90,6 @@ function getHTMLTile(building) {
     }
 }
 
-function makeAlhambraDroppable(e) {
-    const w = e.target.dataset.walls;
-    const walls = {
-        "north": w.includes("n"),
-        "east": w.includes("e"),
-        "south": w.includes("s"),
-        "west": w.includes("w")
-    };
-    getAvailableLocations(walls, function (response) {
-        for (const loc of response) {
-            addEmptyTileToAlhambra(loc);
-        }
-        document.querySelectorAll("#alhambra .emptyTile").forEach(
-            tile => {
-                tile.addEventListener("dragover", dragoverTile);
-                tile.addEventListener("drop", dropAlhambra);
-            }
-        );
-    });
-}
-
-function dropAlhambra(e) {
-    //get Location
-    const dropLocationElement = e.target.closest("section");
-    const dropRow = dropLocationElement.dataset.row;
-    const dropCol = dropLocationElement.dataset.col;
-
-    const dropLocation = {"row": dropRow, "col": dropCol};
-
-
-    //get coins
-    const selectedCoins = document.querySelectorAll("#personalbank .money[data-selected=true]");
-    const coinArray = [];
-    for (const coin of selectedCoins) {
-        const currency = coin.dataset.currency;
-        const amount = coin.dataset.amount;
-        coinArray.push({"currency": currency, "amount": amount});
-    }
-
-    // place building in reserve
-    const building = {
-        "type": e.dataTransfer.getData("type"),
-        "cost": e.dataTransfer.getData("cost"),
-        "walls": {
-            "north": e.dataTransfer.getData("walls").includes("n"),
-            "east": e.dataTransfer.getData("walls").includes("e"),
-            "south": e.dataTransfer.getData("walls").includes("s"),
-            "west": e.dataTransfer.getData("walls").includes("w"),
-        }
-    };
-
-    buyBuilding(e.dataTransfer.getData("currency"), coinArray, function () {
-        placeBuildingOnAlhambra(building, dropLocation, endOfTurn);
-    });
-}
 
 function addEmptyTileToAlhambra(location) {
     const board = document.querySelector("#alhambra");
@@ -155,40 +100,5 @@ function addEmptyTileToAlhambra(location) {
                     <h4>Empty tile</h4>
                 </article>
             </section>`;
-}
-
-function makeAlhambraUndroppable() {
-    const emptyTiles = document.querySelectorAll("#alhambra .emptyTile");
-    for (const emptyTile of emptyTiles) {
-        emptyTile.closest("section").remove();
-    }
-}
-
-function makeAlhambraTilesDraggable(){
-    document.querySelectorAll("#alhambra .tile").forEach(tile => {
-        if(!tile.className.includes("fountain")){
-            tile.setAttribute("draggable", true);
-            tile.addEventListener("dragstart", dragstartAlhambraTile);
-        }
-
-    });
-}
-
-function dragstartAlhambraTile(e){
-    e.dataTransfer.setData("row", e.target.parentElement.dataset.row);
-    e.dataTransfer.setData("col", e.target.parentElement.dataset.col);
-
-    document.querySelector("#personalreserve").addEventListener("dragover", dragoverTile);
-    document.querySelector("#personalreserve").addEventListener("drop", dropAlhambraInPersonalReserve);
-}
-
-function dropAlhambraInPersonalReserve(e){
-    const location = {
-        "row": e.dataTransfer.getData("row"),
-        "col": e.dataTransfer.getData("col")
-    };
-
-    removeBuildingFromAlhambra(location, function(){
-        endOfTurn();
-    });
+    makeAlhambraTilesDraggable();
 }

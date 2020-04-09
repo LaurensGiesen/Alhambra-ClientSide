@@ -13,11 +13,8 @@ function pollGameAuth(callback) {
         if (callback) {
             callback();
         }
-
     });
-    setTimeout(function () {
-        pollGameAuth();
-    }, config.pollingTime);
+    setTimeout(function(){pollGameAuth();}, config.pollingTime);
 }
 
 function hasGameStarted() {
@@ -39,6 +36,11 @@ function getPlayer(name) {
         }
     }
     return null;
+}
+
+function getPersonalReserve(playerName) {
+    const player = getPlayer(playerName);
+    return player.reserve;
 }
 
 function getAlhambra(playerName) {
@@ -74,7 +76,6 @@ function buyBuilding(currency, coins, callback) {
     const body = {"currency": currency, "coins": coins};
     fetchFromServer(`${config.root}games/${_gameId}/players/${_playerName}/buildings-in-hand`, 'POST', body).then(function (response) {
         _gameAuth = response;
-        console.log(_gameAuth);
         callback();
     });
 }
@@ -99,13 +100,23 @@ function getAvailableLocations(walls, callback) {
     fetchFromServer(`${config.root}games/${_gameId}/players/${_playerName}/city/locations?north=${walls.north}&east=${walls.east}&south=${walls.south}&west=${walls.west}`,
         'GET'
     ).then(function (response) {
-        console.log(response);
         callback(response);
     });
 }
 
 function removeBuildingFromAlhambra(location, callback){
     const body = {location};
+    fetchFromServer(`${config.root}games/${_gameId}/players/${_playerName}/city`, 'PATCH', body).then(function (response) {
+        _gameAuth = response;
+        callback();
+    });
+}
+
+function patchBuildingOnAlhambra(building, location, callback){
+    const body = {
+        "building": building,
+        "location": location
+    };
     fetchFromServer(`${config.root}games/${_gameId}/players/${_playerName}/city`, 'PATCH', body).then(function (response) {
         _gameAuth = response;
         callback();
