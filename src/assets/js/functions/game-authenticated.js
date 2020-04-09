@@ -10,7 +10,6 @@ let _gameAuth = null;
 function pollGameAuth(callback) {
     fetchFromServer(`${config.root}games/${_gameId}`, 'GET').then(function (game) {
         _gameAuth = game;
-        //console.log(_gameAuth);
         if (callback) {
             callback();
         }
@@ -102,5 +101,13 @@ function getAvailableLocations(walls, callback) {
     ).then(function (response) {
         console.log(response);
         callback(response);
+    });
+}
+
+function removeBuildingFromAlhambra(location, callback){
+    const body = {location};
+    fetchFromServer(`${config.root}games/${_gameId}/players/${_playerName}/city`, 'PATCH', body).then(function (response) {
+        _gameAuth = response;
+        callback();
     });
 }
