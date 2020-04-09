@@ -2,11 +2,8 @@
 
 let personalReserveHTML = document.querySelector("#personalreserve div");
 
-function pollPersonalReserve(){
-    setTimeout(pollPersonalReserve, config.pollingTime);
-
+function loadPersonalReserve(){
     let player = _gameAuth.players;
-
 
     for (let i = 0; i < player.length; i++) {
         if (player[i].name === _playerName) {

@@ -11,7 +11,7 @@ function init(){
         goToLeaderboard();
         //loadPersonalReserve();
         loadAlhambra();
-        pollPersonalReserve();
+        loadPersonalReserve();
     });
 
 
