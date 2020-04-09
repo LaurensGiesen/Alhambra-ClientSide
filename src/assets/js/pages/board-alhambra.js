@@ -51,6 +51,10 @@ function loadAlhambra() {
         <section class="row9 col9" data-row="9" data-col="9">
         </section>`;
     board.innerHTML = boardSectionHTML;
+
+    if(isPlayerActive(_playerName)){
+        makeAlhambraTilesDraggable();
+    }
 }
 
 function getHTMLTile(building) {
@@ -75,12 +79,12 @@ function getHTMLTile(building) {
         }
 
         return `<article class="tile ${building.type} ${wallClass}" data-type="${building.type}" data-cost="${building.cost}" data-walls="${wallData}">
-            <img src="../assets/media/icons/${building.type}.png" alt="${building.type}">
+            <img src="../assets/media/icons/${building.type}.png" alt="${building.type}" draggable="false">
             <h4>${building.cost}</h4>
             </article>`;
     } else {
         return `<article class="tile fountain" data-type="fountain">
-            <img src="../assets/media/icons/fountain.png" alt="fountain">
+            <img src="../assets/media/icons/fountain.png" alt="fountain" draggable="false">
             <h4>fountain</h4>
             </article>`;
     }
@@ -158,4 +162,33 @@ function makeAlhambraUndroppable() {
     for (const emptyTile of emptyTiles) {
         emptyTile.closest("section").remove();
     }
+}
+
+function makeAlhambraTilesDraggable(){
+    document.querySelectorAll("#alhambra .tile").forEach(tile => {
+        if(!tile.className.includes("fountain")){
+            tile.setAttribute("draggable", true);
+            tile.addEventListener("dragstart", dragstartAlhambraTile);
+        }
+
+    });
+}
+
+function dragstartAlhambraTile(e){
+    e.dataTransfer.setData("row", e.target.parentElement.dataset.row);
+    e.dataTransfer.setData("col", e.target.parentElement.dataset.col);
+
+    document.querySelector("#personalreserve").addEventListener("dragover", dragoverTile);
+    document.querySelector("#personalreserve").addEventListener("drop", dropAlhambraInPersonalReserve);
+}
+
+function dropAlhambraInPersonalReserve(e){
+    const location = {
+        "row": e.dataTransfer.getData("row"),
+        "col": e.dataTransfer.getData("col")
+    };
+
+    removeBuildingFromAlhambra(location, function(){
+        endOfTurn();
+    });
 }

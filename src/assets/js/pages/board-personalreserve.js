@@ -12,7 +12,7 @@ function pollPersonalReserve(){
         if (player[i].name === _playerName) {
             let personalReserve = player[i].reserve;
             personalReserveHTML.innerHTML = "";
-            console.log(personalReserve);
+
             for(let i = 0; i < personalReserve.length; i++) {
                 let reserve = personalReserve[i];
                 personalReserveHTML.innerHTML += `
@@ -21,10 +21,6 @@ function pollPersonalReserve(){
                     <h4>${reserve.cost}</h4>
                 </article>`;
             }
-
-
-
-
         }
     }
 
