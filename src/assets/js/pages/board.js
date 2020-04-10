@@ -9,9 +9,9 @@ function init(){
         loadBanks(); // Load public bank and personal bank onto the board
         loadPublicMarket();
         goToLeaderboard();
-        //loadPersonalReserve();
         loadAlhambra();
-        pollPersonalReserve();
+        loadPersonalReserve();
+        pollSwitchTurn();
     });
 
 
@@ -26,4 +26,23 @@ function init(){
     // Alhambra functionality
     scrollToFountain();
     document.addEventListener('keydown', shortcutsAlhambra);
+}
+
+function pollSwitchTurn(){
+    setTimeout(pollSwitchTurn, config.pollingTime);
+    if(_turnStarted === false && isPlayerActive(_playerName)){
+        switchTurn();
+        _turnStarted = true;
+    } else if(_turnStarted === true && !isPlayerActive(_playerName)){
+        switchTurn();
+        _turnStarted = false;
+    }
+}
+
+function switchTurn(){
+    loadPlayers();
+    loadBanks();
+    loadPublicMarket();
+    loadPersonalReserve();
+    loadAlhambra();
 }
