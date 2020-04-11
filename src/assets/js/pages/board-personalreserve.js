@@ -7,9 +7,8 @@ function loadPersonalReserve(){
 
     let personalReserveInnerHTML = "";
     for(let i = 0; i < personalReserve.length; i++) {
-        let tile = personalReserve[i];
+        const tile = personalReserve[i];
         personalReserveInnerHTML += getHTMLTile(tile);
-
     }
 
     document.querySelector("#personalreserve div").innerHTML = personalReserveInnerHTML;
