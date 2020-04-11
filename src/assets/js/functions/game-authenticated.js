@@ -59,7 +59,6 @@ function getLocationFountain(city) {
     return null;
 }
 
-
 function isPlayerActive(name) {
     return _gameAuth.currentPlayer === name;
 }
@@ -75,7 +74,9 @@ function takeMoney(coins, callback) {
 function buyBuilding(currency, coins, callback) {
     const body = {"currency": currency, "coins": coins};
     fetchFromServer(`${config.root}games/${_gameId}/players/${_playerName}/buildings-in-hand`, 'POST', body).then(function (response) {
-        _gameAuth = response;
+        if(!response.hasOwnProperty("failed")){
+            _gameAuth = response;
+        }
         callback();
     });
 }
@@ -83,7 +84,11 @@ function buyBuilding(currency, coins, callback) {
 function placeBuildingInReserve(building, callback) {
     const body = {"building": building, "location": null};
     fetchFromServer(`${config.root}games/${_gameId}/players/${_playerName}/city`, 'POST', body).then(function (response) {
-        _gameAuth = response;
+        if(response.hasOwnProperty("failed")){
+            displayError();
+        } else {
+            _gameAuth = response;
+        }
         callback();
     });
 }
@@ -91,7 +96,11 @@ function placeBuildingInReserve(building, callback) {
 function placeBuildingOnAlhambra(building, location, callback) {
     const body = {"building": building, "location": location};
     fetchFromServer(`${config.root}games/${_gameId}/players/${_playerName}/city`, 'POST', body).then(function (response) {
-        _gameAuth = response;
+        if(response.hasOwnProperty("failed")){
+            displayError();
+        } else {
+            _gameAuth = response;
+        }
         callback();
     });
 }
@@ -107,7 +116,11 @@ function getAvailableLocations(walls, callback) {
 function removeBuildingFromAlhambra(location, callback){
     const body = {location};
     fetchFromServer(`${config.root}games/${_gameId}/players/${_playerName}/city`, 'PATCH', body).then(function (response) {
-        _gameAuth = response;
+        if(response.hasOwnProperty("failed")){
+            displayError();
+        } else {
+            _gameAuth = response;
+        }
         callback();
     });
 }
@@ -118,7 +131,11 @@ function patchBuildingOnAlhambra(building, location, callback){
         "location": location
     };
     fetchFromServer(`${config.root}games/${_gameId}/players/${_playerName}/city`, 'PATCH', body).then(function (response) {
-        _gameAuth = response;
+        if(response.hasOwnProperty("failed")){
+            displayError();
+        } else {
+            _gameAuth = response;
+        }
         callback();
     });
 }

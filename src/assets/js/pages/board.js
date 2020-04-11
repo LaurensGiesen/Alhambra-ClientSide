@@ -1,4 +1,5 @@
 "use strict";
+let _turnStarted = false;
 
 document.addEventListener('DOMContentLoaded',init);
 
@@ -45,4 +46,11 @@ function switchTurn(){
     loadPublicMarket();
     loadPersonalReserve();
     loadAlhambra();
+}
+
+function displayError(){
+    const errors = document.querySelector("#errors");
+    errors.style.display = "block";
+    setTimeout(
+        function(){errors.style.display = "none";},3000);
 }
