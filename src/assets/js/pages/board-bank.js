@@ -1,5 +1,5 @@
 "use strict";
-let _turnStarted = false;
+
 
 function loadBanks(){
     const isActivePlayer = isPlayerActive(_playerName);

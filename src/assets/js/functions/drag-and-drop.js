@@ -33,7 +33,7 @@ function dragstartReserveTile(e){
     e.dataTransfer.setData("walls", e.target.dataset.walls);
 
     makeDroppableAlhambraEmptyTile(e, function(){
-        makeDroppableAlhambraTile(e);
+        makeDroppableAlhambraTile();
     });
 
 }
@@ -43,7 +43,7 @@ function dragstartAlhambraTile(e){
     e.dataTransfer.setData("row", e.target.parentElement.dataset.row);
     e.dataTransfer.setData("col", e.target.parentElement.dataset.col);
 
-    makeDroppableReserve(e);
+    makeDroppableReserve();
 }
 
 function dragstartMarketTile(e){
@@ -54,7 +54,7 @@ function dragstartMarketTile(e){
     e.dataTransfer.setData("walls", e.target.dataset.walls);
 
     makeDroppableAlhambraEmptyTile(e);
-    makeDroppableReserve(e);
+    makeDroppableReserve();
 }
 
 function dragendTile(){

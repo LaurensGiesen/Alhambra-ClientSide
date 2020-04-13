@@ -1,0 +1,23 @@
+#errors {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 320px;
+    width: 250px;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: indianred;
+    animation: fade 2s linear;
+}
+#errors h2 {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 2rem;
+    color: darkred;
+
+}
+#errors p {
+    font-size: 1rem;
+    padding: 5px;
+}
