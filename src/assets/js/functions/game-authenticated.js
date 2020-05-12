@@ -49,10 +49,10 @@ function getAlhambra(playerName) {
 }
 
 function getLocationFountain(city) {
-    for (let col = 0; col < city.length; col++) {
-        for (let row = 0; row < city[col].length; row++) {
-            if (city[col][row] != null && city[col][row].type == null) {
-                return {"row": row, "col": col};
+    for (let row = 0; row < city.length; row++) {
+        for (let col = 0; col < city[row].length; col++) {
+            if (city[row][col] != null && city[row][col].type == null) {
+                return {"col": col, "row": row};
             }
         }
     }

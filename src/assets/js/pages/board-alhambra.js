@@ -33,6 +33,7 @@ function shortcutsAlhambra(e) {
 function loadAlhambra() {
     const alhambra = getAlhambra(_playerName);
     const locationFountain = getLocationFountain(alhambra);
+    console.log(locationFountain);
     const board = document.querySelector("#alhambra");
 
     let boardSectionHTML = "";
