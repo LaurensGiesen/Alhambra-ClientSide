@@ -4,10 +4,13 @@ let playerScoreBook = [];
 function makeScoreBook() {
 
     for (let i = 0; i < _gameAuth.players.length; i++){
-        let playerScore  = {name: _gameAuth.players[i].name, score: _gameAuth.players[i].score };
+        let playerScore  = {playerName: _gameAuth.players[i].playerName, score: _gameAuth.players[i].score };
         playerScoreBook.push(playerScore);
     }
     let playerStatics = playerScoreBook.sort(compare);
+    if(playerStatics.length < 3){
+        playerStatics.push({playerName: "", score: ""});
+    }
     loadPodium(playerStatics);
 }
 
@@ -22,11 +25,12 @@ function compare(a,b) {
 
 function loadPodium(playerStatics) {
     let podium = document.querySelector("#podium");
+
     for (let i = 0; i < 3; i++){
         podium.innerHTML += `
             <article>
                 <h3>${i+1}</h3>
-                <h2>${playerStatics[i].name}</h2>
+                <h2>${playerStatics[i].playerName}</h2>
                 <p>${playerStatics[i].score}</p>
             </article>
         `
@@ -43,7 +47,7 @@ function loadList(playerStatics) {
         list.innerHTML +=
             `<article>
                 <h3>${i + 1}</h3>
-                <h2>${playerStatics[i].name}</h2>
+                <h2>${playerStatics[i].playerName}</h2>
                 <p>${playerStatics[i].score}</p>
             </article>`
     }

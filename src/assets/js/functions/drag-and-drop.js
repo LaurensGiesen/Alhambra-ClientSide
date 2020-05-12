@@ -52,7 +52,6 @@ function dragstartMarketTile(e){
     e.dataTransfer.setData("type", e.target.dataset.type);
     e.dataTransfer.setData("cost", e.target.dataset.cost);
     e.dataTransfer.setData("walls", e.target.dataset.walls);
-
     makeDroppableAlhambraEmptyTile(e);
     makeDroppableReserve();
 }
