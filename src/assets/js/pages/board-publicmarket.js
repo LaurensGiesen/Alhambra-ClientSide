@@ -34,19 +34,19 @@ function loadTileInMarket(color){
     if(market != null){
         let walls = "";
         let wallsClass = "";
-        if(market.walls.north){
+        if(market.walls.walls.north){
             walls += "n";
             wallsClass += "wallNorth ";
         }
-        if(market.walls.east){
+        if(market.walls.walls.east){
             walls += "e";
             wallsClass += "wallEast ";
         }
-        if(market.walls.south){
+        if(market.walls.walls.south){
             walls += "s";
             wallsClass += "wallSouth ";
         }
-        if(market.walls.west){
+        if(market.walls.walls.west){
             walls += "w";
             wallsClass += "wallWest ";
         }

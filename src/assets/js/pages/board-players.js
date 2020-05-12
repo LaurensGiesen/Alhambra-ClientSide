@@ -1,6 +1,7 @@
 "use strict";
 
 function loadPlayers(){
+    console.log(_gameAuth);
     const isActivePlayer = isPlayerActive(_playerName);
     if(!isActivePlayer){
         setTimeout(loadPlayers, config.pollingTime);
@@ -18,13 +19,13 @@ function loadPlayers(){
 
 function getPlayersHTML(player, currentPlayer){
     let activeClass;
-    if(player.name === currentPlayer){
+    if(player.playerName === currentPlayer){
         activeClass = "active";
     } else {
         activeClass = "deactive";
     }
-    return `<article class="${activeClass}" data-name="${player.name}">
-        <h3>${player.name}</h3>
+    return `<article class="${activeClass}" data-name="${player.playerName}">
+        <h3>${player.playerName}</h3>
         <p>${player.score}</p>
         </article> `;
 }

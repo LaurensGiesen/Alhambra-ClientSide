@@ -33,6 +33,7 @@ function shortcutsAlhambra(e) {
 function loadAlhambra() {
     const alhambra = getAlhambra(_playerName);
     const locationFountain = getLocationFountain(alhambra);
+    console.log(locationFountain);
     const board = document.querySelector("#alhambra");
 
     let boardSectionHTML = "";
@@ -61,19 +62,19 @@ function getHTMLTile(building) {
     if (building.type != null) {
         let wallClass = "";
         let wallData = "";
-        if (building.walls.north) {
+        if (building.walls.walls.north) {
             wallClass += "wallNorth ";
             wallData += "n";
         }
-        if (building.walls.east) {
+        if (building.walls.walls.east) {
             wallClass += "wallEast ";
             wallData += "e";
         }
-        if (building.walls.south) {
+        if (building.walls.walls.south) {
             wallClass += "wallSouth ";
             wallData += "s";
         }
-        if (building.walls.west) {
+        if (building.walls.walls.west) {
             wallClass += "wallWest ";
             wallData += "w";
         }
