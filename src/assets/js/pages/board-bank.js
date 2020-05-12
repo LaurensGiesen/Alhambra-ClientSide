@@ -6,7 +6,7 @@ function loadBanks(){
     loadPersonalBank();
     loadPublicBank();
     if(!isActivePlayer){
-        setTimeout(loadBanks, 1000);
+        setTimeout(loadBanks, config.pollingTime);
     } else {
         makeMoneyClickable();
         document.querySelector("#actions #money").addEventListener('click', clickTakeMoney);
@@ -27,7 +27,7 @@ function loadPersonalBank(){
     orangestack.innerHTML = "";
     yellowstack.innerHTML = "";
 
-    for(const coin of player.coins){
+    for(const coin of player.money){
         switch(coin.currency) {
             case "blue":
                 bluestack.innerHTML += getCoinHTML(coin);
