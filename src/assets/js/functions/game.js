@@ -14,9 +14,14 @@ function createGame(callback){
 
 function joinGame(gameId, callback) {
     fetchFromServer(`${config.root}games/${gameId}/players`, 'POST', {playerName: `${_playerName}`}).then(function(response){
-        localStorage.setItem("playerToken", response);
-        localStorage.setItem("gameId", gameId);
-        callback();
+        if(!response.failed){
+            localStorage.setItem("playerToken", response);
+            localStorage.setItem("gameId", gameId);
+            callback();
+        } else {
+            alert(response.cause);
+        }
+
     });
 }
 
@@ -36,9 +41,9 @@ function getNumberOfGames(number, callback){
 }
 
 function getGame(gameId, callback){
-    fetchFromServer(`${config.root}games?details=true&prefix=group${config.groupnumber}`, 'GET').then(function (games) {
+    fetchFromServer(`${config.root}games?details=true`, 'GET').then(function (games) {
         for(const game of games){
-            if(game.id === gameId){
+            if(game.id == gameId){
                 callback(game);
             }
         }
