@@ -76,6 +76,7 @@ function buyBuilding(currency, coins, callback) {
     fetchFromServer(`${config.root}games/${_gameId}/players/${_playerName}/buildings-in-hand`, 'POST', body).then(function (response) {
         if(!response.hasOwnProperty("failed")){
             _gameAuth = response;
+            loadPublicMarket();
         }
         callback();
     });
@@ -83,7 +84,6 @@ function buyBuilding(currency, coins, callback) {
 
 function placeBuildingInReserve(building, callback) {
     const body = {"building": building, "location": null};
-    console.log(body);
     fetchFromServer(`${config.root}games/${_gameId}/players/${_playerName}/city`, 'POST', body).then(function (response) {
         if(response.hasOwnProperty("failed")){
             displayError();
