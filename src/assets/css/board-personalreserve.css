@@ -1,6 +1,7 @@
 #personalreserve {
     background-image: url("../media/textures/white-sand.jpg");
     border-radius: 10px;
+    width: 1200px;
     padding: 10px;
     overflow: auto;
 }
