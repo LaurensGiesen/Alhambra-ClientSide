@@ -31,11 +31,19 @@ function shortcutsAlhambra(e) {
 }
 
 function loadAlhambra() {
-    const alhambra = getAlhambra(_playerName);
-    const locationFountain = getLocationFountain(alhambra);
-    console.log(locationFountain);
+
     const board = document.querySelector("#alhambra");
 
+    board.innerHTML = alhambraHTML(_playerName);
+
+    if(isPlayerActive(_playerName)){
+        makeAlhambraTilesDraggable();
+    }
+}
+
+function alhambraHTML(playerName) {
+    const alhambra = getAlhambra(playerName);
+    const locationFountain = getLocationFountain(alhambra);
     let boardSectionHTML = "";
     for (let row = 0; row < alhambra.length; row++) {
         for (let col = 0; col < alhambra[row].length; col++) {
@@ -51,12 +59,9 @@ function loadAlhambra() {
     boardSectionHTML += `
         <section class="row9 col9" data-row="9" data-col="9">
         </section>`;
-    board.innerHTML = boardSectionHTML;
-
-    if(isPlayerActive(_playerName)){
-        makeAlhambraTilesDraggable();
-    }
+    return boardSectionHTML;
 }
+
 
 function getHTMLTile(building) {
     if (building.type != null) {

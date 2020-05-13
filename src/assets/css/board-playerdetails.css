@@ -41,6 +41,10 @@
     flex-basis: 100%;
 }
 
+#playerDetails img, #playerDetails h4 {
+    display: none;
+}
+
 #playerDetails #otherAlhambra {
     display: grid;
     grid-template-rows: repeat(19, 26px);
@@ -91,9 +95,6 @@
 #otherAlhambra .row8 {grid-row: 18 / span 1;}
 #otherAlhambra .row9 {grid-row: 19 / span 1;}
 
-
-
-
 #playerDetails #otherBank, #playerDetails #otherReserve {
     display: flex;
     flex-wrap: wrap;
@@ -137,13 +138,14 @@
     border: 2px solid rgba(0,0,0,0.4);
     margin-right: 5px;
 }
-#playerDetails #otherReserve .tile h4, #playerDetails #otherAlhambra .tile h4 {
-    display: none;
-}
 
-#playerDetails #otherAlhambra .tile.fountain h4 {
+#playerDetails #otherBank .money h4:first-of-type {
     display: block;
 }
+
+
+
+
 
 
 

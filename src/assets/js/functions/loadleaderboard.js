@@ -33,7 +33,7 @@ function loadPodium(playerStatics) {
                 <h2>${playerStatics[i].playerName}</h2>
                 <p>${playerStatics[i].score}</p>
             </article>
-        `
+        `;
     }
     if (playerStatics.length  > 3 ){
         loadList(playerStatics);
