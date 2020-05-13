@@ -27,7 +27,7 @@ div span a:hover {
 }
 
 
-span {
+span, form {
     margin-bottom: 25px;
     padding-left: 125px;
     line-height: 1.5;
