@@ -8,7 +8,7 @@ function makeScoreBook() {
         playerScoreBook.push(playerScore);
     }
     let playerStatics = playerScoreBook.sort(compare);
-    if(playerStatics.length < 3){
+    while (playerStatics.length < 3){
         playerStatics.push({playerName: "", score: ""});
     }
     loadPodium(playerStatics);
