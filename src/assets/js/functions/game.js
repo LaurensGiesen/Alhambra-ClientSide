@@ -19,9 +19,8 @@ function joinGame(gameId, callback) {
             localStorage.setItem("gameId", gameId);
             callback();
         } else {
-            alert(response.cause);
+            alert.window(response.cause);
         }
-
     });
 }
 
