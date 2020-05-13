@@ -23,7 +23,9 @@ div {
 
 div span a:hover {
     color: red;
+    transition: 0.3s;
 }
+
 
 span {
     margin-bottom: 25px;
@@ -33,17 +35,28 @@ span {
     font-family: 'MedievalSharp', cursive;
 }
 
-span a {
+span a, form label {
     text-decoration: none;
     color: black;
-
+    cursor: pointer;
 }
 
-span.create {
-    background-image: url("../media/icons/plus.png");
+form input[type=submit]{
+    height: 80px;
+    width: 80px;
+    background-image: url("../media/icons/hammer.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 80px 80px;
+    background-color:transparent;
+    border: none;
+    cursor: pointer;
+    transition:1s;
 }
+
+form input[type=submit]:focus{
+    outline: none;
+}
+
 span.join {
     background-image: url("../media/icons/add.png");
     background-repeat: no-repeat;
