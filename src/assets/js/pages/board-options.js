@@ -26,9 +26,9 @@ function openLeaveWarning(e) {
 
 function leaveGame(e) {
     e.preventDefault();
-    deleteSelfFromGame();
+    deleteSelfFromGame(function () {
+        window.location.href = "gamemenu.html";
+    });
     localStorage.setItem("gameId", "");
     localStorage.setItem("playerToken", "");
-    window.location.href = "gamemenu.html";
-
 }
