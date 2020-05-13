@@ -26,9 +26,6 @@ function openLeaveWarning(e) {
 
 function leaveGame(e) {
     e.preventDefault();
-    console.log("bijna goe bezig");
-
-    console.log("goe bezig");
     deleteSelfFromGame();
     localStorage.setItem("gameId", "");
     localStorage.setItem("playerToken", "");
