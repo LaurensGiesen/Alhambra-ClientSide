@@ -1,9 +1,8 @@
 "use strict";
 
 function loadPlayers(){
-    console.log(_gameAuth);
     const isActivePlayer = isPlayerActive(_playerName);
-    if(!isActivePlayer){
+    if(!isActivePlayer && !_otherPlayerDetailsIsOpen){
         setTimeout(loadPlayers, config.pollingTime);
     }
 

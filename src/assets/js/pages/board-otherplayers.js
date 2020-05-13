@@ -1,23 +1,35 @@
 "use strict";
+let _otherPlayerDetailsIsOpen = false;
 
-const popUp = document.querySelector("#playerDetails .popup");
-const content = document.querySelector("#playerDetails .popup .popup-content");
+//const popUp = document.querySelector("#playerDetails .popup");
+//const content = document.querySelector("#playerDetails .popup .popup-content");
 
 function openOtherPlayerDetails(e) {
     e.preventDefault();
+    _otherPlayerDetailsIsOpen = true;
+    const popUp = document.querySelector("#playerDetails .popup");
+    const content = document.querySelector("#playerDetails .popup .popup-content");
+
     popUp.style.display = 'flex';
     content.style.display = 'flex';
 
     const playerName = e.target.querySelector("h3").innerHTML;
     content.innerHTML = getHTMLOtherPlayerDetails(playerName);
 
+    console.log(_otherPlayerDetailsIsOpen);
+
     document.querySelectorAll("#players #otherPlayers").forEach((element) => {
         element.addEventListener("mouseleave", closePopUp);});
 }
 
 function closePopUp() {
+    const popUp = document.querySelector("#playerDetails .popup");
+    const content = document.querySelector("#playerDetails .popup .popup-content");
     popUp.style.display = 'none';
     content.style.display = 'none';
+    _otherPlayerDetailsIsOpen = false;
+    console.log(_otherPlayerDetailsIsOpen);
+    loadPlayers();
 }
 
 
