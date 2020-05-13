@@ -19,7 +19,7 @@ function joinGame(gameId, callback) {
             localStorage.setItem("gameId", gameId);
             callback();
         } else {
-            alert.window(response.cause);
+            window.alert(response.cause);
         }
     });
 }
@@ -44,7 +44,7 @@ function getNumberOfGames(number, callback) {
 function getGame(gameId, callback) {
     fetchFromServer(`${config.root}games?details=true`, 'GET').then(function (games) {
         for (const game of games) {
-            if (game.id == gameId) {
+            if (game.id === gameId) {
                 callback(game);
             }
         }
