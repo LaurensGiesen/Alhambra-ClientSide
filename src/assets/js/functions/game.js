@@ -25,12 +25,11 @@ function joinGame(gameId, callback) {
     });
 }
 
-function deleteSelfFromGame(gameId, callback) {
-    fetchFromServer(`${config.root}games/${gameId}/players/${_playerName}`, 'DELETE').then(function (response) {
+function deleteSelfFromGame(callback) {
+    fetchFromServer(`${config.root}games/${_gameId}/players/${_playerName}`, 'DELETE').then(function (response) {
         if (callback != null) {
             callback(response);
         }
-        return true;
     });
 }
 
