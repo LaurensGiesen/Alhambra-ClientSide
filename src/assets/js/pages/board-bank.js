@@ -79,18 +79,24 @@ function selectMoney(e){
     }
 
 }
+
 function clickTakeMoney(e){
     e.preventDefault();
     const selectedCoins = document.querySelectorAll("#publicbank .money[data-selected=true]");
     const coinArray = [];
-    for(const coin of selectedCoins){
-        const currency = coin.dataset.currency;
-        const amount = coin.dataset.amount;
-        coinArray.push({"currency": currency, "amount": amount});
+
+    if (selectedCoins.length === 0) {
+        window.alert("You have to select some money first !");
+    } else {
+        for(const coin of selectedCoins){
+            const currency = coin.dataset.currency;
+            const amount = coin.dataset.amount;
+            coinArray.push({"currency": currency, "amount": amount});
+        }
+        takeMoney(coinArray, function(){
+            switchTurn();
+        });
     }
-    takeMoney(coinArray, function(){
-        switchTurn();
-    });
 }
 
 
