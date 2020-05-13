@@ -140,3 +140,4 @@ function patchBuildingOnAlhambra(building, location, callback){
         callback();
     });
 }
+

@@ -11,10 +11,10 @@ function loadPlayers(){
     for(const player of _gameAuth.players){
         playersArea += getPlayersHTML(player, _gameAuth.currentPlayer);
     }
-    document.querySelector("#players section").innerHTML = playersArea;
+    document.querySelector("#players #otherPlayers").innerHTML = playersArea;
 
-    document.querySelectorAll("#players section article h3").forEach((element) => {
-        element.addEventListener('mouseover', openPopUp);});
+    document.querySelectorAll("#players #otherPlayers article").forEach((element) => {
+        element.addEventListener('mouseenter', openOtherPlayerDetails);});
 }
 
 function getPlayersHTML(player, currentPlayer){
