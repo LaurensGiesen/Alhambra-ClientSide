@@ -37,12 +37,7 @@
 #actions #money h3 {
     background-image: url("../media/icons/moneybag.png");
 }
-#actions #buy h3 {
-    background-image: url("../media/icons/cart.png");
-}
-#actions #build h3 {
-    background-image: url("../media/icons/build.png");
-}
+
 
 
 #actions.active article h3{
