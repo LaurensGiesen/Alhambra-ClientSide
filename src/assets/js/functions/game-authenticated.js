@@ -43,6 +43,11 @@ function getPersonalReserve(playerName) {
     return player.reserve;
 }
 
+function getPersonalBank(playerName) {
+    const player = getPlayer(playerName);
+    return player.money;
+}
+
 function getAlhambra(playerName) {
     const player = getPlayer(playerName);
     return player.city;
@@ -140,3 +145,4 @@ function patchBuildingOnAlhambra(building, location, callback){
         callback();
     });
 }
+

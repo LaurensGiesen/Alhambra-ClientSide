@@ -13,7 +13,7 @@
     display: none;
 }
 
-#players article {
+#players #otherPlayers article {
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -27,16 +27,16 @@
     -webkit-filter: drop-shadow(5px 5px 5px #e83328);
     filter:         drop-shadow(5px 5px 5px #e83328);
 }
-#players article.active {
+#players #otherPlayers article.active {
     -webkit-filter: drop-shadow(5px 5px 5px #61ab3a);
     filter:         drop-shadow(5px 5px 5px #61ab3a);
 }
-#players article h3 {
+#players #otherPlayers article h3 {
     font-size: 1rem;
     font-weight: bold;
     padding-bottom: 5px;
 }
-#players article p {
+#players #otherPlayers article p {
     position: absolute;
     right: 16px;
     top: 35px;
