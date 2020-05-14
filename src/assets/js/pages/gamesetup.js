@@ -2,10 +2,24 @@
 
 document.addEventListener('DOMContentLoaded',init);
 
+
+
+
+
+
+
+
+
+
+const backgroundHammer = document.querySelector("#submit");
+const createKingdom = document.querySelector("form label");
+const joinGameButton = document.querySelector(".join");
+
 function init() {
     document.querySelector('.create').addEventListener("click", submitNewGame);
     document.querySelector('form').addEventListener("mouseover", letHammerFall);
     document.querySelector('form').addEventListener("mouseout", letHammerNotFall);
+    joinGameButton.addEventListener("click", goToJoinGame);
 }
 
 function submitNewGame(e) {
@@ -13,11 +27,9 @@ function submitNewGame(e) {
     createGame(function(response){
         joinGame(response, function(){
             window.location.href = "gamelobby.html";
-        })
+        });
     });
 }
-let backgroundHammer = document.querySelector("#submit");
-let createKingdom = document.querySelector("form label");
 
 function letHammerFall() {
     backgroundHammer.style.transform = "rotate(45deg)";
@@ -30,3 +42,7 @@ function letHammerNotFall() {
     createKingdom.style.color = "black";
     createKingdom.style.transition = "0.3s";
 }
+function goToJoinGame() {
+    window.location.href = "match.html";
+}
+

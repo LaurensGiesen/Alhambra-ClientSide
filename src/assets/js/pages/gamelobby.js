@@ -2,11 +2,13 @@
 
 document.addEventListener('DOMContentLoaded',init);
 
+const readyButton = document.querySelector("main section h5");
+
 function init(){
     pollGameAuth(function(){
         loadGameId();
         loadLobbyTable();
-        document.querySelector("main section h5").addEventListener("click", clickPlayerReady);
+        readyButton.addEventListener("click", clickPlayerReady);
     });
 
 }
@@ -53,7 +55,6 @@ function clickPlayerReady(e){
     setPlayerStatusReady(function(response){
        if(response){
            loadPlayers();
-           const readyButton = document.querySelector("main section h5");
            readyButton.innerHTML = "Wait longer?";
            readyButton.removeEventListener("click", clickPlayerReady);
            readyButton.addEventListener("click", clickPlayerNotReady);
@@ -65,7 +66,6 @@ function clickPlayerNotReady(e){
     setPlayerStatusNotReady(function(response){
         if(response){
             loadPlayers();
-            const readyButton = document.querySelector("main section h5");
             readyButton.innerHTML = "Ready?";
             readyButton.removeEventListener("click", clickPlayerNotReady);
             readyButton.addEventListener("click", clickPlayerReady);
