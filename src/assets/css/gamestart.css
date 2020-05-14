@@ -21,11 +21,11 @@ div {
     background-position: center 10px;
 }
 
+
 div span a:hover {
     color: red;
     transition: 0.3s;
 }
-
 
 span, form {
     margin-bottom: 25px;
@@ -61,4 +61,5 @@ span.join {
     background-image: url("../media/icons/add.png");
     background-repeat: no-repeat;
     background-size: contain;
+    cursor: pointer;
 }
