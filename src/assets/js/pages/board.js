@@ -48,9 +48,13 @@ function switchTurn(){
     loadAlhambra();
 }
 
-function displayError(){
+function displayError(errorMsg){
     const errors = document.querySelector("#errors");
     errors.style.display = "block";
+    errors.innerHTML = `
+            <h3>Oops...</h3>
+            <p>Something went wrong:</p>
+            <p>${errorMsg}</p>`;
     setTimeout(
         function(){errors.style.display = "none";},3000);
 }

@@ -13,7 +13,6 @@ function loadBanks(){
     }
 }
 
-
 function loadPersonalBank(){
     const player = getPlayer(_playerName);
 
@@ -47,6 +46,7 @@ function loadPersonalBank(){
     }
 
 }
+
 function loadPublicBank(){
     let publicBankHTML = "<h2>Public bank</h2>";
 
@@ -61,7 +61,6 @@ function makeMoneyClickable(){
         money.addEventListener("click", selectMoney);
     });
 }
-
 
 function getCoinHTML(coin){
     return `<article class="money ${coin.currency}money" data-currency="${coin.currency}" data-amount="${coin.amount}" data-selected="false">
@@ -86,7 +85,7 @@ function clickTakeMoney(e){
     const coinArray = [];
 
     if (selectedCoins.length === 0) {
-        window.alert("You have to select some money first !");
+        displayError("No coins selected");
     } else {
         for(const coin of selectedCoins){
             const currency = coin.dataset.currency;
