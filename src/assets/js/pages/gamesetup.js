@@ -2,6 +2,9 @@
 
 document.addEventListener('DOMContentLoaded',init);
 
+const backgroundHammer = document.querySelector("#submit");
+const createKingdom = document.querySelector("form label");
+
 function init() {
     document.querySelector('.create').addEventListener("click", submitNewGame);
     document.querySelector('form').addEventListener("mouseover", letHammerFall);
@@ -16,8 +19,6 @@ function submitNewGame(e) {
         })
     });
 }
-let backgroundHammer = document.querySelector("#submit");
-let createKingdom = document.querySelector("form label");
 
 function letHammerFall() {
     backgroundHammer.style.transform = "rotate(45deg)";

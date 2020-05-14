@@ -1,13 +1,13 @@
 "use strict";
-let playerScoreBook = [];
+const playerScoreBook = [];
 
 function makeScoreBook() {
 
     for (let i = 0; i < _gameAuth.players.length; i++){
-        let playerScore  = {playerName: _gameAuth.players[i].playerName, score: _gameAuth.players[i].score };
+        const playerScore  = {playerName: _gameAuth.players[i].playerName, score: _gameAuth.players[i].score };
         playerScoreBook.push(playerScore);
     }
-    let playerStatics = playerScoreBook.sort(compare);
+    const playerStatics = playerScoreBook.sort(compare);
     while (playerStatics.length < 3){
         playerStatics.push({playerName: "", score: ""});
     }
@@ -17,14 +17,15 @@ function makeScoreBook() {
 function compare(a,b) {
     if(a.score > b.score){
         return -1;
-    }if(a.score < b.score){
+    }
+    if(a.score < b.score){
         return 1;
     }
     return 0;
 }
 
 function loadPodium(playerStatics) {
-    let podium = document.querySelector("#podium");
+    const podium = document.querySelector("#podium");
 
     for (let i = 0; i < 3; i++){
         podium.innerHTML += `
