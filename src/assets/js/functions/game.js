@@ -44,7 +44,7 @@ function getNumberOfGames(number, callback) {
 function getGame(gameId, callback) {
     fetchFromServer(`${config.root}games?details=true`, 'GET').then(function (games) {
         for (const game of games) {
-            if (game.id === gameId) {
+            if (game.id === parseInt(gameId)) {
                 callback(game);
             }
         }
