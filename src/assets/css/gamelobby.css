@@ -16,10 +16,11 @@ header {
     justify-content: flex-end;
     align-items: center;
     height: 100px;
+
 }
 
 header h1{
-    padding-left: 75px;
+    padding-left: 60px;
     margin-right: 15px;
     line-height: 2;
     font-size: 1.5rem;
@@ -28,11 +29,14 @@ header h1{
     background-repeat: no-repeat;
     font-weight: bolder;
 }
+header .span{
+    font-weight: bold;
+}
 header p{
-    margin-right: 15px;
+    margin-right: 50px;
     font-size: 1.3rem;
     color: #5c5b5b;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 
@@ -46,6 +50,7 @@ main{
 main header {
     justify-content: center;
     height: inherit;
+    color: white;
 }
 
 main header h2 {
@@ -121,6 +126,7 @@ main section:nth-of-type(2) h5 {
     font-size: 3rem;
     line-height: 1.5;
     padding-left: 100px;
+    font-weight: bold;
 }
 main section:nth-of-type(2) h5:hover {
     cursor: pointer;
