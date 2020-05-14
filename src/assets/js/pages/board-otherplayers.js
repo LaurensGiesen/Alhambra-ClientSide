@@ -1,9 +1,6 @@
 "use strict";
 let _otherPlayerDetailsIsOpen = false;
 
-//const popUp = document.querySelector("#playerDetails .popup");
-//const content = document.querySelector("#playerDetails .popup .popup-content");
-
 function openOtherPlayerDetails(e) {
     e.preventDefault();
     _otherPlayerDetailsIsOpen = true;

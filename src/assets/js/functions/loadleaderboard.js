@@ -43,13 +43,13 @@ function loadPodium(playerStatics) {
 }
 
 function loadList(playerStatics) {
-    let list = document.querySelector("#list");
+    const list = document.querySelector("#list");
     for (let i =  3; i <= playerStatics.length - 1 ; i++) {
         list.innerHTML +=
             `<article>
                 <h3>${i + 1}</h3>
                 <h2>${playerStatics[i].playerName}</h2>
                 <p>${playerStatics[i].score}</p>
-            </article>`
+            </article>`;
     }
 }
