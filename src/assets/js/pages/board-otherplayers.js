@@ -13,8 +13,6 @@ function openOtherPlayerDetails(e) {
     const playerName = e.target.querySelector("h3").innerHTML;
     content.innerHTML = getHTMLOtherPlayerDetails(playerName);
 
-    console.log(_otherPlayerDetailsIsOpen);
-
     document.querySelectorAll("#players #otherPlayers").forEach((element) => {
         element.addEventListener("mouseleave", closePopUp);});
 }
@@ -25,7 +23,6 @@ function closePopUp() {
     popUp.style.display = 'none';
     content.style.display = 'none';
     _otherPlayerDetailsIsOpen = false;
-    console.log(_otherPlayerDetailsIsOpen);
     loadPlayers();
 }
 
