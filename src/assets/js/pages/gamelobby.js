@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded',init);
 const readyButton = document.querySelector("main section h5");
 
 function init(){
+    document.querySelector("#return").addEventListener("click", clickLeaveLobby);
     pollGameAuth(function(){
         loadGameId();
         loadLobbyTable();
@@ -72,3 +73,13 @@ function clickPlayerNotReady(e){
         }
     });
 }
+function clickLeaveLobby(e){
+    e.preventDefault();
+    deleteSelfFromGame(function () {
+        window.location.href = "gamemenu.html";
+    });
+    localStorage.setItem("gameId", "");
+    localStorage.setItem("playerToken", "");
+}
+
+
