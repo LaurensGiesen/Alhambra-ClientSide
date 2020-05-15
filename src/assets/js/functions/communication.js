@@ -30,17 +30,14 @@ function fetchFromServer(url, httpVerb, requestBody){
 }
 
 function fetchFromServerAdmin(url, httpVerb , token){
-    const options= {};
-    options.method = httpVerb;
+    const optionsAdmin= {};
+    optionsAdmin.method = httpVerb;
 
-    options.headers = {};
-    options.headers["Content-Type"] = "application/json";
-    options.headers["Authorization"] = "Bearer " + token;
+    optionsAdmin.headers = {};
+    optionsAdmin.headers["Content-Type"] = "application/json";
+    optionsAdmin.headers["Authorization"] = "Bearer " + token;
 
-    // Authorization header
-    options.headers["Authorization"] = "Bearer " + token;
-
-    return fetch(url, options)
+    return fetch(url, optionsAdmin)
         .then((response) => {
             if (!response.ok) {
                 console.error('%c%s','background-color: red;color: white','! An error occurred while calling the API');
