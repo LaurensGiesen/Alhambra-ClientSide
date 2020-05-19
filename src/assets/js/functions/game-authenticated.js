@@ -31,7 +31,7 @@ function getPlayers() {
 
 function getPlayer(name) {
     for (const player of _gameAuth.players) {
-        if (player.playerName === name) {
+        if (player.name === name) {
             return player;
         }
     }

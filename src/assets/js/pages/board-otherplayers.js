@@ -32,9 +32,9 @@ function getHTMLOtherPlayerDetails(playerName) {
 
     return `
         <header>
-            <h2>${player.playerName}</h2>
+            <h2>${player.name}</h2>
         </header>
-        <section id="otherAlhambra">${alhambraHTML(player.playerName)}</section>
+        <section id="otherAlhambra">${alhambraHTML(player.name)}</section>
         <section id="otherBank">
             <h3>Bank</h3>
             ${getOtherBankHTML(playerName)}

@@ -18,13 +18,13 @@ function loadPlayers(){
 
 function getPlayersHTML(player, currentPlayer){
     let activeClass;
-    if(player.playerName === currentPlayer){
+    if(player.name === currentPlayer){
         activeClass = "active";
     } else {
         activeClass = "deactive";
     }
-    return `<article class="${activeClass}" data-name="${player.playerName}">
-        <h3>${player.playerName}</h3>
+    return `<article class="${activeClass}" data-name="${player.name}">
+        <h3>${player.name}</h3>
         <p>${player.score}</p>
         </article> `;
 }

@@ -43,7 +43,7 @@ function loadPlayers(){
         const ready = player.ready ? "Ready" : "Not Ready";
         const classReady = player.ready ? "ready" : "notReady";
         playerListHTML += `<article>
-                                    <h3>${player.playerName}</h3>
+                                    <h3>${player.name}</h3>
                                     <p class="${classReady}">${ready}</p>
                                 </article>`;
     }
