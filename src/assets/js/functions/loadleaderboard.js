@@ -31,7 +31,7 @@ function loadPodium(playerStatics) {
         podium.innerHTML += `
             <article>
                 <h3>${i+1}</h3>
-                <h2>${playerStatics[i].name}</h2>
+                <h2>${playerStatics[i].playerName}</h2>
                 <p>${playerStatics[i].score}</p>
             </article>
         `;
@@ -39,7 +39,6 @@ function loadPodium(playerStatics) {
     if (playerStatics.length  > 3 ){
         loadList(playerStatics);
     }
-    console.log(playerStatics);
 }
 
 function loadList(playerStatics) {
@@ -48,7 +47,7 @@ function loadList(playerStatics) {
         list.innerHTML +=
             `<article>
                 <h3>${i + 1}</h3>
-                <h2>${playerStatics[i].name}</h2>
+                <h2>${playerStatics[i].playerName}</h2>
                 <p>${playerStatics[i].score}</p>
             </article>`;
     }
